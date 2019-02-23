@@ -12,7 +12,8 @@ function find(qs) {
 
 function loadAll() {
     var fns = bindDrawFunctions(0);
-    const { curves } = convertPath(Bezier, "M10 80 Q 95 10 180 80"/*"M10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80"*/);
+    let curves = [];
+    initialPaths.forEach(path => curves = curves.concat(convertPath(Bezier, path).curves));
     const activeCurveIndex = 0;
     const drawFns = [];
     for(let i = 0; i < curves.length; i++) {

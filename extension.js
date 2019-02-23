@@ -6,6 +6,9 @@ const path = require('path');
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
 
+function getPathsForDocument(text) {
+	return text.split('\n').filter(line => line);
+}
 /**
  * @param {vscode.ExtensionContext} context
  */
@@ -41,7 +44,7 @@ function activate(context) {
 		vscode.workspace.openTextDocument(vscode.window.activeTextEditor.document.fileName).then((document) => {
 			let text = document.getText();
 			mainDoc = document;
-			panel.webview.html = getWebviewContent(text, context);
+			panel.webview.html = getWebviewContent(getPathsForDocument(text), context);
 			//vscode.window.activeTextEditor.document.conten
 		  }).catch((ex) => console.error(ex));
 
@@ -76,7 +79,7 @@ function getNonce() {
     return text;
 }
 
-function getWebviewContent(body, context) {
+function getWebviewContent(paths, context) {
 	const scripts = ['svg-beziers', 'bezier', 'draw', 'interaction', 'main']
 	const scriptUris = scripts.reduce((acc, scriptName) => {
 		const scriptPathOnDisk = vscode.Uri.file(path.join(context.extensionPath, 'webview', 'js', `${scriptName}.js`));
@@ -101,6 +104,9 @@ function getWebviewContent(body, context) {
 	<script nonce="${nonce}" src="${scriptUris['svg-beziers']}"></script>
 	<script nonce="${nonce}" src="${scriptUris['draw']}"></script>
 	<script nonce="${nonce}" src="${scriptUris['interaction']}"></script>
+	<script nonce="${nonce}">
+		var initialPaths = ${JSON.stringify(paths)};
+	</script>
 	<script nonce="${nonce}" src="${scriptUris['main']}"></script>
 </head>
 <body>
