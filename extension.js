@@ -77,7 +77,7 @@ function getNonce() {
 }
 
 function getWebviewContent(body, context) {
-	const scripts = ['main', 'bezier', 'draw', 'interaction']
+	const scripts = ['svg-beziers', 'bezier', 'draw', 'interaction', 'main']
 	const scriptUris = scripts.reduce((acc, scriptName) => {
 		const scriptPathOnDisk = vscode.Uri.file(path.join(context.extensionPath, 'webview', 'js', `${scriptName}.js`));
 		const scriptUri = scriptPathOnDisk.with({ scheme: 'vscode-resource' });
@@ -98,6 +98,7 @@ function getWebviewContent(body, context) {
 	-->
 	<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src vscode-resource: https:; script-src 'nonce-${nonce}';style-src vscode-resource: 'unsafe-inline' http: https: data:;">
 	<script nonce="${nonce}" src="${scriptUris['bezier']}"></script>
+	<script nonce="${nonce}" src="${scriptUris['svg-beziers']}"></script>
 	<script nonce="${nonce}" src="${scriptUris['draw']}"></script>
 	<script nonce="${nonce}" src="${scriptUris['interaction']}"></script>
 	<script nonce="${nonce}" src="${scriptUris['main']}"></script>

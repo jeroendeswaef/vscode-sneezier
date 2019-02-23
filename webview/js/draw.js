@@ -2,8 +2,8 @@ function bindDrawFunctions(idx) {
 
   var figure = find("figure")[idx];
   var cvs = document.createElement("canvas");
-  cvs.width = 200;
-  cvs.height = 200;
+  cvs.width = 500;
+  cvs.height = 500;
   var ctx = cvs.getContext("2d");
   figure.appendChild(cvs);
   var button = figure.querySelector("button");
@@ -67,7 +67,7 @@ function bindDrawFunctions(idx) {
       this.drawLine(pts[0], pts[1], offset);
       if(pts.length === 3) { this.drawLine(pts[1], pts[2], offset); }
       else {this.drawLine(pts[2], pts[3], offset); }
-      ctx.strokeStyle = "black";
+      //ctx.strokeStyle = "black";
       if(!nocoords) this.drawPoints(pts, offset);
     },
 
