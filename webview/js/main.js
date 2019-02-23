@@ -1,7 +1,3 @@
-(function() {
-	console.info("Called main.js!");
-})();
-
 NodeList.prototype.array = function() {
 	return Array.prototype.slice.call(this);
 };
@@ -10,7 +6,33 @@ function find(qs) {
 	return document.querySelectorAll(qs).array();
 }
 
+var CurvesView = {
+    oninit: function() {
+        this.lineIndex = startLine;
+        window.addEventListener('message', event => {
+
+            const message = event.data; // The JSON data our extension sent
+        
+            switch (message.command) {
+                case 'selectLine':
+                    this.lineIndex = message.lineIndex;
+                    m.redraw();
+                    break;
+            }
+        });
+    },
+    setLineIndex(index) {
+        this.lineIndex = index;
+    },
+    view: function() {
+        return m("div", [m("figure"), m("span", {}, this.lineIndex)])
+    }
+}
+
+
 function loadAll() {
+    const vscode = acquireVsCodeApi();
+    m.mount(document.getElementById("app"), CurvesView)
     var fns = bindDrawFunctions(0);
     let curves = [];
     initialPaths.forEach(path => curves = curves.concat(convertPath(Bezier, path).curves));

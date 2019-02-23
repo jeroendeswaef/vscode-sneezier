@@ -22,29 +22,37 @@ function activate(context) {
 	// Now provide the implementation of the command with  registerCommand
 	// The commandId parameter must match the command field in package.json
 	let disposable = vscode.commands.registerCommand('extension.sneezier', function () {
+		const associatedFilename = vscode.window.activeTextEditor.document.fileName;
 		//console.info("fn>", vscode.window.activeTextEditor.document.fileName, vscode.window.activeTextEditor.document.languageId)
 		let mainDoc = null;
 		vscode.workspace.onDidChangeTextDocument(changeEvent => {
 			console.log(`Did change: ${changeEvent.document.uri}`);
-			if (mainDoc) console.info(mainDoc.getText());
+			//if (mainDoc) console.info(mainDoc.getText());
 			// for (const change of changeEvent.contentChanges) {
 			// 	 console.log(change.range); // range of text being replaced
 			// 	 console.log(change.text); // text replacement
 			// }
 	   });
 
-		// The code you place here will be executed every time your command is executed
-		const panel = vscode.window.createWebviewPanel(
-			'sneezier',
-			'Sneezier',
-			vscode.ViewColumn.Two,
-			{enableScripts: true}
-		);
+	   
+	   // The code you place here will be executed every time your command is executed
+	   const panel = vscode.window.createWebviewPanel(
+		   'sneezier',
+		   'Sneezier',
+		   vscode.ViewColumn.Two,
+		   {enableScripts: true}
+		   );
+		   
+		vscode.window.onDidChangeTextEditorSelection(selectionChangeEvent => {
+			if (selectionChangeEvent.textEditor.document.fileName === associatedFilename) {
+				panel.webview.postMessage({ command: 'selectLine', lineIndex: selectionChangeEvent.selections[0].start.line });
+			}
+		})
 
 		vscode.workspace.openTextDocument(vscode.window.activeTextEditor.document.fileName).then((document) => {
 			let text = document.getText();
 			mainDoc = document;
-			panel.webview.html = getWebviewContent(getPathsForDocument(text), context);
+			panel.webview.html = getWebviewContent(getPathsForDocument(text), context, vscode.window.activeTextEditor.selection.start.line);
 			//vscode.window.activeTextEditor.document.conten
 		  }).catch((ex) => console.error(ex));
 
@@ -79,8 +87,8 @@ function getNonce() {
     return text;
 }
 
-function getWebviewContent(paths, context) {
-	const scripts = ['svg-beziers', 'bezier', 'draw', 'interaction', 'main']
+function getWebviewContent(paths, context, startLine) {
+	const scripts = ['svg-beziers', 'bezier', 'draw', 'interaction', 'mithril', 'main']
 	const scriptUris = scripts.reduce((acc, scriptName) => {
 		const scriptPathOnDisk = vscode.Uri.file(path.join(context.extensionPath, 'webview', 'js', `${scriptName}.js`));
 		const scriptUri = scriptPathOnDisk.with({ scheme: 'vscode-resource' });
@@ -88,7 +96,7 @@ function getWebviewContent(paths, context) {
 	}, {})
 
 	const nonce = getNonce();
-	console.info('uris>', scriptUris);
+
 	return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -100,18 +108,15 @@ function getWebviewContent(paths, context) {
 	and only allow scripts that have a specific nonce.
 	-->
 	<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src vscode-resource: https:; script-src 'nonce-${nonce}';style-src vscode-resource: 'unsafe-inline' http: https: data:;">
-	<script nonce="${nonce}" src="${scriptUris['bezier']}"></script>
-	<script nonce="${nonce}" src="${scriptUris['svg-beziers']}"></script>
-	<script nonce="${nonce}" src="${scriptUris['draw']}"></script>
-	<script nonce="${nonce}" src="${scriptUris['interaction']}"></script>
 	<script nonce="${nonce}">
 		var initialPaths = ${JSON.stringify(paths)};
+		var startLine = ${startLine};
 	</script>
-	<script nonce="${nonce}" src="${scriptUris['main']}"></script>
+	${Object.keys(scriptUris).map((scriptName) => `<script nonce="${nonce}" src="${scriptUris[scriptName]}"></script>`).join('\n')}
 </head>
 <body>
 	<noscript>You need to enable JavaScript to run this app.</noscript>
-	<figure></figure>
+	<div id="app"></div>
 </body>
 </html>`;
 }
