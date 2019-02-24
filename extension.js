@@ -42,6 +42,24 @@ function activate(context) {
 		   vscode.ViewColumn.Two,
 		   {enableScripts: true}
 		   );
+
+		const linkedTextEditor = vscode.window.activeTextEditor;
+		// Handle messages from the webview
+		panel.webview.onDidReceiveMessage(
+			message => {
+				switch (message.command) {
+					case 'lineChanged':
+						//vscode.window.showErrorMessage(message.text);
+						linkedTextEditor.edit((editBuilder) => {
+							console.info(linkedTextEditor.document.lineAt(message.line).range);
+							editBuilder.replace(linkedTextEditor.document.lineAt(message.line).range, message.content);
+						});
+						return;
+				}
+			},
+			undefined,
+			context.subscriptions
+		);
 		   
 		vscode.window.onDidChangeTextEditorSelection(selectionChangeEvent => {
 			if (selectionChangeEvent.textEditor.document.fileName === associatedFilename) {
@@ -88,7 +106,7 @@ function getNonce() {
 }
 
 function getWebviewContent(paths, context, startLine) {
-	const scripts = ['svg-beziers', 'bezier', 'draw', 'interaction', 'mithril', 'main']
+	const scripts = ['svg-beziers', 'bezier', 'draw', 'interaction', 'mithril', 'lodash.custom.min', 'main']
 	const scriptUris = scripts.reduce((acc, scriptName) => {
 		const scriptPathOnDisk = vscode.Uri.file(path.join(context.extensionPath, 'webview', 'js', `${scriptName}.js`));
 		const scriptUri = scriptPathOnDisk.with({ scheme: 'vscode-resource' });

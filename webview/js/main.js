@@ -6,6 +6,8 @@ function find(qs) {
 	return document.querySelectorAll(qs).array();
 }
 
+const vscode = acquireVsCodeApi();
+
 var CurvesView = {
     oninit: function() {
         this.lineIndex = startLine;
@@ -21,8 +23,52 @@ var CurvesView = {
             }
         });
     },
-    setLineIndex(index) {
-        this.lineIndex = index;
+    oncreate: function() {
+        this.fns = bindDrawFunctions(0);
+        let curves = [];
+        var previousPaths = initialPaths;
+        initialPaths.forEach((path, i) => curves = curves.concat(convertPath(Bezier, path).curves.map(curve => Object.assign(curve, { line: i}))));
+        this.drawFns = [];
+        const updateFn = _.debounce(() => {
+            for(let i = 0; i < curves.length; i++) {
+                const curve = curves[i];
+                const newPath = curve.toSVG()
+                if (previousPaths[i] != newPath) {
+                    console.info("changed", i, previousPaths[i], '>', curve.toSVG());
+                    vscode.postMessage({
+                        command: 'lineChanged',
+                        line: i,
+                        content: newPath
+                    })
+                    previousPaths[i] = newPath;
+                }
+            }
+        }, 1000);
+        for(let i = 0; i < curves.length; i++) {
+            const curve = curves[i];
+            console.info('c>', curve.toSVG());
+            const draw = () => {
+                if (i === this.lineIndex) {
+                    this.fns.drawSkeleton(curve);
+                }
+                this.fns.setColor("#FF0000");
+                this.fns.drawCurve(curve);
+            };
+            this.drawFns.push(draw);
+            draw();
+            handleInteraction(this.fns.getCanvas(), curve).onupdate = (evt) => {
+                if (evt) {
+                    updateFn();
+                    //console.info("handleInteraction", typeof debounce, typeof lodash, typeof _, typeof _.debounce);
+                    this.fns.reset(curve); 
+                    this.drawFns.forEach(draw => draw(evt));
+                }
+            };
+        }
+    },
+    onupdate: function(vnode) {
+        this.fns.reset(); 
+        this.drawFns.forEach(draw => draw());
     },
     view: function() {
         return m("div", [m("figure"), m("span", {}, this.lineIndex)])
@@ -31,31 +77,7 @@ var CurvesView = {
 
 
 function loadAll() {
-    const vscode = acquireVsCodeApi();
     m.mount(document.getElementById("app"), CurvesView)
-    var fns = bindDrawFunctions(0);
-    let curves = [];
-    initialPaths.forEach(path => curves = curves.concat(convertPath(Bezier, path).curves));
-    const activeCurveIndex = 0;
-    const drawFns = [];
-    for(let i = 0; i < curves.length; i++) {
-        const curve = curves[i];
-        const draw = function() {
-            if (i === activeCurveIndex) {
-                fns.drawSkeleton(curve);
-            }
-            fns.setColor("#FF0000");
-            fns.drawCurve(curve);
-        };
-        drawFns.push(draw);
-        draw();
-        if (i === activeCurveIndex) {
-            handleInteraction(fns.getCanvas(), curve).onupdate = function(evt) {
-                fns.reset(curve); 
-                drawFns.forEach(draw => draw(evt));
-            };
-        }
-    }
 }
 
 document.addEventListener("DOMContentLoaded", loadAll);
