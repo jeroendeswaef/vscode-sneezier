@@ -113,6 +113,8 @@ function getWebviewContent(paths, context, startLine) {
 		return Object.assign(acc, { [scriptName]: scriptUri });
 	}, {})
 
+	const cssPathOnDisk = vscode.Uri.file(path.join(context.extensionPath, 'webview', 'css', 'main.css'));
+	const cssUri = cssPathOnDisk.with({ scheme: 'vscode-resource' })
 	const nonce = getNonce();
 
 	return `<!DOCTYPE html>
@@ -126,6 +128,7 @@ function getWebviewContent(paths, context, startLine) {
 	and only allow scripts that have a specific nonce.
 	-->
 	<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src vscode-resource: https:; script-src 'nonce-${nonce}';style-src vscode-resource: 'unsafe-inline' http: https: data:;">
+	<link rel="stylesheet" type="text/css" href="${cssUri}" />
 	<script nonce="${nonce}">
 		var initialPaths = ${JSON.stringify(paths)};
 		var startLine = ${startLine};

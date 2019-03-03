@@ -1,0 +1,27 @@
+html, body {
+    height: 100%;
+}
+
+#app, body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* figure {
+    position: relative;
+    background: orange;
+    z-index: 20;
+} */
+
+/* figure::after {
+    content: '';
+    display: 'block';
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    background-color: purple;
+    z-index: -1;
+} */
