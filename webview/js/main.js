@@ -27,6 +27,7 @@ var CurvesView = {
         this.fns = bindDrawFunctions(0);
         let curves = [];
         var previousPaths = initialPaths;
+
         initialPaths.forEach((path, i) => curves = curves.concat(convertPath(Bezier, path).curves.map(curve => Object.assign(curve, { line: i}))));
         this.drawFns = [];
         const updateFn = _.debounce(() => {
@@ -76,8 +77,25 @@ var CurvesView = {
 }
 
 
+function DrawingPanel() {
+    var opacity = 30;
+    return {
+        oninit: () => {
+            this.background = _.get(initialMetadata, 'background');
+        },
+        view: () => m("div", [
+            m("img", { style: `opacity: ${opacity / 100}`, src: this.background }),
+            m("input", { onchange: (ev) => { opacity = parseInt(ev.target.value)}, type: "range", min: "0", "max": 100, "value": opacity, "step": 1 })
+        ])
+    }
+}
+
 function loadAll() {
-    m.mount(document.getElementById("app"), CurvesView)
+    try {
+        m.mount(document.getElementById("app"), DrawingPanel)
+    } catch(ex) {
+        console.error(ex)
+    }
 }
 
 document.addEventListener("DOMContentLoaded", loadAll);

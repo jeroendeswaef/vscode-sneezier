@@ -3,12 +3,8 @@
 const vscode = require('vscode');
 const path = require('path');
 
-// this method is called when your extension is activated
-// your extension is activated the very first time the command is executed
+const SneezierFile = require('./SneezierFile');
 
-function getPathsForDocument(text) {
-	return text.split('\n').filter(line => line);
-}
 /**
  * @param {vscode.ExtensionContext} context
  */
@@ -70,7 +66,8 @@ function activate(context) {
 		vscode.workspace.openTextDocument(vscode.window.activeTextEditor.document.fileName).then((document) => {
 			let text = document.getText();
 			mainDoc = document;
-			panel.webview.html = getWebviewContent(getPathsForDocument(text), context, vscode.window.activeTextEditor.selection.start.line);
+			const sneezierFile = new SneezierFile(text)
+			panel.webview.html = getWebviewContent(sneezierFile.getPaths(), { background: sneezierFile.getBackground() }, context, vscode.window.activeTextEditor.selection.start.line);
 			//vscode.window.activeTextEditor.document.conten
 		  }).catch((ex) => console.error(ex));
 
@@ -105,7 +102,7 @@ function getNonce() {
     return text;
 }
 
-function getWebviewContent(paths, context, startLine) {
+function getWebviewContent(paths, metadata, context, startLine) {
 	const scripts = ['svg-beziers', 'bezier', 'draw', 'interaction', 'mithril', 'lodash.custom.min', 'main']
 	const scriptUris = scripts.reduce((acc, scriptName) => {
 		const scriptPathOnDisk = vscode.Uri.file(path.join(context.extensionPath, 'webview', 'js', `${scriptName}.js`));
@@ -131,6 +128,7 @@ function getWebviewContent(paths, context, startLine) {
 	<link rel="stylesheet" type="text/css" href="${cssUri}" />
 	<script nonce="${nonce}">
 		var initialPaths = ${JSON.stringify(paths)};
+		var initialMetadata = ${JSON.stringify(metadata)};
 		var startLine = ${startLine};
 	</script>
 	${Object.keys(scriptUris).map((scriptName) => `<script nonce="${nonce}" src="${scriptUris[scriptName]}"></script>`).join('\n')}

@@ -14,6 +14,17 @@
 	],
 	"main": "./extension.js",
 	"contributes": {
+		"languages": [{
+            "id": "sneezier",
+            "aliases": ["sneezier", "sneezier"],
+            "extensions": [".snz"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "sneezier",
+            "scopeName": "source.snz",
+            "path": "./syntaxes/sneezier.tmLanguage.json"
+        }],
 		"commands": [
 			{
 				"command": "extension.sneezier",

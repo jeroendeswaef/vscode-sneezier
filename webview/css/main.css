@@ -8,6 +8,13 @@ html, body {
     justify-content: center;
 }
 
+input[type=range] {
+    margin: 0 auto;
+    display: block;
+    margin-top: 2rem;
+    width: 60%;
+}
+
 /* figure {
     position: relative;
     background: orange;
