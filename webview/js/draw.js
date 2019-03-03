@@ -1,9 +1,9 @@
-function bindDrawFunctions(idx) {
+function bindDrawFunctions(idx, width, height) {
 
   var figure = find("figure")[idx];
   var cvs = document.createElement("canvas");
-  cvs.width = 500;
-  cvs.height = 500;
+  cvs.width = width;
+  cvs.height = height;
   var ctx = cvs.getContext("2d");
   figure.appendChild(cvs);
   var button = figure.querySelector("button");

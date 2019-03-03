@@ -23,8 +23,8 @@ var CurvesView = {
             }
         });
     },
-    oncreate: function() {
-        this.fns = bindDrawFunctions(0);
+    oncreate: function(vnode) {
+        this.fns = bindDrawFunctions(0, vnode.attrs.imageWidth, vnode.attrs.imageHeight);
         let curves = [];
         var previousPaths = initialPaths;
 
@@ -35,7 +35,6 @@ var CurvesView = {
                 const curve = curves[i];
                 const newPath = curve.toSVG()
                 if (previousPaths[i] != newPath) {
-                    console.info("changed", i, previousPaths[i], '>', curve.toSVG());
                     vscode.postMessage({
                         command: 'lineChanged',
                         line: i,
@@ -47,7 +46,6 @@ var CurvesView = {
         }, 1000);
         for(let i = 0; i < curves.length; i++) {
             const curve = curves[i];
-            console.info('c>', curve.toSVG());
             const draw = () => {
                 if (i === this.lineIndex) {
                     this.fns.drawSkeleton(curve);
@@ -72,19 +70,23 @@ var CurvesView = {
         this.drawFns.forEach(draw => draw());
     },
     view: function() {
-        return m("div", [m("figure"), m("span", {}, this.lineIndex)])
+        return m("figure")
     }
 }
 
 
 function DrawingPanel() {
-    var opacity = 30;
+    let opacity = 30;
+    let imageWidth = null;
+    let imageHeight = null;
     return {
         oninit: () => {
             this.background = _.get(initialMetadata, 'background');
         },
         view: () => m("div", [
-            m("img", { style: `opacity: ${opacity / 100}`, src: this.background }),
+            m("div", { class: 'drawing-area' }, [
+                m("img", { onload: function() { imageWidth = this.width; imageHeight = this.height; }, style: `opacity: ${opacity / 100}`, src: this.background }),
+            ].concat(imageWidth ? [ m(CurvesView, { imageWidth, imageHeight })] : null)),
             m("input", { onchange: (ev) => { opacity = parseInt(ev.target.value)}, type: "range", min: "0", "max": 100, "value": opacity, "step": 1 })
         ])
     }
