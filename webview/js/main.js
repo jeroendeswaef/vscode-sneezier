@@ -26,28 +26,27 @@ var CurvesView = {
     oncreate: function(vnode) {
         this.fns = bindDrawFunctions(0, vnode.attrs.imageWidth, vnode.attrs.imageHeight);
         let curves = [];
-        var previousPaths = initialPaths;
-
-        initialPaths.forEach((path, i) => curves = curves.concat(convertPath(Bezier, path).curves.map(curve => Object.assign(curve, { line: i}))));
+        let previousPaths = initialPaths;
+        initialPaths.forEach((path, i) => curves = curves.concat(convertPath(Bezier, path.svgPath).curves.map(curve => Object.assign(curve, { line: path.line }))));
         this.drawFns = [];
         const updateFn = _.debounce(() => {
             for(let i = 0; i < curves.length; i++) {
                 const curve = curves[i];
                 const newPath = curve.toSVG()
-                if (previousPaths[i] != newPath) {
-                    vscode.postMessage({
-                        command: 'lineChanged',
-                        line: i,
-                        content: newPath
-                    })
-                    previousPaths[i] = newPath;
+                if (previousPaths[i].svgPath != newPath) {
+                    // vscode.postMessage({
+                    //     command: 'lineChanged',
+                    //     line: i,
+                    //     content: newPath
+                    // })
+                    // previousPaths[i] = newPath;
                 }
             }
         }, 1000);
         for(let i = 0; i < curves.length; i++) {
             const curve = curves[i];
             const draw = () => {
-                if (i === this.lineIndex) {
+                if (curve.line === this.lineIndex) {
                     this.fns.drawSkeleton(curve);
                 }
                 this.fns.setColor("#FF0000");

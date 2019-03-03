@@ -1,6 +1,7 @@
 class SneezierFile {
     constructor(text) {
         let content;
+        let startIndex = 0;
         var lines = text.split('\n');
         if (lines.length > 0) {
             const [header, ...rest] = lines;
@@ -12,10 +13,19 @@ class SneezierFile {
                     this.background = backgroundMatch[1];
                 }
                 content = rest;
+                startIndex = 1;
             }
         } 
         if (!content) content = lines;
-        this.paths = content.filter(line => line);
+        this.paths = [];
+        for (let i = 0; i < content.length; i++) {
+            if (content[i]) {
+                this.paths.push({
+                    svgPath: content[i],
+                    line: i + startIndex
+                })
+            }
+        }
     }
 
     getPaths() {
