@@ -14,17 +14,26 @@
 	],
 	"main": "./extension.js",
 	"contributes": {
-		"languages": [{
-            "id": "sneezier",
-            "aliases": ["sneezier", "sneezier"],
-            "extensions": [".snz"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "sneezier",
-            "scopeName": "source.snz",
-            "path": "./syntaxes/sneezier.tmLanguage.json"
-        }],
+		"languages": [
+			{
+				"id": "sneezier",
+				"aliases": [
+					"sneezier",
+					"sneezier"
+				],
+				"extensions": [
+					".snz"
+				],
+				"configuration": "./language-configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "sneezier",
+				"scopeName": "source.snz",
+				"path": "./syntaxes/sneezier.tmLanguage.json"
+			}
+		],
 		"commands": [
 			{
 				"command": "extension.sneezier",
@@ -43,5 +52,8 @@
 		"lodash-cli": "^4.17.5",
 		"typescript": "^3.3.1",
 		"vscode": "^1.1.28"
+	},
+	"dependencies": {
+		"antlr4": "^4.7.2"
 	}
 }

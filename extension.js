@@ -2,8 +2,11 @@
 // Import the module and reference it with the alias vscode in your code below
 const vscode = require('vscode');
 const path = require('path');
+const antlr4 = require('antlr4');
 
 const SneezierFile = require('./SneezierFile');
+const ExprLexer = require('./parser/ExprLexer').ExprLexer;
+const ExprParser = require('./parser/ExprParser').ExprParser;
 
 /**
  * @param {vscode.ExtensionContext} context
@@ -13,6 +16,16 @@ function activate(context) {
 	// Use the console to output diagnostic information (console.log) and errors (console.error)
 	// This line of code will only be executed once when your extension is activated
 	console.log('Congratulations, your extension "sneezier" is now active!');
+
+	var input = "1+(2*4)\n"
+	var chars = new antlr4.InputStream(input);
+	var lexer = new ExprLexer(chars);
+	var tokens  = new antlr4.CommonTokenStream(lexer);
+	var parser = new ExprParser(tokens);
+	parser.buildParseTrees = true;
+	var tree = parser.prog();
+
+	console.log('OK');
 
 	// The command has been defined in the package.json file
 	// Now provide the implementation of the command with  registerCommand
