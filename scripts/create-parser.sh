@@ -1,1 +1,3 @@
-antlr4 -Dlanguage=JavaScript parser/Expr.g4
+#!/usr/bin/env bash
+
+antlr4 -Dlanguage=JavaScript parser/SvgPath.g4
