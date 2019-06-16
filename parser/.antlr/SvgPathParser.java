@@ -23,35 +23,34 @@ public class SvgPathParser extends Parser {
 		T__31=32, T__32=33, T__33=34, T__34=35, T__35=36, T__36=37, T__37=38, 
 		T__38=39, T__39=40;
 	public static final int
-		RULE_eval = 0, RULE_svg_path = 1, RULE_moveto_drawto_command_groups = 2, 
-		RULE_moveto_drawto_command_group = 3, RULE_drawto_commands = 4, RULE_drawto_command = 5, 
-		RULE_moveto = 6, RULE_moveto_argument_sequence = 7, RULE_closepath = 8, 
-		RULE_lineto = 9, RULE_lineto_argument_sequence = 10, RULE_horizontal_lineto = 11, 
-		RULE_horizontal_lineto_argument_sequence = 12, RULE_vertical_lineto = 13, 
-		RULE_vertical_lineto_argument_sequence = 14, RULE_curveto = 15, RULE_curveto_argument_sequence = 16, 
-		RULE_curveto_argument = 17, RULE_smooth_curveto = 18, RULE_smooth_curveto_argument_sequence = 19, 
-		RULE_smooth_curveto_argument = 20, RULE_quadratic_bezier_curveto = 21, 
-		RULE_quadratic_bezier_curveto_argument_sequence = 22, RULE_quadratic_bezier_curveto_argument = 23, 
-		RULE_smooth_quadratic_bezier_curveto = 24, RULE_smooth_quadratic_bezier_curveto_argument_sequence = 25, 
-		RULE_elliptical_arc = 26, RULE_elliptical_arc_argument_sequence = 27, 
-		RULE_elliptical_arc_argument = 28, RULE_coordinate_pair = 29, RULE_coordinate = 30, 
-		RULE_nonnegative_number = 31, RULE_number = 32, RULE_flag = 33, RULE_comma_wsp = 34, 
-		RULE_comma = 35, RULE_integer_constant = 36, RULE_floating_point_constant = 37, 
-		RULE_fractional_constant = 38, RULE_exponent = 39, RULE_sign = 40, RULE_digit_sequence = 41, 
-		RULE_digit = 42, RULE_wsp = 43;
+		RULE_eval = 0, RULE_svgPath = 1, RULE_movetoDrawtoCommandGroups = 2, RULE_movetoDrawtoCommandGroup = 3, 
+		RULE_drawtoCommands = 4, RULE_drawtoCommand = 5, RULE_moveto = 6, RULE_movetoArgumentSequence = 7, 
+		RULE_closepath = 8, RULE_lineto = 9, RULE_linetoArgumentSequence = 10, 
+		RULE_horizontalLineto = 11, RULE_horizontalLinetoArgumentSequence = 12, 
+		RULE_verticalLineto = 13, RULE_verticalLinetoArgumentSequence = 14, RULE_curveto = 15, 
+		RULE_curvetoArgumentSequence = 16, RULE_curvetoArgument = 17, RULE_smoothCurveto = 18, 
+		RULE_smoothCurvetoArgumentSequence = 19, RULE_smoothCurvetoArgument = 20, 
+		RULE_quadraticBezierCurveto = 21, RULE_quadraticBezierCurvetoArgumentSequence = 22, 
+		RULE_quadraticBezierCurvetoArgument = 23, RULE_smoothQuadraticBezierCurveto = 24, 
+		RULE_smoothQuadraticBezierCurvetoArgumentSequence = 25, RULE_ellipticalArc = 26, 
+		RULE_ellipticalArcArgumentSequence = 27, RULE_ellipticalArcArgument = 28, 
+		RULE_coordinatePair = 29, RULE_coordinate = 30, RULE_nonnegativeNumber = 31, 
+		RULE_number = 32, RULE_flag = 33, RULE_commaWsp = 34, RULE_comma = 35, 
+		RULE_integerConstant = 36, RULE_floatingPointConstant = 37, RULE_fractionalConstant = 38, 
+		RULE_exponent = 39, RULE_sign = 40, RULE_digitSequence = 41, RULE_digit = 42, 
+		RULE_wsp = 43;
 	public static final String[] ruleNames = {
-		"eval", "svg_path", "moveto_drawto_command_groups", "moveto_drawto_command_group", 
-		"drawto_commands", "drawto_command", "moveto", "moveto_argument_sequence", 
-		"closepath", "lineto", "lineto_argument_sequence", "horizontal_lineto", 
-		"horizontal_lineto_argument_sequence", "vertical_lineto", "vertical_lineto_argument_sequence", 
-		"curveto", "curveto_argument_sequence", "curveto_argument", "smooth_curveto", 
-		"smooth_curveto_argument_sequence", "smooth_curveto_argument", "quadratic_bezier_curveto", 
-		"quadratic_bezier_curveto_argument_sequence", "quadratic_bezier_curveto_argument", 
-		"smooth_quadratic_bezier_curveto", "smooth_quadratic_bezier_curveto_argument_sequence", 
-		"elliptical_arc", "elliptical_arc_argument_sequence", "elliptical_arc_argument", 
-		"coordinate_pair", "coordinate", "nonnegative_number", "number", "flag", 
-		"comma_wsp", "comma", "integer_constant", "floating_point_constant", "fractional_constant", 
-		"exponent", "sign", "digit_sequence", "digit", "wsp"
+		"eval", "svgPath", "movetoDrawtoCommandGroups", "movetoDrawtoCommandGroup", 
+		"drawtoCommands", "drawtoCommand", "moveto", "movetoArgumentSequence", 
+		"closepath", "lineto", "linetoArgumentSequence", "horizontalLineto", "horizontalLinetoArgumentSequence", 
+		"verticalLineto", "verticalLinetoArgumentSequence", "curveto", "curvetoArgumentSequence", 
+		"curvetoArgument", "smoothCurveto", "smoothCurvetoArgumentSequence", "smoothCurvetoArgument", 
+		"quadraticBezierCurveto", "quadraticBezierCurvetoArgumentSequence", "quadraticBezierCurvetoArgument", 
+		"smoothQuadraticBezierCurveto", "smoothQuadraticBezierCurvetoArgumentSequence", 
+		"ellipticalArc", "ellipticalArcArgumentSequence", "ellipticalArcArgument", 
+		"coordinatePair", "coordinate", "nonnegativeNumber", "number", "flag", 
+		"commaWsp", "comma", "integerConstant", "floatingPointConstant", "fractionalConstant", 
+		"exponent", "sign", "digitSequence", "digit", "wsp"
 	};
 
 	private static final String[] _LITERAL_NAMES = {
@@ -112,8 +111,8 @@ public class SvgPathParser extends Parser {
 		_interp = new ParserATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
 	}
 	public static class EvalContext extends ParserRuleContext {
-		public Svg_pathContext svg_path() {
-			return getRuleContext(Svg_pathContext.class,0);
+		public SvgPathContext svgPath() {
+			return getRuleContext(SvgPathContext.class,0);
 		}
 		public EvalContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -128,7 +127,7 @@ public class SvgPathParser extends Parser {
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(88);
-			svg_path();
+			svgPath();
 			}
 		}
 		catch (RecognitionException re) {
@@ -142,25 +141,25 @@ public class SvgPathParser extends Parser {
 		return _localctx;
 	}
 
-	public static class Svg_pathContext extends ParserRuleContext {
+	public static class SvgPathContext extends ParserRuleContext {
 		public List<WspContext> wsp() {
 			return getRuleContexts(WspContext.class);
 		}
 		public WspContext wsp(int i) {
 			return getRuleContext(WspContext.class,i);
 		}
-		public Moveto_drawto_command_groupsContext moveto_drawto_command_groups() {
-			return getRuleContext(Moveto_drawto_command_groupsContext.class,0);
+		public MovetoDrawtoCommandGroupsContext movetoDrawtoCommandGroups() {
+			return getRuleContext(MovetoDrawtoCommandGroupsContext.class,0);
 		}
-		public Svg_pathContext(ParserRuleContext parent, int invokingState) {
+		public SvgPathContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_svg_path; }
+		@Override public int getRuleIndex() { return RULE_svgPath; }
 	}
 
-	public final Svg_pathContext svg_path() throws RecognitionException {
-		Svg_pathContext _localctx = new Svg_pathContext(_ctx, getState());
-		enterRule(_localctx, 2, RULE_svg_path);
+	public final SvgPathContext svgPath() throws RecognitionException {
+		SvgPathContext _localctx = new SvgPathContext(_ctx, getState());
+		enterRule(_localctx, 2, RULE_svgPath);
 		int _la;
 		try {
 			int _alt;
@@ -188,7 +187,7 @@ public class SvgPathParser extends Parser {
 			if (_la==T__0 || _la==T__1) {
 				{
 				setState(96);
-				moveto_drawto_command_groups();
+				movetoDrawtoCommandGroups();
 				}
 			}
 
@@ -219,12 +218,12 @@ public class SvgPathParser extends Parser {
 		return _localctx;
 	}
 
-	public static class Moveto_drawto_command_groupsContext extends ParserRuleContext {
-		public Moveto_drawto_command_groupContext moveto_drawto_command_group() {
-			return getRuleContext(Moveto_drawto_command_groupContext.class,0);
+	public static class MovetoDrawtoCommandGroupsContext extends ParserRuleContext {
+		public MovetoDrawtoCommandGroupContext movetoDrawtoCommandGroup() {
+			return getRuleContext(MovetoDrawtoCommandGroupContext.class,0);
 		}
-		public Moveto_drawto_command_groupsContext moveto_drawto_command_groups() {
-			return getRuleContext(Moveto_drawto_command_groupsContext.class,0);
+		public MovetoDrawtoCommandGroupsContext movetoDrawtoCommandGroups() {
+			return getRuleContext(MovetoDrawtoCommandGroupsContext.class,0);
 		}
 		public List<WspContext> wsp() {
 			return getRuleContexts(WspContext.class);
@@ -232,15 +231,15 @@ public class SvgPathParser extends Parser {
 		public WspContext wsp(int i) {
 			return getRuleContext(WspContext.class,i);
 		}
-		public Moveto_drawto_command_groupsContext(ParserRuleContext parent, int invokingState) {
+		public MovetoDrawtoCommandGroupsContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_moveto_drawto_command_groups; }
+		@Override public int getRuleIndex() { return RULE_movetoDrawtoCommandGroups; }
 	}
 
-	public final Moveto_drawto_command_groupsContext moveto_drawto_command_groups() throws RecognitionException {
-		Moveto_drawto_command_groupsContext _localctx = new Moveto_drawto_command_groupsContext(_ctx, getState());
-		enterRule(_localctx, 4, RULE_moveto_drawto_command_groups);
+	public final MovetoDrawtoCommandGroupsContext movetoDrawtoCommandGroups() throws RecognitionException {
+		MovetoDrawtoCommandGroupsContext _localctx = new MovetoDrawtoCommandGroupsContext(_ctx, getState());
+		enterRule(_localctx, 4, RULE_movetoDrawtoCommandGroups);
 		int _la;
 		try {
 			setState(115);
@@ -250,14 +249,14 @@ public class SvgPathParser extends Parser {
 				enterOuterAlt(_localctx, 1);
 				{
 				setState(105);
-				moveto_drawto_command_group();
+				movetoDrawtoCommandGroup();
 				}
 				break;
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
 				setState(106);
-				moveto_drawto_command_group();
+				movetoDrawtoCommandGroup();
 				setState(110);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
@@ -273,7 +272,7 @@ public class SvgPathParser extends Parser {
 					_la = _input.LA(1);
 				}
 				setState(113);
-				moveto_drawto_command_groups();
+				movetoDrawtoCommandGroups();
 				}
 				break;
 			}
@@ -289,7 +288,7 @@ public class SvgPathParser extends Parser {
 		return _localctx;
 	}
 
-	public static class Moveto_drawto_command_groupContext extends ParserRuleContext {
+	public static class MovetoDrawtoCommandGroupContext extends ParserRuleContext {
 		public MovetoContext moveto() {
 			return getRuleContext(MovetoContext.class,0);
 		}
@@ -299,18 +298,18 @@ public class SvgPathParser extends Parser {
 		public WspContext wsp(int i) {
 			return getRuleContext(WspContext.class,i);
 		}
-		public Drawto_commandsContext drawto_commands() {
-			return getRuleContext(Drawto_commandsContext.class,0);
+		public DrawtoCommandsContext drawtoCommands() {
+			return getRuleContext(DrawtoCommandsContext.class,0);
 		}
-		public Moveto_drawto_command_groupContext(ParserRuleContext parent, int invokingState) {
+		public MovetoDrawtoCommandGroupContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_moveto_drawto_command_group; }
+		@Override public int getRuleIndex() { return RULE_movetoDrawtoCommandGroup; }
 	}
 
-	public final Moveto_drawto_command_groupContext moveto_drawto_command_group() throws RecognitionException {
-		Moveto_drawto_command_groupContext _localctx = new Moveto_drawto_command_groupContext(_ctx, getState());
-		enterRule(_localctx, 6, RULE_moveto_drawto_command_group);
+	public final MovetoDrawtoCommandGroupContext movetoDrawtoCommandGroup() throws RecognitionException {
+		MovetoDrawtoCommandGroupContext _localctx = new MovetoDrawtoCommandGroupContext(_ctx, getState());
+		enterRule(_localctx, 6, RULE_movetoDrawtoCommandGroup);
 		int _la;
 		try {
 			int _alt;
@@ -340,7 +339,7 @@ public class SvgPathParser extends Parser {
 			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__2) | (1L << T__3) | (1L << T__4) | (1L << T__5) | (1L << T__6) | (1L << T__7) | (1L << T__8) | (1L << T__9) | (1L << T__10) | (1L << T__11) | (1L << T__12) | (1L << T__13) | (1L << T__14) | (1L << T__15) | (1L << T__16) | (1L << T__17) | (1L << T__18) | (1L << T__19))) != 0)) {
 				{
 				setState(124);
-				drawto_commands();
+				drawtoCommands();
 				}
 			}
 
@@ -357,12 +356,12 @@ public class SvgPathParser extends Parser {
 		return _localctx;
 	}
 
-	public static class Drawto_commandsContext extends ParserRuleContext {
-		public Drawto_commandContext drawto_command() {
-			return getRuleContext(Drawto_commandContext.class,0);
+	public static class DrawtoCommandsContext extends ParserRuleContext {
+		public DrawtoCommandContext drawtoCommand() {
+			return getRuleContext(DrawtoCommandContext.class,0);
 		}
-		public Drawto_commandsContext drawto_commands() {
-			return getRuleContext(Drawto_commandsContext.class,0);
+		public DrawtoCommandsContext drawtoCommands() {
+			return getRuleContext(DrawtoCommandsContext.class,0);
 		}
 		public List<WspContext> wsp() {
 			return getRuleContexts(WspContext.class);
@@ -370,15 +369,15 @@ public class SvgPathParser extends Parser {
 		public WspContext wsp(int i) {
 			return getRuleContext(WspContext.class,i);
 		}
-		public Drawto_commandsContext(ParserRuleContext parent, int invokingState) {
+		public DrawtoCommandsContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_drawto_commands; }
+		@Override public int getRuleIndex() { return RULE_drawtoCommands; }
 	}
 
-	public final Drawto_commandsContext drawto_commands() throws RecognitionException {
-		Drawto_commandsContext _localctx = new Drawto_commandsContext(_ctx, getState());
-		enterRule(_localctx, 8, RULE_drawto_commands);
+	public final DrawtoCommandsContext drawtoCommands() throws RecognitionException {
+		DrawtoCommandsContext _localctx = new DrawtoCommandsContext(_ctx, getState());
+		enterRule(_localctx, 8, RULE_drawtoCommands);
 		int _la;
 		try {
 			setState(137);
@@ -388,14 +387,14 @@ public class SvgPathParser extends Parser {
 				enterOuterAlt(_localctx, 1);
 				{
 				setState(127);
-				drawto_command();
+				drawtoCommand();
 				}
 				break;
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
 				setState(128);
-				drawto_command();
+				drawtoCommand();
 				setState(132);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
@@ -411,7 +410,7 @@ public class SvgPathParser extends Parser {
 					_la = _input.LA(1);
 				}
 				setState(135);
-				drawto_commands();
+				drawtoCommands();
 				}
 				break;
 			}
@@ -427,43 +426,43 @@ public class SvgPathParser extends Parser {
 		return _localctx;
 	}
 
-	public static class Drawto_commandContext extends ParserRuleContext {
+	public static class DrawtoCommandContext extends ParserRuleContext {
 		public ClosepathContext closepath() {
 			return getRuleContext(ClosepathContext.class,0);
 		}
 		public LinetoContext lineto() {
 			return getRuleContext(LinetoContext.class,0);
 		}
-		public Horizontal_linetoContext horizontal_lineto() {
-			return getRuleContext(Horizontal_linetoContext.class,0);
+		public HorizontalLinetoContext horizontalLineto() {
+			return getRuleContext(HorizontalLinetoContext.class,0);
 		}
-		public Vertical_linetoContext vertical_lineto() {
-			return getRuleContext(Vertical_linetoContext.class,0);
+		public VerticalLinetoContext verticalLineto() {
+			return getRuleContext(VerticalLinetoContext.class,0);
 		}
 		public CurvetoContext curveto() {
 			return getRuleContext(CurvetoContext.class,0);
 		}
-		public Smooth_curvetoContext smooth_curveto() {
-			return getRuleContext(Smooth_curvetoContext.class,0);
+		public SmoothCurvetoContext smoothCurveto() {
+			return getRuleContext(SmoothCurvetoContext.class,0);
 		}
-		public Quadratic_bezier_curvetoContext quadratic_bezier_curveto() {
-			return getRuleContext(Quadratic_bezier_curvetoContext.class,0);
+		public QuadraticBezierCurvetoContext quadraticBezierCurveto() {
+			return getRuleContext(QuadraticBezierCurvetoContext.class,0);
 		}
-		public Smooth_quadratic_bezier_curvetoContext smooth_quadratic_bezier_curveto() {
-			return getRuleContext(Smooth_quadratic_bezier_curvetoContext.class,0);
+		public SmoothQuadraticBezierCurvetoContext smoothQuadraticBezierCurveto() {
+			return getRuleContext(SmoothQuadraticBezierCurvetoContext.class,0);
 		}
-		public Elliptical_arcContext elliptical_arc() {
-			return getRuleContext(Elliptical_arcContext.class,0);
+		public EllipticalArcContext ellipticalArc() {
+			return getRuleContext(EllipticalArcContext.class,0);
 		}
-		public Drawto_commandContext(ParserRuleContext parent, int invokingState) {
+		public DrawtoCommandContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_drawto_command; }
+		@Override public int getRuleIndex() { return RULE_drawtoCommand; }
 	}
 
-	public final Drawto_commandContext drawto_command() throws RecognitionException {
-		Drawto_commandContext _localctx = new Drawto_commandContext(_ctx, getState());
-		enterRule(_localctx, 10, RULE_drawto_command);
+	public final DrawtoCommandContext drawtoCommand() throws RecognitionException {
+		DrawtoCommandContext _localctx = new DrawtoCommandContext(_ctx, getState());
+		enterRule(_localctx, 10, RULE_drawtoCommand);
 		try {
 			setState(148);
 			_errHandler.sync(this);
@@ -489,7 +488,7 @@ public class SvgPathParser extends Parser {
 				enterOuterAlt(_localctx, 3);
 				{
 				setState(141);
-				horizontal_lineto();
+				horizontalLineto();
 				}
 				break;
 			case T__8:
@@ -497,7 +496,7 @@ public class SvgPathParser extends Parser {
 				enterOuterAlt(_localctx, 4);
 				{
 				setState(142);
-				vertical_lineto();
+				verticalLineto();
 				}
 				break;
 			case T__10:
@@ -513,7 +512,7 @@ public class SvgPathParser extends Parser {
 				enterOuterAlt(_localctx, 6);
 				{
 				setState(144);
-				smooth_curveto();
+				smoothCurveto();
 				}
 				break;
 			case T__14:
@@ -521,7 +520,7 @@ public class SvgPathParser extends Parser {
 				enterOuterAlt(_localctx, 7);
 				{
 				setState(145);
-				quadratic_bezier_curveto();
+				quadraticBezierCurveto();
 				}
 				break;
 			case T__16:
@@ -529,7 +528,7 @@ public class SvgPathParser extends Parser {
 				enterOuterAlt(_localctx, 8);
 				{
 				setState(146);
-				smooth_quadratic_bezier_curveto();
+				smoothQuadraticBezierCurveto();
 				}
 				break;
 			case T__18:
@@ -537,7 +536,7 @@ public class SvgPathParser extends Parser {
 				enterOuterAlt(_localctx, 9);
 				{
 				setState(147);
-				elliptical_arc();
+				ellipticalArc();
 				}
 				break;
 			default:
@@ -556,8 +555,8 @@ public class SvgPathParser extends Parser {
 	}
 
 	public static class MovetoContext extends ParserRuleContext {
-		public Moveto_argument_sequenceContext moveto_argument_sequence() {
-			return getRuleContext(Moveto_argument_sequenceContext.class,0);
+		public MovetoArgumentSequenceContext movetoArgumentSequence() {
+			return getRuleContext(MovetoArgumentSequenceContext.class,0);
 		}
 		public List<WspContext> wsp() {
 			return getRuleContexts(WspContext.class);
@@ -603,7 +602,7 @@ public class SvgPathParser extends Parser {
 				_la = _input.LA(1);
 			}
 			setState(157);
-			moveto_argument_sequence();
+			movetoArgumentSequence();
 			}
 		}
 		catch (RecognitionException re) {
@@ -617,25 +616,25 @@ public class SvgPathParser extends Parser {
 		return _localctx;
 	}
 
-	public static class Moveto_argument_sequenceContext extends ParserRuleContext {
-		public Coordinate_pairContext coordinate_pair() {
-			return getRuleContext(Coordinate_pairContext.class,0);
+	public static class MovetoArgumentSequenceContext extends ParserRuleContext {
+		public CoordinatePairContext coordinatePair() {
+			return getRuleContext(CoordinatePairContext.class,0);
 		}
-		public Lineto_argument_sequenceContext lineto_argument_sequence() {
-			return getRuleContext(Lineto_argument_sequenceContext.class,0);
+		public LinetoArgumentSequenceContext linetoArgumentSequence() {
+			return getRuleContext(LinetoArgumentSequenceContext.class,0);
 		}
-		public Comma_wspContext comma_wsp() {
-			return getRuleContext(Comma_wspContext.class,0);
+		public CommaWspContext commaWsp() {
+			return getRuleContext(CommaWspContext.class,0);
 		}
-		public Moveto_argument_sequenceContext(ParserRuleContext parent, int invokingState) {
+		public MovetoArgumentSequenceContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_moveto_argument_sequence; }
+		@Override public int getRuleIndex() { return RULE_movetoArgumentSequence; }
 	}
 
-	public final Moveto_argument_sequenceContext moveto_argument_sequence() throws RecognitionException {
-		Moveto_argument_sequenceContext _localctx = new Moveto_argument_sequenceContext(_ctx, getState());
-		enterRule(_localctx, 14, RULE_moveto_argument_sequence);
+	public final MovetoArgumentSequenceContext movetoArgumentSequence() throws RecognitionException {
+		MovetoArgumentSequenceContext _localctx = new MovetoArgumentSequenceContext(_ctx, getState());
+		enterRule(_localctx, 14, RULE_movetoArgumentSequence);
 		int _la;
 		try {
 			setState(166);
@@ -645,26 +644,26 @@ public class SvgPathParser extends Parser {
 				enterOuterAlt(_localctx, 1);
 				{
 				setState(159);
-				coordinate_pair();
+				coordinatePair();
 				}
 				break;
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
 				setState(160);
-				coordinate_pair();
+				coordinatePair();
 				setState(162);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__22) | (1L << T__36) | (1L << T__37) | (1L << T__38) | (1L << T__39))) != 0)) {
 					{
 					setState(161);
-					comma_wsp();
+					commaWsp();
 					}
 				}
 
 				setState(164);
-				lineto_argument_sequence();
+				linetoArgumentSequence();
 				}
 				break;
 			}
@@ -718,8 +717,8 @@ public class SvgPathParser extends Parser {
 	}
 
 	public static class LinetoContext extends ParserRuleContext {
-		public Lineto_argument_sequenceContext lineto_argument_sequence() {
-			return getRuleContext(Lineto_argument_sequenceContext.class,0);
+		public LinetoArgumentSequenceContext linetoArgumentSequence() {
+			return getRuleContext(LinetoArgumentSequenceContext.class,0);
 		}
 		public List<WspContext> wsp() {
 			return getRuleContexts(WspContext.class);
@@ -765,7 +764,7 @@ public class SvgPathParser extends Parser {
 				_la = _input.LA(1);
 			}
 			setState(177);
-			lineto_argument_sequence();
+			linetoArgumentSequence();
 			}
 		}
 		catch (RecognitionException re) {
@@ -779,25 +778,25 @@ public class SvgPathParser extends Parser {
 		return _localctx;
 	}
 
-	public static class Lineto_argument_sequenceContext extends ParserRuleContext {
-		public Coordinate_pairContext coordinate_pair() {
-			return getRuleContext(Coordinate_pairContext.class,0);
+	public static class LinetoArgumentSequenceContext extends ParserRuleContext {
+		public CoordinatePairContext coordinatePair() {
+			return getRuleContext(CoordinatePairContext.class,0);
 		}
-		public Lineto_argument_sequenceContext lineto_argument_sequence() {
-			return getRuleContext(Lineto_argument_sequenceContext.class,0);
+		public LinetoArgumentSequenceContext linetoArgumentSequence() {
+			return getRuleContext(LinetoArgumentSequenceContext.class,0);
 		}
-		public Comma_wspContext comma_wsp() {
-			return getRuleContext(Comma_wspContext.class,0);
+		public CommaWspContext commaWsp() {
+			return getRuleContext(CommaWspContext.class,0);
 		}
-		public Lineto_argument_sequenceContext(ParserRuleContext parent, int invokingState) {
+		public LinetoArgumentSequenceContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_lineto_argument_sequence; }
+		@Override public int getRuleIndex() { return RULE_linetoArgumentSequence; }
 	}
 
-	public final Lineto_argument_sequenceContext lineto_argument_sequence() throws RecognitionException {
-		Lineto_argument_sequenceContext _localctx = new Lineto_argument_sequenceContext(_ctx, getState());
-		enterRule(_localctx, 20, RULE_lineto_argument_sequence);
+	public final LinetoArgumentSequenceContext linetoArgumentSequence() throws RecognitionException {
+		LinetoArgumentSequenceContext _localctx = new LinetoArgumentSequenceContext(_ctx, getState());
+		enterRule(_localctx, 20, RULE_linetoArgumentSequence);
 		int _la;
 		try {
 			setState(186);
@@ -807,26 +806,26 @@ public class SvgPathParser extends Parser {
 				enterOuterAlt(_localctx, 1);
 				{
 				setState(179);
-				coordinate_pair();
+				coordinatePair();
 				}
 				break;
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
 				setState(180);
-				coordinate_pair();
+				coordinatePair();
 				setState(182);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__22) | (1L << T__36) | (1L << T__37) | (1L << T__38) | (1L << T__39))) != 0)) {
 					{
 					setState(181);
-					comma_wsp();
+					commaWsp();
 					}
 				}
 
 				setState(184);
-				lineto_argument_sequence();
+				linetoArgumentSequence();
 				}
 				break;
 			}
@@ -842,9 +841,9 @@ public class SvgPathParser extends Parser {
 		return _localctx;
 	}
 
-	public static class Horizontal_linetoContext extends ParserRuleContext {
-		public Horizontal_lineto_argument_sequenceContext horizontal_lineto_argument_sequence() {
-			return getRuleContext(Horizontal_lineto_argument_sequenceContext.class,0);
+	public static class HorizontalLinetoContext extends ParserRuleContext {
+		public HorizontalLinetoArgumentSequenceContext horizontalLinetoArgumentSequence() {
+			return getRuleContext(HorizontalLinetoArgumentSequenceContext.class,0);
 		}
 		public List<WspContext> wsp() {
 			return getRuleContexts(WspContext.class);
@@ -852,15 +851,15 @@ public class SvgPathParser extends Parser {
 		public WspContext wsp(int i) {
 			return getRuleContext(WspContext.class,i);
 		}
-		public Horizontal_linetoContext(ParserRuleContext parent, int invokingState) {
+		public HorizontalLinetoContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_horizontal_lineto; }
+		@Override public int getRuleIndex() { return RULE_horizontalLineto; }
 	}
 
-	public final Horizontal_linetoContext horizontal_lineto() throws RecognitionException {
-		Horizontal_linetoContext _localctx = new Horizontal_linetoContext(_ctx, getState());
-		enterRule(_localctx, 22, RULE_horizontal_lineto);
+	public final HorizontalLinetoContext horizontalLineto() throws RecognitionException {
+		HorizontalLinetoContext _localctx = new HorizontalLinetoContext(_ctx, getState());
+		enterRule(_localctx, 22, RULE_horizontalLineto);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
@@ -890,7 +889,7 @@ public class SvgPathParser extends Parser {
 				_la = _input.LA(1);
 			}
 			setState(195);
-			horizontal_lineto_argument_sequence();
+			horizontalLinetoArgumentSequence();
 			}
 		}
 		catch (RecognitionException re) {
@@ -904,25 +903,25 @@ public class SvgPathParser extends Parser {
 		return _localctx;
 	}
 
-	public static class Horizontal_lineto_argument_sequenceContext extends ParserRuleContext {
+	public static class HorizontalLinetoArgumentSequenceContext extends ParserRuleContext {
 		public CoordinateContext coordinate() {
 			return getRuleContext(CoordinateContext.class,0);
 		}
-		public Horizontal_lineto_argument_sequenceContext horizontal_lineto_argument_sequence() {
-			return getRuleContext(Horizontal_lineto_argument_sequenceContext.class,0);
+		public HorizontalLinetoArgumentSequenceContext horizontalLinetoArgumentSequence() {
+			return getRuleContext(HorizontalLinetoArgumentSequenceContext.class,0);
 		}
-		public Comma_wspContext comma_wsp() {
-			return getRuleContext(Comma_wspContext.class,0);
+		public CommaWspContext commaWsp() {
+			return getRuleContext(CommaWspContext.class,0);
 		}
-		public Horizontal_lineto_argument_sequenceContext(ParserRuleContext parent, int invokingState) {
+		public HorizontalLinetoArgumentSequenceContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_horizontal_lineto_argument_sequence; }
+		@Override public int getRuleIndex() { return RULE_horizontalLinetoArgumentSequence; }
 	}
 
-	public final Horizontal_lineto_argument_sequenceContext horizontal_lineto_argument_sequence() throws RecognitionException {
-		Horizontal_lineto_argument_sequenceContext _localctx = new Horizontal_lineto_argument_sequenceContext(_ctx, getState());
-		enterRule(_localctx, 24, RULE_horizontal_lineto_argument_sequence);
+	public final HorizontalLinetoArgumentSequenceContext horizontalLinetoArgumentSequence() throws RecognitionException {
+		HorizontalLinetoArgumentSequenceContext _localctx = new HorizontalLinetoArgumentSequenceContext(_ctx, getState());
+		enterRule(_localctx, 24, RULE_horizontalLinetoArgumentSequence);
 		int _la;
 		try {
 			setState(204);
@@ -946,12 +945,12 @@ public class SvgPathParser extends Parser {
 				if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__22) | (1L << T__36) | (1L << T__37) | (1L << T__38) | (1L << T__39))) != 0)) {
 					{
 					setState(199);
-					comma_wsp();
+					commaWsp();
 					}
 				}
 
 				setState(202);
-				horizontal_lineto_argument_sequence();
+				horizontalLinetoArgumentSequence();
 				}
 				break;
 			}
@@ -967,9 +966,9 @@ public class SvgPathParser extends Parser {
 		return _localctx;
 	}
 
-	public static class Vertical_linetoContext extends ParserRuleContext {
-		public Vertical_lineto_argument_sequenceContext vertical_lineto_argument_sequence() {
-			return getRuleContext(Vertical_lineto_argument_sequenceContext.class,0);
+	public static class VerticalLinetoContext extends ParserRuleContext {
+		public VerticalLinetoArgumentSequenceContext verticalLinetoArgumentSequence() {
+			return getRuleContext(VerticalLinetoArgumentSequenceContext.class,0);
 		}
 		public List<WspContext> wsp() {
 			return getRuleContexts(WspContext.class);
@@ -977,15 +976,15 @@ public class SvgPathParser extends Parser {
 		public WspContext wsp(int i) {
 			return getRuleContext(WspContext.class,i);
 		}
-		public Vertical_linetoContext(ParserRuleContext parent, int invokingState) {
+		public VerticalLinetoContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_vertical_lineto; }
+		@Override public int getRuleIndex() { return RULE_verticalLineto; }
 	}
 
-	public final Vertical_linetoContext vertical_lineto() throws RecognitionException {
-		Vertical_linetoContext _localctx = new Vertical_linetoContext(_ctx, getState());
-		enterRule(_localctx, 26, RULE_vertical_lineto);
+	public final VerticalLinetoContext verticalLineto() throws RecognitionException {
+		VerticalLinetoContext _localctx = new VerticalLinetoContext(_ctx, getState());
+		enterRule(_localctx, 26, RULE_verticalLineto);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
@@ -1015,7 +1014,7 @@ public class SvgPathParser extends Parser {
 				_la = _input.LA(1);
 			}
 			setState(213);
-			vertical_lineto_argument_sequence();
+			verticalLinetoArgumentSequence();
 			}
 		}
 		catch (RecognitionException re) {
@@ -1029,25 +1028,25 @@ public class SvgPathParser extends Parser {
 		return _localctx;
 	}
 
-	public static class Vertical_lineto_argument_sequenceContext extends ParserRuleContext {
+	public static class VerticalLinetoArgumentSequenceContext extends ParserRuleContext {
 		public CoordinateContext coordinate() {
 			return getRuleContext(CoordinateContext.class,0);
 		}
-		public Vertical_lineto_argument_sequenceContext vertical_lineto_argument_sequence() {
-			return getRuleContext(Vertical_lineto_argument_sequenceContext.class,0);
+		public VerticalLinetoArgumentSequenceContext verticalLinetoArgumentSequence() {
+			return getRuleContext(VerticalLinetoArgumentSequenceContext.class,0);
 		}
-		public Comma_wspContext comma_wsp() {
-			return getRuleContext(Comma_wspContext.class,0);
+		public CommaWspContext commaWsp() {
+			return getRuleContext(CommaWspContext.class,0);
 		}
-		public Vertical_lineto_argument_sequenceContext(ParserRuleContext parent, int invokingState) {
+		public VerticalLinetoArgumentSequenceContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_vertical_lineto_argument_sequence; }
+		@Override public int getRuleIndex() { return RULE_verticalLinetoArgumentSequence; }
 	}
 
-	public final Vertical_lineto_argument_sequenceContext vertical_lineto_argument_sequence() throws RecognitionException {
-		Vertical_lineto_argument_sequenceContext _localctx = new Vertical_lineto_argument_sequenceContext(_ctx, getState());
-		enterRule(_localctx, 28, RULE_vertical_lineto_argument_sequence);
+	public final VerticalLinetoArgumentSequenceContext verticalLinetoArgumentSequence() throws RecognitionException {
+		VerticalLinetoArgumentSequenceContext _localctx = new VerticalLinetoArgumentSequenceContext(_ctx, getState());
+		enterRule(_localctx, 28, RULE_verticalLinetoArgumentSequence);
 		int _la;
 		try {
 			setState(222);
@@ -1071,12 +1070,12 @@ public class SvgPathParser extends Parser {
 				if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__22) | (1L << T__36) | (1L << T__37) | (1L << T__38) | (1L << T__39))) != 0)) {
 					{
 					setState(217);
-					comma_wsp();
+					commaWsp();
 					}
 				}
 
 				setState(220);
-				vertical_lineto_argument_sequence();
+				verticalLinetoArgumentSequence();
 				}
 				break;
 			}
@@ -1093,8 +1092,8 @@ public class SvgPathParser extends Parser {
 	}
 
 	public static class CurvetoContext extends ParserRuleContext {
-		public Curveto_argument_sequenceContext curveto_argument_sequence() {
-			return getRuleContext(Curveto_argument_sequenceContext.class,0);
+		public CurvetoArgumentSequenceContext curvetoArgumentSequence() {
+			return getRuleContext(CurvetoArgumentSequenceContext.class,0);
 		}
 		public List<WspContext> wsp() {
 			return getRuleContexts(WspContext.class);
@@ -1140,7 +1139,7 @@ public class SvgPathParser extends Parser {
 				_la = _input.LA(1);
 			}
 			setState(231);
-			curveto_argument_sequence();
+			curvetoArgumentSequence();
 			}
 		}
 		catch (RecognitionException re) {
@@ -1154,25 +1153,25 @@ public class SvgPathParser extends Parser {
 		return _localctx;
 	}
 
-	public static class Curveto_argument_sequenceContext extends ParserRuleContext {
-		public Curveto_argumentContext curveto_argument() {
-			return getRuleContext(Curveto_argumentContext.class,0);
+	public static class CurvetoArgumentSequenceContext extends ParserRuleContext {
+		public CurvetoArgumentContext curvetoArgument() {
+			return getRuleContext(CurvetoArgumentContext.class,0);
 		}
-		public Curveto_argument_sequenceContext curveto_argument_sequence() {
-			return getRuleContext(Curveto_argument_sequenceContext.class,0);
+		public CurvetoArgumentSequenceContext curvetoArgumentSequence() {
+			return getRuleContext(CurvetoArgumentSequenceContext.class,0);
 		}
-		public Comma_wspContext comma_wsp() {
-			return getRuleContext(Comma_wspContext.class,0);
+		public CommaWspContext commaWsp() {
+			return getRuleContext(CommaWspContext.class,0);
 		}
-		public Curveto_argument_sequenceContext(ParserRuleContext parent, int invokingState) {
+		public CurvetoArgumentSequenceContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_curveto_argument_sequence; }
+		@Override public int getRuleIndex() { return RULE_curvetoArgumentSequence; }
 	}
 
-	public final Curveto_argument_sequenceContext curveto_argument_sequence() throws RecognitionException {
-		Curveto_argument_sequenceContext _localctx = new Curveto_argument_sequenceContext(_ctx, getState());
-		enterRule(_localctx, 32, RULE_curveto_argument_sequence);
+	public final CurvetoArgumentSequenceContext curvetoArgumentSequence() throws RecognitionException {
+		CurvetoArgumentSequenceContext _localctx = new CurvetoArgumentSequenceContext(_ctx, getState());
+		enterRule(_localctx, 32, RULE_curvetoArgumentSequence);
 		int _la;
 		try {
 			setState(240);
@@ -1182,26 +1181,26 @@ public class SvgPathParser extends Parser {
 				enterOuterAlt(_localctx, 1);
 				{
 				setState(233);
-				curveto_argument();
+				curvetoArgument();
 				}
 				break;
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
 				setState(234);
-				curveto_argument();
+				curvetoArgument();
 				setState(236);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__22) | (1L << T__36) | (1L << T__37) | (1L << T__38) | (1L << T__39))) != 0)) {
 					{
 					setState(235);
-					comma_wsp();
+					commaWsp();
 					}
 				}
 
 				setState(238);
-				curveto_argument_sequence();
+				curvetoArgumentSequence();
 				}
 				break;
 			}
@@ -1217,58 +1216,58 @@ public class SvgPathParser extends Parser {
 		return _localctx;
 	}
 
-	public static class Curveto_argumentContext extends ParserRuleContext {
-		public List<Coordinate_pairContext> coordinate_pair() {
-			return getRuleContexts(Coordinate_pairContext.class);
+	public static class CurvetoArgumentContext extends ParserRuleContext {
+		public List<CoordinatePairContext> coordinatePair() {
+			return getRuleContexts(CoordinatePairContext.class);
 		}
-		public Coordinate_pairContext coordinate_pair(int i) {
-			return getRuleContext(Coordinate_pairContext.class,i);
+		public CoordinatePairContext coordinatePair(int i) {
+			return getRuleContext(CoordinatePairContext.class,i);
 		}
-		public List<Comma_wspContext> comma_wsp() {
-			return getRuleContexts(Comma_wspContext.class);
+		public List<CommaWspContext> commaWsp() {
+			return getRuleContexts(CommaWspContext.class);
 		}
-		public Comma_wspContext comma_wsp(int i) {
-			return getRuleContext(Comma_wspContext.class,i);
+		public CommaWspContext commaWsp(int i) {
+			return getRuleContext(CommaWspContext.class,i);
 		}
-		public Curveto_argumentContext(ParserRuleContext parent, int invokingState) {
+		public CurvetoArgumentContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_curveto_argument; }
+		@Override public int getRuleIndex() { return RULE_curvetoArgument; }
 	}
 
-	public final Curveto_argumentContext curveto_argument() throws RecognitionException {
-		Curveto_argumentContext _localctx = new Curveto_argumentContext(_ctx, getState());
-		enterRule(_localctx, 34, RULE_curveto_argument);
+	public final CurvetoArgumentContext curvetoArgument() throws RecognitionException {
+		CurvetoArgumentContext _localctx = new CurvetoArgumentContext(_ctx, getState());
+		enterRule(_localctx, 34, RULE_curvetoArgument);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(242);
-			coordinate_pair();
+			coordinatePair();
 			setState(244);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__22) | (1L << T__36) | (1L << T__37) | (1L << T__38) | (1L << T__39))) != 0)) {
 				{
 				setState(243);
-				comma_wsp();
+				commaWsp();
 				}
 			}
 
 			setState(246);
-			coordinate_pair();
+			coordinatePair();
 			setState(248);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__22) | (1L << T__36) | (1L << T__37) | (1L << T__38) | (1L << T__39))) != 0)) {
 				{
 				setState(247);
-				comma_wsp();
+				commaWsp();
 				}
 			}
 
 			setState(250);
-			coordinate_pair();
+			coordinatePair();
 			}
 		}
 		catch (RecognitionException re) {
@@ -1282,9 +1281,9 @@ public class SvgPathParser extends Parser {
 		return _localctx;
 	}
 
-	public static class Smooth_curvetoContext extends ParserRuleContext {
-		public Smooth_curveto_argument_sequenceContext smooth_curveto_argument_sequence() {
-			return getRuleContext(Smooth_curveto_argument_sequenceContext.class,0);
+	public static class SmoothCurvetoContext extends ParserRuleContext {
+		public SmoothCurvetoArgumentSequenceContext smoothCurvetoArgumentSequence() {
+			return getRuleContext(SmoothCurvetoArgumentSequenceContext.class,0);
 		}
 		public List<WspContext> wsp() {
 			return getRuleContexts(WspContext.class);
@@ -1292,15 +1291,15 @@ public class SvgPathParser extends Parser {
 		public WspContext wsp(int i) {
 			return getRuleContext(WspContext.class,i);
 		}
-		public Smooth_curvetoContext(ParserRuleContext parent, int invokingState) {
+		public SmoothCurvetoContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_smooth_curveto; }
+		@Override public int getRuleIndex() { return RULE_smoothCurveto; }
 	}
 
-	public final Smooth_curvetoContext smooth_curveto() throws RecognitionException {
-		Smooth_curvetoContext _localctx = new Smooth_curvetoContext(_ctx, getState());
-		enterRule(_localctx, 36, RULE_smooth_curveto);
+	public final SmoothCurvetoContext smoothCurveto() throws RecognitionException {
+		SmoothCurvetoContext _localctx = new SmoothCurvetoContext(_ctx, getState());
+		enterRule(_localctx, 36, RULE_smoothCurveto);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
@@ -1330,7 +1329,7 @@ public class SvgPathParser extends Parser {
 				_la = _input.LA(1);
 			}
 			setState(259);
-			smooth_curveto_argument_sequence();
+			smoothCurvetoArgumentSequence();
 			}
 		}
 		catch (RecognitionException re) {
@@ -1344,25 +1343,25 @@ public class SvgPathParser extends Parser {
 		return _localctx;
 	}
 
-	public static class Smooth_curveto_argument_sequenceContext extends ParserRuleContext {
-		public Smooth_curveto_argumentContext smooth_curveto_argument() {
-			return getRuleContext(Smooth_curveto_argumentContext.class,0);
+	public static class SmoothCurvetoArgumentSequenceContext extends ParserRuleContext {
+		public SmoothCurvetoArgumentContext smoothCurvetoArgument() {
+			return getRuleContext(SmoothCurvetoArgumentContext.class,0);
 		}
-		public Smooth_curveto_argument_sequenceContext smooth_curveto_argument_sequence() {
-			return getRuleContext(Smooth_curveto_argument_sequenceContext.class,0);
+		public SmoothCurvetoArgumentSequenceContext smoothCurvetoArgumentSequence() {
+			return getRuleContext(SmoothCurvetoArgumentSequenceContext.class,0);
 		}
-		public Comma_wspContext comma_wsp() {
-			return getRuleContext(Comma_wspContext.class,0);
+		public CommaWspContext commaWsp() {
+			return getRuleContext(CommaWspContext.class,0);
 		}
-		public Smooth_curveto_argument_sequenceContext(ParserRuleContext parent, int invokingState) {
+		public SmoothCurvetoArgumentSequenceContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_smooth_curveto_argument_sequence; }
+		@Override public int getRuleIndex() { return RULE_smoothCurvetoArgumentSequence; }
 	}
 
-	public final Smooth_curveto_argument_sequenceContext smooth_curveto_argument_sequence() throws RecognitionException {
-		Smooth_curveto_argument_sequenceContext _localctx = new Smooth_curveto_argument_sequenceContext(_ctx, getState());
-		enterRule(_localctx, 38, RULE_smooth_curveto_argument_sequence);
+	public final SmoothCurvetoArgumentSequenceContext smoothCurvetoArgumentSequence() throws RecognitionException {
+		SmoothCurvetoArgumentSequenceContext _localctx = new SmoothCurvetoArgumentSequenceContext(_ctx, getState());
+		enterRule(_localctx, 38, RULE_smoothCurvetoArgumentSequence);
 		int _la;
 		try {
 			setState(268);
@@ -1372,26 +1371,26 @@ public class SvgPathParser extends Parser {
 				enterOuterAlt(_localctx, 1);
 				{
 				setState(261);
-				smooth_curveto_argument();
+				smoothCurvetoArgument();
 				}
 				break;
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
 				setState(262);
-				smooth_curveto_argument();
+				smoothCurvetoArgument();
 				setState(264);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__22) | (1L << T__36) | (1L << T__37) | (1L << T__38) | (1L << T__39))) != 0)) {
 					{
 					setState(263);
-					comma_wsp();
+					commaWsp();
 					}
 				}
 
 				setState(266);
-				smooth_curveto_argument_sequence();
+				smoothCurvetoArgumentSequence();
 				}
 				break;
 			}
@@ -1407,43 +1406,43 @@ public class SvgPathParser extends Parser {
 		return _localctx;
 	}
 
-	public static class Smooth_curveto_argumentContext extends ParserRuleContext {
-		public List<Coordinate_pairContext> coordinate_pair() {
-			return getRuleContexts(Coordinate_pairContext.class);
+	public static class SmoothCurvetoArgumentContext extends ParserRuleContext {
+		public List<CoordinatePairContext> coordinatePair() {
+			return getRuleContexts(CoordinatePairContext.class);
 		}
-		public Coordinate_pairContext coordinate_pair(int i) {
-			return getRuleContext(Coordinate_pairContext.class,i);
+		public CoordinatePairContext coordinatePair(int i) {
+			return getRuleContext(CoordinatePairContext.class,i);
 		}
-		public Comma_wspContext comma_wsp() {
-			return getRuleContext(Comma_wspContext.class,0);
+		public CommaWspContext commaWsp() {
+			return getRuleContext(CommaWspContext.class,0);
 		}
-		public Smooth_curveto_argumentContext(ParserRuleContext parent, int invokingState) {
+		public SmoothCurvetoArgumentContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_smooth_curveto_argument; }
+		@Override public int getRuleIndex() { return RULE_smoothCurvetoArgument; }
 	}
 
-	public final Smooth_curveto_argumentContext smooth_curveto_argument() throws RecognitionException {
-		Smooth_curveto_argumentContext _localctx = new Smooth_curveto_argumentContext(_ctx, getState());
-		enterRule(_localctx, 40, RULE_smooth_curveto_argument);
+	public final SmoothCurvetoArgumentContext smoothCurvetoArgument() throws RecognitionException {
+		SmoothCurvetoArgumentContext _localctx = new SmoothCurvetoArgumentContext(_ctx, getState());
+		enterRule(_localctx, 40, RULE_smoothCurvetoArgument);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(270);
-			coordinate_pair();
+			coordinatePair();
 			setState(272);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__22) | (1L << T__36) | (1L << T__37) | (1L << T__38) | (1L << T__39))) != 0)) {
 				{
 				setState(271);
-				comma_wsp();
+				commaWsp();
 				}
 			}
 
 			setState(274);
-			coordinate_pair();
+			coordinatePair();
 			}
 		}
 		catch (RecognitionException re) {
@@ -1457,9 +1456,9 @@ public class SvgPathParser extends Parser {
 		return _localctx;
 	}
 
-	public static class Quadratic_bezier_curvetoContext extends ParserRuleContext {
-		public Quadratic_bezier_curveto_argument_sequenceContext quadratic_bezier_curveto_argument_sequence() {
-			return getRuleContext(Quadratic_bezier_curveto_argument_sequenceContext.class,0);
+	public static class QuadraticBezierCurvetoContext extends ParserRuleContext {
+		public QuadraticBezierCurvetoArgumentSequenceContext quadraticBezierCurvetoArgumentSequence() {
+			return getRuleContext(QuadraticBezierCurvetoArgumentSequenceContext.class,0);
 		}
 		public List<WspContext> wsp() {
 			return getRuleContexts(WspContext.class);
@@ -1467,15 +1466,15 @@ public class SvgPathParser extends Parser {
 		public WspContext wsp(int i) {
 			return getRuleContext(WspContext.class,i);
 		}
-		public Quadratic_bezier_curvetoContext(ParserRuleContext parent, int invokingState) {
+		public QuadraticBezierCurvetoContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_quadratic_bezier_curveto; }
+		@Override public int getRuleIndex() { return RULE_quadraticBezierCurveto; }
 	}
 
-	public final Quadratic_bezier_curvetoContext quadratic_bezier_curveto() throws RecognitionException {
-		Quadratic_bezier_curvetoContext _localctx = new Quadratic_bezier_curvetoContext(_ctx, getState());
-		enterRule(_localctx, 42, RULE_quadratic_bezier_curveto);
+	public final QuadraticBezierCurvetoContext quadraticBezierCurveto() throws RecognitionException {
+		QuadraticBezierCurvetoContext _localctx = new QuadraticBezierCurvetoContext(_ctx, getState());
+		enterRule(_localctx, 42, RULE_quadraticBezierCurveto);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
@@ -1505,7 +1504,7 @@ public class SvgPathParser extends Parser {
 				_la = _input.LA(1);
 			}
 			setState(283);
-			quadratic_bezier_curveto_argument_sequence();
+			quadraticBezierCurvetoArgumentSequence();
 			}
 		}
 		catch (RecognitionException re) {
@@ -1519,25 +1518,25 @@ public class SvgPathParser extends Parser {
 		return _localctx;
 	}
 
-	public static class Quadratic_bezier_curveto_argument_sequenceContext extends ParserRuleContext {
-		public Quadratic_bezier_curveto_argumentContext quadratic_bezier_curveto_argument() {
-			return getRuleContext(Quadratic_bezier_curveto_argumentContext.class,0);
+	public static class QuadraticBezierCurvetoArgumentSequenceContext extends ParserRuleContext {
+		public QuadraticBezierCurvetoArgumentContext quadraticBezierCurvetoArgument() {
+			return getRuleContext(QuadraticBezierCurvetoArgumentContext.class,0);
 		}
-		public Quadratic_bezier_curveto_argument_sequenceContext quadratic_bezier_curveto_argument_sequence() {
-			return getRuleContext(Quadratic_bezier_curveto_argument_sequenceContext.class,0);
+		public QuadraticBezierCurvetoArgumentSequenceContext quadraticBezierCurvetoArgumentSequence() {
+			return getRuleContext(QuadraticBezierCurvetoArgumentSequenceContext.class,0);
 		}
-		public Comma_wspContext comma_wsp() {
-			return getRuleContext(Comma_wspContext.class,0);
+		public CommaWspContext commaWsp() {
+			return getRuleContext(CommaWspContext.class,0);
 		}
-		public Quadratic_bezier_curveto_argument_sequenceContext(ParserRuleContext parent, int invokingState) {
+		public QuadraticBezierCurvetoArgumentSequenceContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_quadratic_bezier_curveto_argument_sequence; }
+		@Override public int getRuleIndex() { return RULE_quadraticBezierCurvetoArgumentSequence; }
 	}
 
-	public final Quadratic_bezier_curveto_argument_sequenceContext quadratic_bezier_curveto_argument_sequence() throws RecognitionException {
-		Quadratic_bezier_curveto_argument_sequenceContext _localctx = new Quadratic_bezier_curveto_argument_sequenceContext(_ctx, getState());
-		enterRule(_localctx, 44, RULE_quadratic_bezier_curveto_argument_sequence);
+	public final QuadraticBezierCurvetoArgumentSequenceContext quadraticBezierCurvetoArgumentSequence() throws RecognitionException {
+		QuadraticBezierCurvetoArgumentSequenceContext _localctx = new QuadraticBezierCurvetoArgumentSequenceContext(_ctx, getState());
+		enterRule(_localctx, 44, RULE_quadraticBezierCurvetoArgumentSequence);
 		int _la;
 		try {
 			setState(292);
@@ -1547,26 +1546,26 @@ public class SvgPathParser extends Parser {
 				enterOuterAlt(_localctx, 1);
 				{
 				setState(285);
-				quadratic_bezier_curveto_argument();
+				quadraticBezierCurvetoArgument();
 				}
 				break;
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
 				setState(286);
-				quadratic_bezier_curveto_argument();
+				quadraticBezierCurvetoArgument();
 				setState(288);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__22) | (1L << T__36) | (1L << T__37) | (1L << T__38) | (1L << T__39))) != 0)) {
 					{
 					setState(287);
-					comma_wsp();
+					commaWsp();
 					}
 				}
 
 				setState(290);
-				quadratic_bezier_curveto_argument_sequence();
+				quadraticBezierCurvetoArgumentSequence();
 				}
 				break;
 			}
@@ -1582,43 +1581,43 @@ public class SvgPathParser extends Parser {
 		return _localctx;
 	}
 
-	public static class Quadratic_bezier_curveto_argumentContext extends ParserRuleContext {
-		public List<Coordinate_pairContext> coordinate_pair() {
-			return getRuleContexts(Coordinate_pairContext.class);
+	public static class QuadraticBezierCurvetoArgumentContext extends ParserRuleContext {
+		public List<CoordinatePairContext> coordinatePair() {
+			return getRuleContexts(CoordinatePairContext.class);
 		}
-		public Coordinate_pairContext coordinate_pair(int i) {
-			return getRuleContext(Coordinate_pairContext.class,i);
+		public CoordinatePairContext coordinatePair(int i) {
+			return getRuleContext(CoordinatePairContext.class,i);
 		}
-		public Comma_wspContext comma_wsp() {
-			return getRuleContext(Comma_wspContext.class,0);
+		public CommaWspContext commaWsp() {
+			return getRuleContext(CommaWspContext.class,0);
 		}
-		public Quadratic_bezier_curveto_argumentContext(ParserRuleContext parent, int invokingState) {
+		public QuadraticBezierCurvetoArgumentContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_quadratic_bezier_curveto_argument; }
+		@Override public int getRuleIndex() { return RULE_quadraticBezierCurvetoArgument; }
 	}
 
-	public final Quadratic_bezier_curveto_argumentContext quadratic_bezier_curveto_argument() throws RecognitionException {
-		Quadratic_bezier_curveto_argumentContext _localctx = new Quadratic_bezier_curveto_argumentContext(_ctx, getState());
-		enterRule(_localctx, 46, RULE_quadratic_bezier_curveto_argument);
+	public final QuadraticBezierCurvetoArgumentContext quadraticBezierCurvetoArgument() throws RecognitionException {
+		QuadraticBezierCurvetoArgumentContext _localctx = new QuadraticBezierCurvetoArgumentContext(_ctx, getState());
+		enterRule(_localctx, 46, RULE_quadraticBezierCurvetoArgument);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(294);
-			coordinate_pair();
+			coordinatePair();
 			setState(296);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__22) | (1L << T__36) | (1L << T__37) | (1L << T__38) | (1L << T__39))) != 0)) {
 				{
 				setState(295);
-				comma_wsp();
+				commaWsp();
 				}
 			}
 
 			setState(298);
-			coordinate_pair();
+			coordinatePair();
 			}
 		}
 		catch (RecognitionException re) {
@@ -1632,9 +1631,9 @@ public class SvgPathParser extends Parser {
 		return _localctx;
 	}
 
-	public static class Smooth_quadratic_bezier_curvetoContext extends ParserRuleContext {
-		public Smooth_quadratic_bezier_curveto_argument_sequenceContext smooth_quadratic_bezier_curveto_argument_sequence() {
-			return getRuleContext(Smooth_quadratic_bezier_curveto_argument_sequenceContext.class,0);
+	public static class SmoothQuadraticBezierCurvetoContext extends ParserRuleContext {
+		public SmoothQuadraticBezierCurvetoArgumentSequenceContext smoothQuadraticBezierCurvetoArgumentSequence() {
+			return getRuleContext(SmoothQuadraticBezierCurvetoArgumentSequenceContext.class,0);
 		}
 		public List<WspContext> wsp() {
 			return getRuleContexts(WspContext.class);
@@ -1642,15 +1641,15 @@ public class SvgPathParser extends Parser {
 		public WspContext wsp(int i) {
 			return getRuleContext(WspContext.class,i);
 		}
-		public Smooth_quadratic_bezier_curvetoContext(ParserRuleContext parent, int invokingState) {
+		public SmoothQuadraticBezierCurvetoContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_smooth_quadratic_bezier_curveto; }
+		@Override public int getRuleIndex() { return RULE_smoothQuadraticBezierCurveto; }
 	}
 
-	public final Smooth_quadratic_bezier_curvetoContext smooth_quadratic_bezier_curveto() throws RecognitionException {
-		Smooth_quadratic_bezier_curvetoContext _localctx = new Smooth_quadratic_bezier_curvetoContext(_ctx, getState());
-		enterRule(_localctx, 48, RULE_smooth_quadratic_bezier_curveto);
+	public final SmoothQuadraticBezierCurvetoContext smoothQuadraticBezierCurveto() throws RecognitionException {
+		SmoothQuadraticBezierCurvetoContext _localctx = new SmoothQuadraticBezierCurvetoContext(_ctx, getState());
+		enterRule(_localctx, 48, RULE_smoothQuadraticBezierCurveto);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
@@ -1680,7 +1679,7 @@ public class SvgPathParser extends Parser {
 				_la = _input.LA(1);
 			}
 			setState(307);
-			smooth_quadratic_bezier_curveto_argument_sequence();
+			smoothQuadraticBezierCurvetoArgumentSequence();
 			}
 		}
 		catch (RecognitionException re) {
@@ -1694,25 +1693,25 @@ public class SvgPathParser extends Parser {
 		return _localctx;
 	}
 
-	public static class Smooth_quadratic_bezier_curveto_argument_sequenceContext extends ParserRuleContext {
-		public Coordinate_pairContext coordinate_pair() {
-			return getRuleContext(Coordinate_pairContext.class,0);
+	public static class SmoothQuadraticBezierCurvetoArgumentSequenceContext extends ParserRuleContext {
+		public CoordinatePairContext coordinatePair() {
+			return getRuleContext(CoordinatePairContext.class,0);
 		}
-		public Smooth_quadratic_bezier_curveto_argument_sequenceContext smooth_quadratic_bezier_curveto_argument_sequence() {
-			return getRuleContext(Smooth_quadratic_bezier_curveto_argument_sequenceContext.class,0);
+		public SmoothQuadraticBezierCurvetoArgumentSequenceContext smoothQuadraticBezierCurvetoArgumentSequence() {
+			return getRuleContext(SmoothQuadraticBezierCurvetoArgumentSequenceContext.class,0);
 		}
-		public Comma_wspContext comma_wsp() {
-			return getRuleContext(Comma_wspContext.class,0);
+		public CommaWspContext commaWsp() {
+			return getRuleContext(CommaWspContext.class,0);
 		}
-		public Smooth_quadratic_bezier_curveto_argument_sequenceContext(ParserRuleContext parent, int invokingState) {
+		public SmoothQuadraticBezierCurvetoArgumentSequenceContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_smooth_quadratic_bezier_curveto_argument_sequence; }
+		@Override public int getRuleIndex() { return RULE_smoothQuadraticBezierCurvetoArgumentSequence; }
 	}
 
-	public final Smooth_quadratic_bezier_curveto_argument_sequenceContext smooth_quadratic_bezier_curveto_argument_sequence() throws RecognitionException {
-		Smooth_quadratic_bezier_curveto_argument_sequenceContext _localctx = new Smooth_quadratic_bezier_curveto_argument_sequenceContext(_ctx, getState());
-		enterRule(_localctx, 50, RULE_smooth_quadratic_bezier_curveto_argument_sequence);
+	public final SmoothQuadraticBezierCurvetoArgumentSequenceContext smoothQuadraticBezierCurvetoArgumentSequence() throws RecognitionException {
+		SmoothQuadraticBezierCurvetoArgumentSequenceContext _localctx = new SmoothQuadraticBezierCurvetoArgumentSequenceContext(_ctx, getState());
+		enterRule(_localctx, 50, RULE_smoothQuadraticBezierCurvetoArgumentSequence);
 		int _la;
 		try {
 			setState(316);
@@ -1722,26 +1721,26 @@ public class SvgPathParser extends Parser {
 				enterOuterAlt(_localctx, 1);
 				{
 				setState(309);
-				coordinate_pair();
+				coordinatePair();
 				}
 				break;
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
 				setState(310);
-				coordinate_pair();
+				coordinatePair();
 				setState(312);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__22) | (1L << T__36) | (1L << T__37) | (1L << T__38) | (1L << T__39))) != 0)) {
 					{
 					setState(311);
-					comma_wsp();
+					commaWsp();
 					}
 				}
 
 				setState(314);
-				smooth_quadratic_bezier_curveto_argument_sequence();
+				smoothQuadraticBezierCurvetoArgumentSequence();
 				}
 				break;
 			}
@@ -1757,9 +1756,9 @@ public class SvgPathParser extends Parser {
 		return _localctx;
 	}
 
-	public static class Elliptical_arcContext extends ParserRuleContext {
-		public Elliptical_arc_argument_sequenceContext elliptical_arc_argument_sequence() {
-			return getRuleContext(Elliptical_arc_argument_sequenceContext.class,0);
+	public static class EllipticalArcContext extends ParserRuleContext {
+		public EllipticalArcArgumentSequenceContext ellipticalArcArgumentSequence() {
+			return getRuleContext(EllipticalArcArgumentSequenceContext.class,0);
 		}
 		public List<WspContext> wsp() {
 			return getRuleContexts(WspContext.class);
@@ -1767,15 +1766,15 @@ public class SvgPathParser extends Parser {
 		public WspContext wsp(int i) {
 			return getRuleContext(WspContext.class,i);
 		}
-		public Elliptical_arcContext(ParserRuleContext parent, int invokingState) {
+		public EllipticalArcContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_elliptical_arc; }
+		@Override public int getRuleIndex() { return RULE_ellipticalArc; }
 	}
 
-	public final Elliptical_arcContext elliptical_arc() throws RecognitionException {
-		Elliptical_arcContext _localctx = new Elliptical_arcContext(_ctx, getState());
-		enterRule(_localctx, 52, RULE_elliptical_arc);
+	public final EllipticalArcContext ellipticalArc() throws RecognitionException {
+		EllipticalArcContext _localctx = new EllipticalArcContext(_ctx, getState());
+		enterRule(_localctx, 52, RULE_ellipticalArc);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
@@ -1805,7 +1804,7 @@ public class SvgPathParser extends Parser {
 				_la = _input.LA(1);
 			}
 			setState(325);
-			elliptical_arc_argument_sequence();
+			ellipticalArcArgumentSequence();
 			}
 		}
 		catch (RecognitionException re) {
@@ -1819,25 +1818,25 @@ public class SvgPathParser extends Parser {
 		return _localctx;
 	}
 
-	public static class Elliptical_arc_argument_sequenceContext extends ParserRuleContext {
-		public Elliptical_arc_argumentContext elliptical_arc_argument() {
-			return getRuleContext(Elliptical_arc_argumentContext.class,0);
+	public static class EllipticalArcArgumentSequenceContext extends ParserRuleContext {
+		public EllipticalArcArgumentContext ellipticalArcArgument() {
+			return getRuleContext(EllipticalArcArgumentContext.class,0);
 		}
-		public Elliptical_arc_argument_sequenceContext elliptical_arc_argument_sequence() {
-			return getRuleContext(Elliptical_arc_argument_sequenceContext.class,0);
+		public EllipticalArcArgumentSequenceContext ellipticalArcArgumentSequence() {
+			return getRuleContext(EllipticalArcArgumentSequenceContext.class,0);
 		}
-		public Comma_wspContext comma_wsp() {
-			return getRuleContext(Comma_wspContext.class,0);
+		public CommaWspContext commaWsp() {
+			return getRuleContext(CommaWspContext.class,0);
 		}
-		public Elliptical_arc_argument_sequenceContext(ParserRuleContext parent, int invokingState) {
+		public EllipticalArcArgumentSequenceContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_elliptical_arc_argument_sequence; }
+		@Override public int getRuleIndex() { return RULE_ellipticalArcArgumentSequence; }
 	}
 
-	public final Elliptical_arc_argument_sequenceContext elliptical_arc_argument_sequence() throws RecognitionException {
-		Elliptical_arc_argument_sequenceContext _localctx = new Elliptical_arc_argument_sequenceContext(_ctx, getState());
-		enterRule(_localctx, 54, RULE_elliptical_arc_argument_sequence);
+	public final EllipticalArcArgumentSequenceContext ellipticalArcArgumentSequence() throws RecognitionException {
+		EllipticalArcArgumentSequenceContext _localctx = new EllipticalArcArgumentSequenceContext(_ctx, getState());
+		enterRule(_localctx, 54, RULE_ellipticalArcArgumentSequence);
 		int _la;
 		try {
 			setState(334);
@@ -1847,26 +1846,26 @@ public class SvgPathParser extends Parser {
 				enterOuterAlt(_localctx, 1);
 				{
 				setState(327);
-				elliptical_arc_argument();
+				ellipticalArcArgument();
 				}
 				break;
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
 				setState(328);
-				elliptical_arc_argument();
+				ellipticalArcArgument();
 				setState(330);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__22) | (1L << T__36) | (1L << T__37) | (1L << T__38) | (1L << T__39))) != 0)) {
 					{
 					setState(329);
-					comma_wsp();
+					commaWsp();
 					}
 				}
 
 				setState(332);
-				elliptical_arc_argument_sequence();
+				ellipticalArcArgumentSequence();
 				}
 				break;
 			}
@@ -1882,21 +1881,21 @@ public class SvgPathParser extends Parser {
 		return _localctx;
 	}
 
-	public static class Elliptical_arc_argumentContext extends ParserRuleContext {
-		public List<Nonnegative_numberContext> nonnegative_number() {
-			return getRuleContexts(Nonnegative_numberContext.class);
+	public static class EllipticalArcArgumentContext extends ParserRuleContext {
+		public List<NonnegativeNumberContext> nonnegativeNumber() {
+			return getRuleContexts(NonnegativeNumberContext.class);
 		}
-		public Nonnegative_numberContext nonnegative_number(int i) {
-			return getRuleContext(Nonnegative_numberContext.class,i);
+		public NonnegativeNumberContext nonnegativeNumber(int i) {
+			return getRuleContext(NonnegativeNumberContext.class,i);
 		}
 		public NumberContext number() {
 			return getRuleContext(NumberContext.class,0);
 		}
-		public List<Comma_wspContext> comma_wsp() {
-			return getRuleContexts(Comma_wspContext.class);
+		public List<CommaWspContext> commaWsp() {
+			return getRuleContexts(CommaWspContext.class);
 		}
-		public Comma_wspContext comma_wsp(int i) {
-			return getRuleContext(Comma_wspContext.class,i);
+		public CommaWspContext commaWsp(int i) {
+			return getRuleContext(CommaWspContext.class,i);
 		}
 		public List<FlagContext> flag() {
 			return getRuleContexts(FlagContext.class);
@@ -1904,50 +1903,50 @@ public class SvgPathParser extends Parser {
 		public FlagContext flag(int i) {
 			return getRuleContext(FlagContext.class,i);
 		}
-		public Coordinate_pairContext coordinate_pair() {
-			return getRuleContext(Coordinate_pairContext.class,0);
+		public CoordinatePairContext coordinatePair() {
+			return getRuleContext(CoordinatePairContext.class,0);
 		}
-		public Elliptical_arc_argumentContext(ParserRuleContext parent, int invokingState) {
+		public EllipticalArcArgumentContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_elliptical_arc_argument; }
+		@Override public int getRuleIndex() { return RULE_ellipticalArcArgument; }
 	}
 
-	public final Elliptical_arc_argumentContext elliptical_arc_argument() throws RecognitionException {
-		Elliptical_arc_argumentContext _localctx = new Elliptical_arc_argumentContext(_ctx, getState());
-		enterRule(_localctx, 56, RULE_elliptical_arc_argument);
+	public final EllipticalArcArgumentContext ellipticalArcArgument() throws RecognitionException {
+		EllipticalArcArgumentContext _localctx = new EllipticalArcArgumentContext(_ctx, getState());
+		enterRule(_localctx, 56, RULE_ellipticalArcArgument);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(336);
-			nonnegative_number();
+			nonnegativeNumber();
 			setState(338);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__22) | (1L << T__36) | (1L << T__37) | (1L << T__38) | (1L << T__39))) != 0)) {
 				{
 				setState(337);
-				comma_wsp();
+				commaWsp();
 				}
 			}
 
 			setState(340);
-			nonnegative_number();
+			nonnegativeNumber();
 			setState(342);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__22) | (1L << T__36) | (1L << T__37) | (1L << T__38) | (1L << T__39))) != 0)) {
 				{
 				setState(341);
-				comma_wsp();
+				commaWsp();
 				}
 			}
 
 			setState(344);
 			number();
 			setState(345);
-			comma_wsp();
+			commaWsp();
 			setState(346);
 			flag();
 			setState(348);
@@ -1956,7 +1955,7 @@ public class SvgPathParser extends Parser {
 			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__22) | (1L << T__36) | (1L << T__37) | (1L << T__38) | (1L << T__39))) != 0)) {
 				{
 				setState(347);
-				comma_wsp();
+				commaWsp();
 				}
 			}
 
@@ -1968,12 +1967,12 @@ public class SvgPathParser extends Parser {
 			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__22) | (1L << T__36) | (1L << T__37) | (1L << T__38) | (1L << T__39))) != 0)) {
 				{
 				setState(351);
-				comma_wsp();
+				commaWsp();
 				}
 			}
 
 			setState(354);
-			coordinate_pair();
+			coordinatePair();
 			}
 		}
 		catch (RecognitionException re) {
@@ -1987,25 +1986,25 @@ public class SvgPathParser extends Parser {
 		return _localctx;
 	}
 
-	public static class Coordinate_pairContext extends ParserRuleContext {
+	public static class CoordinatePairContext extends ParserRuleContext {
 		public List<CoordinateContext> coordinate() {
 			return getRuleContexts(CoordinateContext.class);
 		}
 		public CoordinateContext coordinate(int i) {
 			return getRuleContext(CoordinateContext.class,i);
 		}
-		public Comma_wspContext comma_wsp() {
-			return getRuleContext(Comma_wspContext.class,0);
+		public CommaWspContext commaWsp() {
+			return getRuleContext(CommaWspContext.class,0);
 		}
-		public Coordinate_pairContext(ParserRuleContext parent, int invokingState) {
+		public CoordinatePairContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_coordinate_pair; }
+		@Override public int getRuleIndex() { return RULE_coordinatePair; }
 	}
 
-	public final Coordinate_pairContext coordinate_pair() throws RecognitionException {
-		Coordinate_pairContext _localctx = new Coordinate_pairContext(_ctx, getState());
-		enterRule(_localctx, 58, RULE_coordinate_pair);
+	public final CoordinatePairContext coordinatePair() throws RecognitionException {
+		CoordinatePairContext _localctx = new CoordinatePairContext(_ctx, getState());
+		enterRule(_localctx, 58, RULE_coordinatePair);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
@@ -2018,7 +2017,7 @@ public class SvgPathParser extends Parser {
 			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__22) | (1L << T__36) | (1L << T__37) | (1L << T__38) | (1L << T__39))) != 0)) {
 				{
 				setState(357);
-				comma_wsp();
+				commaWsp();
 				}
 			}
 
@@ -2068,22 +2067,22 @@ public class SvgPathParser extends Parser {
 		return _localctx;
 	}
 
-	public static class Nonnegative_numberContext extends ParserRuleContext {
-		public Integer_constantContext integer_constant() {
-			return getRuleContext(Integer_constantContext.class,0);
+	public static class NonnegativeNumberContext extends ParserRuleContext {
+		public IntegerConstantContext integerConstant() {
+			return getRuleContext(IntegerConstantContext.class,0);
 		}
-		public Floating_point_constantContext floating_point_constant() {
-			return getRuleContext(Floating_point_constantContext.class,0);
+		public FloatingPointConstantContext floatingPointConstant() {
+			return getRuleContext(FloatingPointConstantContext.class,0);
 		}
-		public Nonnegative_numberContext(ParserRuleContext parent, int invokingState) {
+		public NonnegativeNumberContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_nonnegative_number; }
+		@Override public int getRuleIndex() { return RULE_nonnegativeNumber; }
 	}
 
-	public final Nonnegative_numberContext nonnegative_number() throws RecognitionException {
-		Nonnegative_numberContext _localctx = new Nonnegative_numberContext(_ctx, getState());
-		enterRule(_localctx, 62, RULE_nonnegative_number);
+	public final NonnegativeNumberContext nonnegativeNumber() throws RecognitionException {
+		NonnegativeNumberContext _localctx = new NonnegativeNumberContext(_ctx, getState());
+		enterRule(_localctx, 62, RULE_nonnegativeNumber);
 		try {
 			setState(366);
 			_errHandler.sync(this);
@@ -2092,14 +2091,14 @@ public class SvgPathParser extends Parser {
 				enterOuterAlt(_localctx, 1);
 				{
 				setState(364);
-				integer_constant();
+				integerConstant();
 				}
 				break;
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
 				setState(365);
-				floating_point_constant();
+				floatingPointConstant();
 				}
 				break;
 			}
@@ -2116,14 +2115,14 @@ public class SvgPathParser extends Parser {
 	}
 
 	public static class NumberContext extends ParserRuleContext {
-		public Integer_constantContext integer_constant() {
-			return getRuleContext(Integer_constantContext.class,0);
+		public IntegerConstantContext integerConstant() {
+			return getRuleContext(IntegerConstantContext.class,0);
 		}
 		public SignContext sign() {
 			return getRuleContext(SignContext.class,0);
 		}
-		public Floating_point_constantContext floating_point_constant() {
-			return getRuleContext(Floating_point_constantContext.class,0);
+		public FloatingPointConstantContext floatingPointConstant() {
+			return getRuleContext(FloatingPointConstantContext.class,0);
 		}
 		public NumberContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -2153,7 +2152,7 @@ public class SvgPathParser extends Parser {
 				}
 
 				setState(371);
-				integer_constant();
+				integerConstant();
 				}
 				break;
 			case 2:
@@ -2170,7 +2169,7 @@ public class SvgPathParser extends Parser {
 				}
 
 				setState(375);
-				floating_point_constant();
+				floatingPointConstant();
 				}
 				break;
 			}
@@ -2223,7 +2222,7 @@ public class SvgPathParser extends Parser {
 		return _localctx;
 	}
 
-	public static class Comma_wspContext extends ParserRuleContext {
+	public static class CommaWspContext extends ParserRuleContext {
 		public List<WspContext> wsp() {
 			return getRuleContexts(WspContext.class);
 		}
@@ -2233,15 +2232,15 @@ public class SvgPathParser extends Parser {
 		public CommaContext comma() {
 			return getRuleContext(CommaContext.class,0);
 		}
-		public Comma_wspContext(ParserRuleContext parent, int invokingState) {
+		public CommaWspContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_comma_wsp; }
+		@Override public int getRuleIndex() { return RULE_commaWsp; }
 	}
 
-	public final Comma_wspContext comma_wsp() throws RecognitionException {
-		Comma_wspContext _localctx = new Comma_wspContext(_ctx, getState());
-		enterRule(_localctx, 68, RULE_comma_wsp);
+	public final CommaWspContext commaWsp() throws RecognitionException {
+		CommaWspContext _localctx = new CommaWspContext(_ctx, getState());
+		enterRule(_localctx, 68, RULE_commaWsp);
 		int _la;
 		try {
 			int _alt;
@@ -2368,24 +2367,24 @@ public class SvgPathParser extends Parser {
 		return _localctx;
 	}
 
-	public static class Integer_constantContext extends ParserRuleContext {
-		public Digit_sequenceContext digit_sequence() {
-			return getRuleContext(Digit_sequenceContext.class,0);
+	public static class IntegerConstantContext extends ParserRuleContext {
+		public DigitSequenceContext digitSequence() {
+			return getRuleContext(DigitSequenceContext.class,0);
 		}
-		public Integer_constantContext(ParserRuleContext parent, int invokingState) {
+		public IntegerConstantContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_integer_constant; }
+		@Override public int getRuleIndex() { return RULE_integerConstant; }
 	}
 
-	public final Integer_constantContext integer_constant() throws RecognitionException {
-		Integer_constantContext _localctx = new Integer_constantContext(_ctx, getState());
-		enterRule(_localctx, 72, RULE_integer_constant);
+	public final IntegerConstantContext integerConstant() throws RecognitionException {
+		IntegerConstantContext _localctx = new IntegerConstantContext(_ctx, getState());
+		enterRule(_localctx, 72, RULE_integerConstant);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(405);
-			digit_sequence();
+			digitSequence();
 			}
 		}
 		catch (RecognitionException re) {
@@ -2399,25 +2398,25 @@ public class SvgPathParser extends Parser {
 		return _localctx;
 	}
 
-	public static class Floating_point_constantContext extends ParserRuleContext {
-		public Fractional_constantContext fractional_constant() {
-			return getRuleContext(Fractional_constantContext.class,0);
+	public static class FloatingPointConstantContext extends ParserRuleContext {
+		public FractionalConstantContext fractionalConstant() {
+			return getRuleContext(FractionalConstantContext.class,0);
 		}
 		public ExponentContext exponent() {
 			return getRuleContext(ExponentContext.class,0);
 		}
-		public Digit_sequenceContext digit_sequence() {
-			return getRuleContext(Digit_sequenceContext.class,0);
+		public DigitSequenceContext digitSequence() {
+			return getRuleContext(DigitSequenceContext.class,0);
 		}
-		public Floating_point_constantContext(ParserRuleContext parent, int invokingState) {
+		public FloatingPointConstantContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_floating_point_constant; }
+		@Override public int getRuleIndex() { return RULE_floatingPointConstant; }
 	}
 
-	public final Floating_point_constantContext floating_point_constant() throws RecognitionException {
-		Floating_point_constantContext _localctx = new Floating_point_constantContext(_ctx, getState());
-		enterRule(_localctx, 74, RULE_floating_point_constant);
+	public final FloatingPointConstantContext floatingPointConstant() throws RecognitionException {
+		FloatingPointConstantContext _localctx = new FloatingPointConstantContext(_ctx, getState());
+		enterRule(_localctx, 74, RULE_floatingPointConstant);
 		int _la;
 		try {
 			setState(414);
@@ -2427,7 +2426,7 @@ public class SvgPathParser extends Parser {
 				enterOuterAlt(_localctx, 1);
 				{
 				setState(407);
-				fractional_constant();
+				fractionalConstant();
 				setState(409);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
@@ -2444,7 +2443,7 @@ public class SvgPathParser extends Parser {
 				enterOuterAlt(_localctx, 2);
 				{
 				setState(411);
-				digit_sequence();
+				digitSequence();
 				setState(412);
 				exponent();
 				}
@@ -2462,22 +2461,22 @@ public class SvgPathParser extends Parser {
 		return _localctx;
 	}
 
-	public static class Fractional_constantContext extends ParserRuleContext {
-		public List<Digit_sequenceContext> digit_sequence() {
-			return getRuleContexts(Digit_sequenceContext.class);
+	public static class FractionalConstantContext extends ParserRuleContext {
+		public List<DigitSequenceContext> digitSequence() {
+			return getRuleContexts(DigitSequenceContext.class);
 		}
-		public Digit_sequenceContext digit_sequence(int i) {
-			return getRuleContext(Digit_sequenceContext.class,i);
+		public DigitSequenceContext digitSequence(int i) {
+			return getRuleContext(DigitSequenceContext.class,i);
 		}
-		public Fractional_constantContext(ParserRuleContext parent, int invokingState) {
+		public FractionalConstantContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_fractional_constant; }
+		@Override public int getRuleIndex() { return RULE_fractionalConstant; }
 	}
 
-	public final Fractional_constantContext fractional_constant() throws RecognitionException {
-		Fractional_constantContext _localctx = new Fractional_constantContext(_ctx, getState());
-		enterRule(_localctx, 76, RULE_fractional_constant);
+	public final FractionalConstantContext fractionalConstant() throws RecognitionException {
+		FractionalConstantContext _localctx = new FractionalConstantContext(_ctx, getState());
+		enterRule(_localctx, 76, RULE_fractionalConstant);
 		int _la;
 		try {
 			setState(424);
@@ -2492,21 +2491,21 @@ public class SvgPathParser extends Parser {
 				if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__20) | (1L << T__21) | (1L << T__28) | (1L << T__29) | (1L << T__30) | (1L << T__31) | (1L << T__32) | (1L << T__33) | (1L << T__34) | (1L << T__35))) != 0)) {
 					{
 					setState(416);
-					digit_sequence();
+					digitSequence();
 					}
 				}
 
 				setState(419);
 				match(T__23);
 				setState(420);
-				digit_sequence();
+				digitSequence();
 				}
 				break;
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
 				setState(421);
-				digit_sequence();
+				digitSequence();
 				setState(422);
 				match(T__23);
 				}
@@ -2525,8 +2524,8 @@ public class SvgPathParser extends Parser {
 	}
 
 	public static class ExponentContext extends ParserRuleContext {
-		public Digit_sequenceContext digit_sequence() {
-			return getRuleContext(Digit_sequenceContext.class,0);
+		public DigitSequenceContext digitSequence() {
+			return getRuleContext(DigitSequenceContext.class,0);
 		}
 		public SignContext sign() {
 			return getRuleContext(SignContext.class,0);
@@ -2565,7 +2564,7 @@ public class SvgPathParser extends Parser {
 			}
 
 			setState(430);
-			digit_sequence();
+			digitSequence();
 			}
 		}
 		catch (RecognitionException re) {
@@ -2616,22 +2615,22 @@ public class SvgPathParser extends Parser {
 		return _localctx;
 	}
 
-	public static class Digit_sequenceContext extends ParserRuleContext {
+	public static class DigitSequenceContext extends ParserRuleContext {
 		public DigitContext digit() {
 			return getRuleContext(DigitContext.class,0);
 		}
-		public Digit_sequenceContext digit_sequence() {
-			return getRuleContext(Digit_sequenceContext.class,0);
+		public DigitSequenceContext digitSequence() {
+			return getRuleContext(DigitSequenceContext.class,0);
 		}
-		public Digit_sequenceContext(ParserRuleContext parent, int invokingState) {
+		public DigitSequenceContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_digit_sequence; }
+		@Override public int getRuleIndex() { return RULE_digitSequence; }
 	}
 
-	public final Digit_sequenceContext digit_sequence() throws RecognitionException {
-		Digit_sequenceContext _localctx = new Digit_sequenceContext(_ctx, getState());
-		enterRule(_localctx, 82, RULE_digit_sequence);
+	public final DigitSequenceContext digitSequence() throws RecognitionException {
+		DigitSequenceContext _localctx = new DigitSequenceContext(_ctx, getState());
+		enterRule(_localctx, 82, RULE_digitSequence);
 		try {
 			setState(438);
 			_errHandler.sync(this);
@@ -2649,7 +2648,7 @@ public class SvgPathParser extends Parser {
 				setState(435);
 				digit();
 				setState(436);
-				digit_sequence();
+				digitSequence();
 				}
 				break;
 			}

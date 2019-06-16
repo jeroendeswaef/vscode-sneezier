@@ -2,6 +2,8 @@
 // jshint ignore: start
 var antlr4 = require('antlr4/index');
 var SvgPathListener = require('./SvgPathListener').SvgPathListener;
+var SvgPathVisitor = require('./SvgPathVisitor').SvgPathVisitor;
+
 var grammarFileName = "SvgPath.g4";
 
 
@@ -469,6 +471,14 @@ EvalContext.prototype.exitRule = function(listener) {
 	}
 };
 
+EvalContext.prototype.accept = function(visitor) {
+    if ( visitor instanceof SvgPathVisitor ) {
+        return visitor.visitEval(this);
+    } else {
+        return visitor.visitChildren(this);
+    }
+};
+
 
 
 
@@ -538,6 +548,14 @@ SvgPathContext.prototype.exitRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
         listener.exitSvgPath(this);
 	}
+};
+
+SvgPathContext.prototype.accept = function(visitor) {
+    if ( visitor instanceof SvgPathVisitor ) {
+        return visitor.visitSvgPath(this);
+    } else {
+        return visitor.visitChildren(this);
+    }
 };
 
 
@@ -645,6 +663,14 @@ MovetoDrawtoCommandGroupsContext.prototype.exitRule = function(listener) {
 	}
 };
 
+MovetoDrawtoCommandGroupsContext.prototype.accept = function(visitor) {
+    if ( visitor instanceof SvgPathVisitor ) {
+        return visitor.visitMovetoDrawtoCommandGroups(this);
+    } else {
+        return visitor.visitChildren(this);
+    }
+};
+
 
 
 
@@ -747,6 +773,14 @@ MovetoDrawtoCommandGroupContext.prototype.exitRule = function(listener) {
 	}
 };
 
+MovetoDrawtoCommandGroupContext.prototype.accept = function(visitor) {
+    if ( visitor instanceof SvgPathVisitor ) {
+        return visitor.visitMovetoDrawtoCommandGroup(this);
+    } else {
+        return visitor.visitChildren(this);
+    }
+};
+
 
 
 
@@ -842,6 +876,14 @@ DrawtoCommandsContext.prototype.exitRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
         listener.exitDrawtoCommands(this);
 	}
+};
+
+DrawtoCommandsContext.prototype.accept = function(visitor) {
+    if ( visitor instanceof SvgPathVisitor ) {
+        return visitor.visitDrawtoCommands(this);
+    } else {
+        return visitor.visitChildren(this);
+    }
 };
 
 
@@ -961,6 +1003,14 @@ DrawtoCommandContext.prototype.exitRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
         listener.exitDrawtoCommand(this);
 	}
+};
+
+DrawtoCommandContext.prototype.accept = function(visitor) {
+    if ( visitor instanceof SvgPathVisitor ) {
+        return visitor.visitDrawtoCommand(this);
+    } else {
+        return visitor.visitChildren(this);
+    }
 };
 
 
@@ -1091,6 +1141,14 @@ MovetoContext.prototype.exitRule = function(listener) {
 	}
 };
 
+MovetoContext.prototype.accept = function(visitor) {
+    if ( visitor instanceof SvgPathVisitor ) {
+        return visitor.visitMoveto(this);
+    } else {
+        return visitor.visitChildren(this);
+    }
+};
+
 
 
 
@@ -1179,6 +1237,14 @@ MovetoArgumentSequenceContext.prototype.exitRule = function(listener) {
 	}
 };
 
+MovetoArgumentSequenceContext.prototype.accept = function(visitor) {
+    if ( visitor instanceof SvgPathVisitor ) {
+        return visitor.visitMovetoArgumentSequence(this);
+    } else {
+        return visitor.visitChildren(this);
+    }
+};
+
 
 
 
@@ -1261,6 +1327,14 @@ ClosepathContext.prototype.exitRule = function(listener) {
 	}
 };
 
+ClosepathContext.prototype.accept = function(visitor) {
+    if ( visitor instanceof SvgPathVisitor ) {
+        return visitor.visitClosepath(this);
+    } else {
+        return visitor.visitChildren(this);
+    }
+};
+
 
 
 
@@ -1338,6 +1412,14 @@ LinetoContext.prototype.exitRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
         listener.exitLineto(this);
 	}
+};
+
+LinetoContext.prototype.accept = function(visitor) {
+    if ( visitor instanceof SvgPathVisitor ) {
+        return visitor.visitLineto(this);
+    } else {
+        return visitor.visitChildren(this);
+    }
 };
 
 
@@ -1426,6 +1508,14 @@ LinetoArgumentSequenceContext.prototype.exitRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
         listener.exitLinetoArgumentSequence(this);
 	}
+};
+
+LinetoArgumentSequenceContext.prototype.accept = function(visitor) {
+    if ( visitor instanceof SvgPathVisitor ) {
+        return visitor.visitLinetoArgumentSequence(this);
+    } else {
+        return visitor.visitChildren(this);
+    }
 };
 
 
@@ -1524,6 +1614,14 @@ HorizontalLinetoContext.prototype.exitRule = function(listener) {
 	}
 };
 
+HorizontalLinetoContext.prototype.accept = function(visitor) {
+    if ( visitor instanceof SvgPathVisitor ) {
+        return visitor.visitHorizontalLineto(this);
+    } else {
+        return visitor.visitChildren(this);
+    }
+};
+
 
 
 
@@ -1610,6 +1708,14 @@ HorizontalLinetoArgumentSequenceContext.prototype.exitRule = function(listener) 
     if(listener instanceof SvgPathListener ) {
         listener.exitHorizontalLinetoArgumentSequence(this);
 	}
+};
+
+HorizontalLinetoArgumentSequenceContext.prototype.accept = function(visitor) {
+    if ( visitor instanceof SvgPathVisitor ) {
+        return visitor.visitHorizontalLinetoArgumentSequence(this);
+    } else {
+        return visitor.visitChildren(this);
+    }
 };
 
 
@@ -1708,6 +1814,14 @@ VerticalLinetoContext.prototype.exitRule = function(listener) {
 	}
 };
 
+VerticalLinetoContext.prototype.accept = function(visitor) {
+    if ( visitor instanceof SvgPathVisitor ) {
+        return visitor.visitVerticalLineto(this);
+    } else {
+        return visitor.visitChildren(this);
+    }
+};
+
 
 
 
@@ -1794,6 +1908,14 @@ VerticalLinetoArgumentSequenceContext.prototype.exitRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
         listener.exitVerticalLinetoArgumentSequence(this);
 	}
+};
+
+VerticalLinetoArgumentSequenceContext.prototype.accept = function(visitor) {
+    if ( visitor instanceof SvgPathVisitor ) {
+        return visitor.visitVerticalLinetoArgumentSequence(this);
+    } else {
+        return visitor.visitChildren(this);
+    }
 };
 
 
@@ -1892,6 +2014,14 @@ CurvetoContext.prototype.exitRule = function(listener) {
 	}
 };
 
+CurvetoContext.prototype.accept = function(visitor) {
+    if ( visitor instanceof SvgPathVisitor ) {
+        return visitor.visitCurveto(this);
+    } else {
+        return visitor.visitChildren(this);
+    }
+};
+
 
 
 
@@ -1978,6 +2108,14 @@ CurvetoArgumentSequenceContext.prototype.exitRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
         listener.exitCurvetoArgumentSequence(this);
 	}
+};
+
+CurvetoArgumentSequenceContext.prototype.accept = function(visitor) {
+    if ( visitor instanceof SvgPathVisitor ) {
+        return visitor.visitCurvetoArgumentSequence(this);
+    } else {
+        return visitor.visitChildren(this);
+    }
 };
 
 
@@ -2083,6 +2221,14 @@ CurvetoArgumentContext.prototype.exitRule = function(listener) {
 	}
 };
 
+CurvetoArgumentContext.prototype.accept = function(visitor) {
+    if ( visitor instanceof SvgPathVisitor ) {
+        return visitor.visitCurvetoArgument(this);
+    } else {
+        return visitor.visitChildren(this);
+    }
+};
+
 
 
 
@@ -2175,6 +2321,14 @@ SmoothCurvetoContext.prototype.exitRule = function(listener) {
 	}
 };
 
+SmoothCurvetoContext.prototype.accept = function(visitor) {
+    if ( visitor instanceof SvgPathVisitor ) {
+        return visitor.visitSmoothCurveto(this);
+    } else {
+        return visitor.visitChildren(this);
+    }
+};
+
 
 
 
@@ -2261,6 +2415,14 @@ SmoothCurvetoArgumentSequenceContext.prototype.exitRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
         listener.exitSmoothCurvetoArgumentSequence(this);
 	}
+};
+
+SmoothCurvetoArgumentSequenceContext.prototype.accept = function(visitor) {
+    if ( visitor instanceof SvgPathVisitor ) {
+        return visitor.visitSmoothCurvetoArgumentSequence(this);
+    } else {
+        return visitor.visitChildren(this);
+    }
 };
 
 
@@ -2359,6 +2521,14 @@ SmoothCurvetoArgumentContext.prototype.exitRule = function(listener) {
 	}
 };
 
+SmoothCurvetoArgumentContext.prototype.accept = function(visitor) {
+    if ( visitor instanceof SvgPathVisitor ) {
+        return visitor.visitSmoothCurvetoArgument(this);
+    } else {
+        return visitor.visitChildren(this);
+    }
+};
+
 
 
 
@@ -2439,6 +2609,14 @@ QuadraticBezierCurvetoContext.prototype.exitRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
         listener.exitQuadraticBezierCurveto(this);
 	}
+};
+
+QuadraticBezierCurvetoContext.prototype.accept = function(visitor) {
+    if ( visitor instanceof SvgPathVisitor ) {
+        return visitor.visitQuadraticBezierCurveto(this);
+    } else {
+        return visitor.visitChildren(this);
+    }
 };
 
 
@@ -2527,6 +2705,14 @@ QuadraticBezierCurvetoArgumentSequenceContext.prototype.exitRule = function(list
     if(listener instanceof SvgPathListener ) {
         listener.exitQuadraticBezierCurvetoArgumentSequence(this);
 	}
+};
+
+QuadraticBezierCurvetoArgumentSequenceContext.prototype.accept = function(visitor) {
+    if ( visitor instanceof SvgPathVisitor ) {
+        return visitor.visitQuadraticBezierCurvetoArgumentSequence(this);
+    } else {
+        return visitor.visitChildren(this);
+    }
 };
 
 
@@ -2625,6 +2811,14 @@ QuadraticBezierCurvetoArgumentContext.prototype.exitRule = function(listener) {
 	}
 };
 
+QuadraticBezierCurvetoArgumentContext.prototype.accept = function(visitor) {
+    if ( visitor instanceof SvgPathVisitor ) {
+        return visitor.visitQuadraticBezierCurvetoArgument(this);
+    } else {
+        return visitor.visitChildren(this);
+    }
+};
+
 
 
 
@@ -2705,6 +2899,14 @@ SmoothQuadraticBezierCurvetoContext.prototype.exitRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
         listener.exitSmoothQuadraticBezierCurveto(this);
 	}
+};
+
+SmoothQuadraticBezierCurvetoContext.prototype.accept = function(visitor) {
+    if ( visitor instanceof SvgPathVisitor ) {
+        return visitor.visitSmoothQuadraticBezierCurveto(this);
+    } else {
+        return visitor.visitChildren(this);
+    }
 };
 
 
@@ -2793,6 +2995,14 @@ SmoothQuadraticBezierCurvetoArgumentSequenceContext.prototype.exitRule = functio
     if(listener instanceof SvgPathListener ) {
         listener.exitSmoothQuadraticBezierCurvetoArgumentSequence(this);
 	}
+};
+
+SmoothQuadraticBezierCurvetoArgumentSequenceContext.prototype.accept = function(visitor) {
+    if ( visitor instanceof SvgPathVisitor ) {
+        return visitor.visitSmoothQuadraticBezierCurvetoArgumentSequence(this);
+    } else {
+        return visitor.visitChildren(this);
+    }
 };
 
 
@@ -2891,6 +3101,14 @@ EllipticalArcContext.prototype.exitRule = function(listener) {
 	}
 };
 
+EllipticalArcContext.prototype.accept = function(visitor) {
+    if ( visitor instanceof SvgPathVisitor ) {
+        return visitor.visitEllipticalArc(this);
+    } else {
+        return visitor.visitChildren(this);
+    }
+};
+
 
 
 
@@ -2977,6 +3195,14 @@ EllipticalArcArgumentSequenceContext.prototype.exitRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
         listener.exitEllipticalArcArgumentSequence(this);
 	}
+};
+
+EllipticalArcArgumentSequenceContext.prototype.accept = function(visitor) {
+    if ( visitor instanceof SvgPathVisitor ) {
+        return visitor.visitEllipticalArcArgumentSequence(this);
+    } else {
+        return visitor.visitChildren(this);
+    }
 };
 
 
@@ -3101,6 +3327,14 @@ EllipticalArcArgumentContext.prototype.exitRule = function(listener) {
 	}
 };
 
+EllipticalArcArgumentContext.prototype.accept = function(visitor) {
+    if ( visitor instanceof SvgPathVisitor ) {
+        return visitor.visitEllipticalArcArgument(this);
+    } else {
+        return visitor.visitChildren(this);
+    }
+};
+
 
 
 
@@ -3217,6 +3451,14 @@ CoordinatePairContext.prototype.exitRule = function(listener) {
 	}
 };
 
+CoordinatePairContext.prototype.accept = function(visitor) {
+    if ( visitor instanceof SvgPathVisitor ) {
+        return visitor.visitCoordinatePair(this);
+    } else {
+        return visitor.visitChildren(this);
+    }
+};
+
 
 
 
@@ -3288,6 +3530,14 @@ CoordinateContext.prototype.exitRule = function(listener) {
 	}
 };
 
+CoordinateContext.prototype.accept = function(visitor) {
+    if ( visitor instanceof SvgPathVisitor ) {
+        return visitor.visitCoordinate(this);
+    } else {
+        return visitor.visitChildren(this);
+    }
+};
+
 
 
 
@@ -3350,6 +3600,14 @@ NonnegativeNumberContext.prototype.exitRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
         listener.exitNonnegativeNumber(this);
 	}
+};
+
+NonnegativeNumberContext.prototype.accept = function(visitor) {
+    if ( visitor instanceof SvgPathVisitor ) {
+        return visitor.visitNonnegativeNumber(this);
+    } else {
+        return visitor.visitChildren(this);
+    }
 };
 
 
@@ -3432,6 +3690,14 @@ NumberContext.prototype.exitRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
         listener.exitNumber(this);
 	}
+};
+
+NumberContext.prototype.accept = function(visitor) {
+    if ( visitor instanceof SvgPathVisitor ) {
+        return visitor.visitNumber(this);
+    } else {
+        return visitor.visitChildren(this);
+    }
 };
 
 
@@ -3522,6 +3788,14 @@ FlagContext.prototype.exitRule = function(listener) {
 	}
 };
 
+FlagContext.prototype.accept = function(visitor) {
+    if ( visitor instanceof SvgPathVisitor ) {
+        return visitor.visitFlag(this);
+    } else {
+        return visitor.visitChildren(this);
+    }
+};
+
 
 
 
@@ -3599,6 +3873,14 @@ CommaWspContext.prototype.exitRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
         listener.exitCommaWsp(this);
 	}
+};
+
+CommaWspContext.prototype.accept = function(visitor) {
+    if ( visitor instanceof SvgPathVisitor ) {
+        return visitor.visitCommaWsp(this);
+    } else {
+        return visitor.visitChildren(this);
+    }
 };
 
 
@@ -3717,6 +3999,14 @@ CommaContext.prototype.exitRule = function(listener) {
 	}
 };
 
+CommaContext.prototype.accept = function(visitor) {
+    if ( visitor instanceof SvgPathVisitor ) {
+        return visitor.visitComma(this);
+    } else {
+        return visitor.visitChildren(this);
+    }
+};
+
 
 
 
@@ -3775,6 +4065,14 @@ IntegerConstantContext.prototype.exitRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
         listener.exitIntegerConstant(this);
 	}
+};
+
+IntegerConstantContext.prototype.accept = function(visitor) {
+    if ( visitor instanceof SvgPathVisitor ) {
+        return visitor.visitIntegerConstant(this);
+    } else {
+        return visitor.visitChildren(this);
+    }
 };
 
 
@@ -3843,6 +4141,14 @@ FloatingPointConstantContext.prototype.exitRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
         listener.exitFloatingPointConstant(this);
 	}
+};
+
+FloatingPointConstantContext.prototype.accept = function(visitor) {
+    if ( visitor instanceof SvgPathVisitor ) {
+        return visitor.visitFloatingPointConstant(this);
+    } else {
+        return visitor.visitChildren(this);
+    }
 };
 
 
@@ -3937,6 +4243,14 @@ FractionalConstantContext.prototype.exitRule = function(listener) {
 	}
 };
 
+FractionalConstantContext.prototype.accept = function(visitor) {
+    if ( visitor instanceof SvgPathVisitor ) {
+        return visitor.visitFractionalConstant(this);
+    } else {
+        return visitor.visitChildren(this);
+    }
+};
+
 
 
 
@@ -4028,6 +4342,14 @@ ExponentContext.prototype.exitRule = function(listener) {
 	}
 };
 
+ExponentContext.prototype.accept = function(visitor) {
+    if ( visitor instanceof SvgPathVisitor ) {
+        return visitor.visitExponent(this);
+    } else {
+        return visitor.visitChildren(this);
+    }
+};
+
 
 
 
@@ -4103,6 +4425,14 @@ SignContext.prototype.exitRule = function(listener) {
 	}
 };
 
+SignContext.prototype.accept = function(visitor) {
+    if ( visitor instanceof SvgPathVisitor ) {
+        return visitor.visitSign(this);
+    } else {
+        return visitor.visitChildren(this);
+    }
+};
+
 
 
 
@@ -4173,6 +4503,14 @@ DigitSequenceContext.prototype.exitRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
         listener.exitDigitSequence(this);
 	}
+};
+
+DigitSequenceContext.prototype.accept = function(visitor) {
+    if ( visitor instanceof SvgPathVisitor ) {
+        return visitor.visitDigitSequence(this);
+    } else {
+        return visitor.visitChildren(this);
+    }
 };
 
 
@@ -4248,6 +4586,14 @@ DigitContext.prototype.exitRule = function(listener) {
 	}
 };
 
+DigitContext.prototype.accept = function(visitor) {
+    if ( visitor instanceof SvgPathVisitor ) {
+        return visitor.visitDigit(this);
+    } else {
+        return visitor.visitChildren(this);
+    }
+};
+
 
 
 
@@ -4311,6 +4657,14 @@ WspContext.prototype.exitRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
         listener.exitWsp(this);
 	}
+};
+
+WspContext.prototype.accept = function(visitor) {
+    if ( visitor instanceof SvgPathVisitor ) {
+        return visitor.visitWsp(this);
+    } else {
+        return visitor.visitChildren(this);
+    }
 };
 
 

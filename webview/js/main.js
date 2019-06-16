@@ -78,7 +78,8 @@ function CurvesView() {
         view: function() {
             //return m("figure")
             return m("svg", { class: "svg-area", viewBox: `0 0 ${imageWidth} ${imageHeight}`},
-                initialPaths.map(path => m("path", { class: "path-element", onclick: () => { console.info('svg clicked!'); }, d: path.svgPath, fill: "none", 'stroke-width': 2, stroke: "hotpink" }))
+                //initialPaths.map(path => m("path", { class: "path-element", onclick: () => { console.info('svg clicked!'); }, d: path.svgPath, fill: "none", 'stroke-width': 2, stroke: "hotpink" }))
+                m("circle", { fill: 'none', 'stroke-width': 1, stroke: "hotpink", cx: 50, cy: 50, r: 4 })
             )
         }
     }

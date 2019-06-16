@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing a oneline svg expression 1`] = `
+Array [
+  Object {
+    "type": "helperPoint",
+    "x": 10,
+    "y": 80,
+  },
+]
+`;
