@@ -20,48 +20,48 @@ SvgPathListener.prototype.exitEval = function(ctx) {
 };
 
 
-// Enter a parse tree produced by SvgPathParser#svg_path.
-SvgPathListener.prototype.enterSvg_path = function(ctx) {
+// Enter a parse tree produced by SvgPathParser#svgPath.
+SvgPathListener.prototype.enterSvgPath = function(ctx) {
 };
 
-// Exit a parse tree produced by SvgPathParser#svg_path.
-SvgPathListener.prototype.exitSvg_path = function(ctx) {
-};
-
-
-// Enter a parse tree produced by SvgPathParser#moveto_drawto_command_groups.
-SvgPathListener.prototype.enterMoveto_drawto_command_groups = function(ctx) {
-};
-
-// Exit a parse tree produced by SvgPathParser#moveto_drawto_command_groups.
-SvgPathListener.prototype.exitMoveto_drawto_command_groups = function(ctx) {
+// Exit a parse tree produced by SvgPathParser#svgPath.
+SvgPathListener.prototype.exitSvgPath = function(ctx) {
 };
 
 
-// Enter a parse tree produced by SvgPathParser#moveto_drawto_command_group.
-SvgPathListener.prototype.enterMoveto_drawto_command_group = function(ctx) {
+// Enter a parse tree produced by SvgPathParser#movetoDrawtoCommandGroups.
+SvgPathListener.prototype.enterMovetoDrawtoCommandGroups = function(ctx) {
 };
 
-// Exit a parse tree produced by SvgPathParser#moveto_drawto_command_group.
-SvgPathListener.prototype.exitMoveto_drawto_command_group = function(ctx) {
-};
-
-
-// Enter a parse tree produced by SvgPathParser#drawto_commands.
-SvgPathListener.prototype.enterDrawto_commands = function(ctx) {
-};
-
-// Exit a parse tree produced by SvgPathParser#drawto_commands.
-SvgPathListener.prototype.exitDrawto_commands = function(ctx) {
+// Exit a parse tree produced by SvgPathParser#movetoDrawtoCommandGroups.
+SvgPathListener.prototype.exitMovetoDrawtoCommandGroups = function(ctx) {
 };
 
 
-// Enter a parse tree produced by SvgPathParser#drawto_command.
-SvgPathListener.prototype.enterDrawto_command = function(ctx) {
+// Enter a parse tree produced by SvgPathParser#movetoDrawtoCommandGroup.
+SvgPathListener.prototype.enterMovetoDrawtoCommandGroup = function(ctx) {
 };
 
-// Exit a parse tree produced by SvgPathParser#drawto_command.
-SvgPathListener.prototype.exitDrawto_command = function(ctx) {
+// Exit a parse tree produced by SvgPathParser#movetoDrawtoCommandGroup.
+SvgPathListener.prototype.exitMovetoDrawtoCommandGroup = function(ctx) {
+};
+
+
+// Enter a parse tree produced by SvgPathParser#drawtoCommands.
+SvgPathListener.prototype.enterDrawtoCommands = function(ctx) {
+};
+
+// Exit a parse tree produced by SvgPathParser#drawtoCommands.
+SvgPathListener.prototype.exitDrawtoCommands = function(ctx) {
+};
+
+
+// Enter a parse tree produced by SvgPathParser#drawtoCommand.
+SvgPathListener.prototype.enterDrawtoCommand = function(ctx) {
+};
+
+// Exit a parse tree produced by SvgPathParser#drawtoCommand.
+SvgPathListener.prototype.exitDrawtoCommand = function(ctx) {
 };
 
 
@@ -74,12 +74,12 @@ SvgPathListener.prototype.exitMoveto = function(ctx) {
 };
 
 
-// Enter a parse tree produced by SvgPathParser#moveto_argument_sequence.
-SvgPathListener.prototype.enterMoveto_argument_sequence = function(ctx) {
+// Enter a parse tree produced by SvgPathParser#movetoArgumentSequence.
+SvgPathListener.prototype.enterMovetoArgumentSequence = function(ctx) {
 };
 
-// Exit a parse tree produced by SvgPathParser#moveto_argument_sequence.
-SvgPathListener.prototype.exitMoveto_argument_sequence = function(ctx) {
+// Exit a parse tree produced by SvgPathParser#movetoArgumentSequence.
+SvgPathListener.prototype.exitMovetoArgumentSequence = function(ctx) {
 };
 
 
@@ -101,48 +101,48 @@ SvgPathListener.prototype.exitLineto = function(ctx) {
 };
 
 
-// Enter a parse tree produced by SvgPathParser#lineto_argument_sequence.
-SvgPathListener.prototype.enterLineto_argument_sequence = function(ctx) {
+// Enter a parse tree produced by SvgPathParser#linetoArgumentSequence.
+SvgPathListener.prototype.enterLinetoArgumentSequence = function(ctx) {
 };
 
-// Exit a parse tree produced by SvgPathParser#lineto_argument_sequence.
-SvgPathListener.prototype.exitLineto_argument_sequence = function(ctx) {
-};
-
-
-// Enter a parse tree produced by SvgPathParser#horizontal_lineto.
-SvgPathListener.prototype.enterHorizontal_lineto = function(ctx) {
-};
-
-// Exit a parse tree produced by SvgPathParser#horizontal_lineto.
-SvgPathListener.prototype.exitHorizontal_lineto = function(ctx) {
+// Exit a parse tree produced by SvgPathParser#linetoArgumentSequence.
+SvgPathListener.prototype.exitLinetoArgumentSequence = function(ctx) {
 };
 
 
-// Enter a parse tree produced by SvgPathParser#horizontal_lineto_argument_sequence.
-SvgPathListener.prototype.enterHorizontal_lineto_argument_sequence = function(ctx) {
+// Enter a parse tree produced by SvgPathParser#horizontalLineto.
+SvgPathListener.prototype.enterHorizontalLineto = function(ctx) {
 };
 
-// Exit a parse tree produced by SvgPathParser#horizontal_lineto_argument_sequence.
-SvgPathListener.prototype.exitHorizontal_lineto_argument_sequence = function(ctx) {
-};
-
-
-// Enter a parse tree produced by SvgPathParser#vertical_lineto.
-SvgPathListener.prototype.enterVertical_lineto = function(ctx) {
-};
-
-// Exit a parse tree produced by SvgPathParser#vertical_lineto.
-SvgPathListener.prototype.exitVertical_lineto = function(ctx) {
+// Exit a parse tree produced by SvgPathParser#horizontalLineto.
+SvgPathListener.prototype.exitHorizontalLineto = function(ctx) {
 };
 
 
-// Enter a parse tree produced by SvgPathParser#vertical_lineto_argument_sequence.
-SvgPathListener.prototype.enterVertical_lineto_argument_sequence = function(ctx) {
+// Enter a parse tree produced by SvgPathParser#horizontalLinetoArgumentSequence.
+SvgPathListener.prototype.enterHorizontalLinetoArgumentSequence = function(ctx) {
 };
 
-// Exit a parse tree produced by SvgPathParser#vertical_lineto_argument_sequence.
-SvgPathListener.prototype.exitVertical_lineto_argument_sequence = function(ctx) {
+// Exit a parse tree produced by SvgPathParser#horizontalLinetoArgumentSequence.
+SvgPathListener.prototype.exitHorizontalLinetoArgumentSequence = function(ctx) {
+};
+
+
+// Enter a parse tree produced by SvgPathParser#verticalLineto.
+SvgPathListener.prototype.enterVerticalLineto = function(ctx) {
+};
+
+// Exit a parse tree produced by SvgPathParser#verticalLineto.
+SvgPathListener.prototype.exitVerticalLineto = function(ctx) {
+};
+
+
+// Enter a parse tree produced by SvgPathParser#verticalLinetoArgumentSequence.
+SvgPathListener.prototype.enterVerticalLinetoArgumentSequence = function(ctx) {
+};
+
+// Exit a parse tree produced by SvgPathParser#verticalLinetoArgumentSequence.
+SvgPathListener.prototype.exitVerticalLinetoArgumentSequence = function(ctx) {
 };
 
 
@@ -155,129 +155,129 @@ SvgPathListener.prototype.exitCurveto = function(ctx) {
 };
 
 
-// Enter a parse tree produced by SvgPathParser#curveto_argument_sequence.
-SvgPathListener.prototype.enterCurveto_argument_sequence = function(ctx) {
+// Enter a parse tree produced by SvgPathParser#curvetoArgumentSequence.
+SvgPathListener.prototype.enterCurvetoArgumentSequence = function(ctx) {
 };
 
-// Exit a parse tree produced by SvgPathParser#curveto_argument_sequence.
-SvgPathListener.prototype.exitCurveto_argument_sequence = function(ctx) {
-};
-
-
-// Enter a parse tree produced by SvgPathParser#curveto_argument.
-SvgPathListener.prototype.enterCurveto_argument = function(ctx) {
-};
-
-// Exit a parse tree produced by SvgPathParser#curveto_argument.
-SvgPathListener.prototype.exitCurveto_argument = function(ctx) {
+// Exit a parse tree produced by SvgPathParser#curvetoArgumentSequence.
+SvgPathListener.prototype.exitCurvetoArgumentSequence = function(ctx) {
 };
 
 
-// Enter a parse tree produced by SvgPathParser#smooth_curveto.
-SvgPathListener.prototype.enterSmooth_curveto = function(ctx) {
+// Enter a parse tree produced by SvgPathParser#curvetoArgument.
+SvgPathListener.prototype.enterCurvetoArgument = function(ctx) {
 };
 
-// Exit a parse tree produced by SvgPathParser#smooth_curveto.
-SvgPathListener.prototype.exitSmooth_curveto = function(ctx) {
-};
-
-
-// Enter a parse tree produced by SvgPathParser#smooth_curveto_argument_sequence.
-SvgPathListener.prototype.enterSmooth_curveto_argument_sequence = function(ctx) {
-};
-
-// Exit a parse tree produced by SvgPathParser#smooth_curveto_argument_sequence.
-SvgPathListener.prototype.exitSmooth_curveto_argument_sequence = function(ctx) {
+// Exit a parse tree produced by SvgPathParser#curvetoArgument.
+SvgPathListener.prototype.exitCurvetoArgument = function(ctx) {
 };
 
 
-// Enter a parse tree produced by SvgPathParser#smooth_curveto_argument.
-SvgPathListener.prototype.enterSmooth_curveto_argument = function(ctx) {
+// Enter a parse tree produced by SvgPathParser#smoothCurveto.
+SvgPathListener.prototype.enterSmoothCurveto = function(ctx) {
 };
 
-// Exit a parse tree produced by SvgPathParser#smooth_curveto_argument.
-SvgPathListener.prototype.exitSmooth_curveto_argument = function(ctx) {
-};
-
-
-// Enter a parse tree produced by SvgPathParser#quadratic_bezier_curveto.
-SvgPathListener.prototype.enterQuadratic_bezier_curveto = function(ctx) {
-};
-
-// Exit a parse tree produced by SvgPathParser#quadratic_bezier_curveto.
-SvgPathListener.prototype.exitQuadratic_bezier_curveto = function(ctx) {
+// Exit a parse tree produced by SvgPathParser#smoothCurveto.
+SvgPathListener.prototype.exitSmoothCurveto = function(ctx) {
 };
 
 
-// Enter a parse tree produced by SvgPathParser#quadratic_bezier_curveto_argument_sequence.
-SvgPathListener.prototype.enterQuadratic_bezier_curveto_argument_sequence = function(ctx) {
+// Enter a parse tree produced by SvgPathParser#smoothCurvetoArgumentSequence.
+SvgPathListener.prototype.enterSmoothCurvetoArgumentSequence = function(ctx) {
 };
 
-// Exit a parse tree produced by SvgPathParser#quadratic_bezier_curveto_argument_sequence.
-SvgPathListener.prototype.exitQuadratic_bezier_curveto_argument_sequence = function(ctx) {
-};
-
-
-// Enter a parse tree produced by SvgPathParser#quadratic_bezier_curveto_argument.
-SvgPathListener.prototype.enterQuadratic_bezier_curveto_argument = function(ctx) {
-};
-
-// Exit a parse tree produced by SvgPathParser#quadratic_bezier_curveto_argument.
-SvgPathListener.prototype.exitQuadratic_bezier_curveto_argument = function(ctx) {
+// Exit a parse tree produced by SvgPathParser#smoothCurvetoArgumentSequence.
+SvgPathListener.prototype.exitSmoothCurvetoArgumentSequence = function(ctx) {
 };
 
 
-// Enter a parse tree produced by SvgPathParser#smooth_quadratic_bezier_curveto.
-SvgPathListener.prototype.enterSmooth_quadratic_bezier_curveto = function(ctx) {
+// Enter a parse tree produced by SvgPathParser#smoothCurvetoArgument.
+SvgPathListener.prototype.enterSmoothCurvetoArgument = function(ctx) {
 };
 
-// Exit a parse tree produced by SvgPathParser#smooth_quadratic_bezier_curveto.
-SvgPathListener.prototype.exitSmooth_quadratic_bezier_curveto = function(ctx) {
-};
-
-
-// Enter a parse tree produced by SvgPathParser#smooth_quadratic_bezier_curveto_argument_sequence.
-SvgPathListener.prototype.enterSmooth_quadratic_bezier_curveto_argument_sequence = function(ctx) {
-};
-
-// Exit a parse tree produced by SvgPathParser#smooth_quadratic_bezier_curveto_argument_sequence.
-SvgPathListener.prototype.exitSmooth_quadratic_bezier_curveto_argument_sequence = function(ctx) {
+// Exit a parse tree produced by SvgPathParser#smoothCurvetoArgument.
+SvgPathListener.prototype.exitSmoothCurvetoArgument = function(ctx) {
 };
 
 
-// Enter a parse tree produced by SvgPathParser#elliptical_arc.
-SvgPathListener.prototype.enterElliptical_arc = function(ctx) {
+// Enter a parse tree produced by SvgPathParser#quadraticBezierCurveto.
+SvgPathListener.prototype.enterQuadraticBezierCurveto = function(ctx) {
 };
 
-// Exit a parse tree produced by SvgPathParser#elliptical_arc.
-SvgPathListener.prototype.exitElliptical_arc = function(ctx) {
-};
-
-
-// Enter a parse tree produced by SvgPathParser#elliptical_arc_argument_sequence.
-SvgPathListener.prototype.enterElliptical_arc_argument_sequence = function(ctx) {
-};
-
-// Exit a parse tree produced by SvgPathParser#elliptical_arc_argument_sequence.
-SvgPathListener.prototype.exitElliptical_arc_argument_sequence = function(ctx) {
+// Exit a parse tree produced by SvgPathParser#quadraticBezierCurveto.
+SvgPathListener.prototype.exitQuadraticBezierCurveto = function(ctx) {
 };
 
 
-// Enter a parse tree produced by SvgPathParser#elliptical_arc_argument.
-SvgPathListener.prototype.enterElliptical_arc_argument = function(ctx) {
+// Enter a parse tree produced by SvgPathParser#quadraticBezierCurvetoArgumentSequence.
+SvgPathListener.prototype.enterQuadraticBezierCurvetoArgumentSequence = function(ctx) {
 };
 
-// Exit a parse tree produced by SvgPathParser#elliptical_arc_argument.
-SvgPathListener.prototype.exitElliptical_arc_argument = function(ctx) {
+// Exit a parse tree produced by SvgPathParser#quadraticBezierCurvetoArgumentSequence.
+SvgPathListener.prototype.exitQuadraticBezierCurvetoArgumentSequence = function(ctx) {
 };
 
 
-// Enter a parse tree produced by SvgPathParser#coordinate_pair.
-SvgPathListener.prototype.enterCoordinate_pair = function(ctx) {
+// Enter a parse tree produced by SvgPathParser#quadraticBezierCurvetoArgument.
+SvgPathListener.prototype.enterQuadraticBezierCurvetoArgument = function(ctx) {
 };
 
-// Exit a parse tree produced by SvgPathParser#coordinate_pair.
-SvgPathListener.prototype.exitCoordinate_pair = function(ctx) {
+// Exit a parse tree produced by SvgPathParser#quadraticBezierCurvetoArgument.
+SvgPathListener.prototype.exitQuadraticBezierCurvetoArgument = function(ctx) {
+};
+
+
+// Enter a parse tree produced by SvgPathParser#smoothQuadraticBezierCurveto.
+SvgPathListener.prototype.enterSmoothQuadraticBezierCurveto = function(ctx) {
+};
+
+// Exit a parse tree produced by SvgPathParser#smoothQuadraticBezierCurveto.
+SvgPathListener.prototype.exitSmoothQuadraticBezierCurveto = function(ctx) {
+};
+
+
+// Enter a parse tree produced by SvgPathParser#smoothQuadraticBezierCurvetoArgumentSequence.
+SvgPathListener.prototype.enterSmoothQuadraticBezierCurvetoArgumentSequence = function(ctx) {
+};
+
+// Exit a parse tree produced by SvgPathParser#smoothQuadraticBezierCurvetoArgumentSequence.
+SvgPathListener.prototype.exitSmoothQuadraticBezierCurvetoArgumentSequence = function(ctx) {
+};
+
+
+// Enter a parse tree produced by SvgPathParser#ellipticalArc.
+SvgPathListener.prototype.enterEllipticalArc = function(ctx) {
+};
+
+// Exit a parse tree produced by SvgPathParser#ellipticalArc.
+SvgPathListener.prototype.exitEllipticalArc = function(ctx) {
+};
+
+
+// Enter a parse tree produced by SvgPathParser#ellipticalArcArgumentSequence.
+SvgPathListener.prototype.enterEllipticalArcArgumentSequence = function(ctx) {
+};
+
+// Exit a parse tree produced by SvgPathParser#ellipticalArcArgumentSequence.
+SvgPathListener.prototype.exitEllipticalArcArgumentSequence = function(ctx) {
+};
+
+
+// Enter a parse tree produced by SvgPathParser#ellipticalArcArgument.
+SvgPathListener.prototype.enterEllipticalArcArgument = function(ctx) {
+};
+
+// Exit a parse tree produced by SvgPathParser#ellipticalArcArgument.
+SvgPathListener.prototype.exitEllipticalArcArgument = function(ctx) {
+};
+
+
+// Enter a parse tree produced by SvgPathParser#coordinatePair.
+SvgPathListener.prototype.enterCoordinatePair = function(ctx) {
+};
+
+// Exit a parse tree produced by SvgPathParser#coordinatePair.
+SvgPathListener.prototype.exitCoordinatePair = function(ctx) {
 };
 
 
@@ -290,12 +290,12 @@ SvgPathListener.prototype.exitCoordinate = function(ctx) {
 };
 
 
-// Enter a parse tree produced by SvgPathParser#nonnegative_number.
-SvgPathListener.prototype.enterNonnegative_number = function(ctx) {
+// Enter a parse tree produced by SvgPathParser#nonnegativeNumber.
+SvgPathListener.prototype.enterNonnegativeNumber = function(ctx) {
 };
 
-// Exit a parse tree produced by SvgPathParser#nonnegative_number.
-SvgPathListener.prototype.exitNonnegative_number = function(ctx) {
+// Exit a parse tree produced by SvgPathParser#nonnegativeNumber.
+SvgPathListener.prototype.exitNonnegativeNumber = function(ctx) {
 };
 
 
@@ -317,12 +317,12 @@ SvgPathListener.prototype.exitFlag = function(ctx) {
 };
 
 
-// Enter a parse tree produced by SvgPathParser#comma_wsp.
-SvgPathListener.prototype.enterComma_wsp = function(ctx) {
+// Enter a parse tree produced by SvgPathParser#commaWsp.
+SvgPathListener.prototype.enterCommaWsp = function(ctx) {
 };
 
-// Exit a parse tree produced by SvgPathParser#comma_wsp.
-SvgPathListener.prototype.exitComma_wsp = function(ctx) {
+// Exit a parse tree produced by SvgPathParser#commaWsp.
+SvgPathListener.prototype.exitCommaWsp = function(ctx) {
 };
 
 
@@ -335,30 +335,30 @@ SvgPathListener.prototype.exitComma = function(ctx) {
 };
 
 
-// Enter a parse tree produced by SvgPathParser#integer_constant.
-SvgPathListener.prototype.enterInteger_constant = function(ctx) {
+// Enter a parse tree produced by SvgPathParser#integerConstant.
+SvgPathListener.prototype.enterIntegerConstant = function(ctx) {
 };
 
-// Exit a parse tree produced by SvgPathParser#integer_constant.
-SvgPathListener.prototype.exitInteger_constant = function(ctx) {
-};
-
-
-// Enter a parse tree produced by SvgPathParser#floating_point_constant.
-SvgPathListener.prototype.enterFloating_point_constant = function(ctx) {
-};
-
-// Exit a parse tree produced by SvgPathParser#floating_point_constant.
-SvgPathListener.prototype.exitFloating_point_constant = function(ctx) {
+// Exit a parse tree produced by SvgPathParser#integerConstant.
+SvgPathListener.prototype.exitIntegerConstant = function(ctx) {
 };
 
 
-// Enter a parse tree produced by SvgPathParser#fractional_constant.
-SvgPathListener.prototype.enterFractional_constant = function(ctx) {
+// Enter a parse tree produced by SvgPathParser#floatingPointConstant.
+SvgPathListener.prototype.enterFloatingPointConstant = function(ctx) {
 };
 
-// Exit a parse tree produced by SvgPathParser#fractional_constant.
-SvgPathListener.prototype.exitFractional_constant = function(ctx) {
+// Exit a parse tree produced by SvgPathParser#floatingPointConstant.
+SvgPathListener.prototype.exitFloatingPointConstant = function(ctx) {
+};
+
+
+// Enter a parse tree produced by SvgPathParser#fractionalConstant.
+SvgPathListener.prototype.enterFractionalConstant = function(ctx) {
+};
+
+// Exit a parse tree produced by SvgPathParser#fractionalConstant.
+SvgPathListener.prototype.exitFractionalConstant = function(ctx) {
 };
 
 
@@ -380,12 +380,12 @@ SvgPathListener.prototype.exitSign = function(ctx) {
 };
 
 
-// Enter a parse tree produced by SvgPathParser#digit_sequence.
-SvgPathListener.prototype.enterDigit_sequence = function(ctx) {
+// Enter a parse tree produced by SvgPathParser#digitSequence.
+SvgPathListener.prototype.enterDigitSequence = function(ctx) {
 };
 
-// Exit a parse tree produced by SvgPathParser#digit_sequence.
-SvgPathListener.prototype.exitDigit_sequence = function(ctx) {
+// Exit a parse tree produced by SvgPathParser#digitSequence.
+SvgPathListener.prototype.exitDigitSequence = function(ctx) {
 };
 
 

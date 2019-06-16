@@ -1,115 +1,115 @@
 grammar SvgPath;
 
-eval : svg_path;
+eval : svgPath;
 
-svg_path:
-    wsp* moveto_drawto_command_groups? wsp*;
-moveto_drawto_command_groups:
-    moveto_drawto_command_group
-    | moveto_drawto_command_group wsp* moveto_drawto_command_groups;
-moveto_drawto_command_group:
-    moveto wsp* drawto_commands?;
-drawto_commands:
-    drawto_command
-    | drawto_command wsp* drawto_commands;
-drawto_command:
+svgPath:
+    wsp* movetoDrawtoCommandGroups? wsp*;
+movetoDrawtoCommandGroups:
+    movetoDrawtoCommandGroup
+    | movetoDrawtoCommandGroup wsp* movetoDrawtoCommandGroups;
+movetoDrawtoCommandGroup:
+    moveto wsp* drawtoCommands?;
+drawtoCommands:
+    drawtoCommand
+    | drawtoCommand wsp* drawtoCommands;
+drawtoCommand:
     closepath
     | lineto
-    | horizontal_lineto
-    | vertical_lineto
+    | horizontalLineto
+    | verticalLineto
     | curveto
-    | smooth_curveto
-    | quadratic_bezier_curveto
-    | smooth_quadratic_bezier_curveto
-    | elliptical_arc;
+    | smoothCurveto
+    | quadraticBezierCurveto
+    | smoothQuadraticBezierCurveto
+    | ellipticalArc;
 moveto:
-    ( 'M' | 'm' ) wsp* moveto_argument_sequence;
-moveto_argument_sequence:
-    coordinate_pair
-    | coordinate_pair comma_wsp? lineto_argument_sequence;
+    ( 'M' | 'm' ) wsp* movetoArgumentSequence;
+movetoArgumentSequence:
+    coordinatePair
+    | coordinatePair commaWsp? linetoArgumentSequence;
 closepath:
     ('Z' | 'z');
 lineto:
-    ( 'L' | 'l' ) wsp* lineto_argument_sequence;
-lineto_argument_sequence:
-    coordinate_pair
-    | coordinate_pair comma_wsp? lineto_argument_sequence;
-horizontal_lineto:
-    ( 'H' | 'h' ) wsp* horizontal_lineto_argument_sequence;
-horizontal_lineto_argument_sequence:
+    ( 'L' | 'l' ) wsp* linetoArgumentSequence;
+linetoArgumentSequence:
+    coordinatePair
+    | coordinatePair commaWsp? linetoArgumentSequence;
+horizontalLineto:
+    ( 'H' | 'h' ) wsp* horizontalLinetoArgumentSequence;
+horizontalLinetoArgumentSequence:
     coordinate
-    | coordinate comma_wsp? horizontal_lineto_argument_sequence;
-vertical_lineto:
-    ( 'V' | 'v' ) wsp* vertical_lineto_argument_sequence;
-vertical_lineto_argument_sequence:
+    | coordinate commaWsp? horizontalLinetoArgumentSequence;
+verticalLineto:
+    ( 'V' | 'v' ) wsp* verticalLinetoArgumentSequence;
+verticalLinetoArgumentSequence:
     coordinate
-    | coordinate comma_wsp? vertical_lineto_argument_sequence;
+    | coordinate commaWsp? verticalLinetoArgumentSequence;
 curveto:
-    ( 'C' | 'c' ) wsp* curveto_argument_sequence;
-curveto_argument_sequence:
-    curveto_argument
-    | curveto_argument comma_wsp? curveto_argument_sequence;
-curveto_argument:
-    coordinate_pair comma_wsp? coordinate_pair comma_wsp? coordinate_pair;
-smooth_curveto:
-    ( 'S' | 's' ) wsp* smooth_curveto_argument_sequence;
-smooth_curveto_argument_sequence:
-    smooth_curveto_argument
-    | smooth_curveto_argument comma_wsp? smooth_curveto_argument_sequence;
-smooth_curveto_argument:
-    coordinate_pair comma_wsp? coordinate_pair;
-quadratic_bezier_curveto:
-    ( 'Q' | 'q' ) wsp* quadratic_bezier_curveto_argument_sequence;
-quadratic_bezier_curveto_argument_sequence:
-    quadratic_bezier_curveto_argument
-    | quadratic_bezier_curveto_argument comma_wsp? 
-        quadratic_bezier_curveto_argument_sequence;
-quadratic_bezier_curveto_argument:
-    coordinate_pair comma_wsp? coordinate_pair;
-smooth_quadratic_bezier_curveto:
-    ( 'T' | 't' ) wsp* smooth_quadratic_bezier_curveto_argument_sequence;
-smooth_quadratic_bezier_curveto_argument_sequence:
-    coordinate_pair
-    | coordinate_pair comma_wsp? smooth_quadratic_bezier_curveto_argument_sequence;
-elliptical_arc:
-    ( 'A' | 'a' ) wsp* elliptical_arc_argument_sequence;
-elliptical_arc_argument_sequence:
-    elliptical_arc_argument
-    | elliptical_arc_argument comma_wsp? elliptical_arc_argument_sequence;
-elliptical_arc_argument:
-    nonnegative_number comma_wsp? nonnegative_number comma_wsp? 
-        number comma_wsp flag comma_wsp? flag comma_wsp? coordinate_pair;
-coordinate_pair:
-    coordinate comma_wsp? coordinate;
+    ( 'C' | 'c' ) wsp* curvetoArgumentSequence;
+curvetoArgumentSequence:
+    curvetoArgument
+    | curvetoArgument commaWsp? curvetoArgumentSequence;
+curvetoArgument:
+    coordinatePair commaWsp? coordinatePair commaWsp? coordinatePair;
+smoothCurveto:
+    ( 'S' | 's' ) wsp* smoothCurvetoArgumentSequence;
+smoothCurvetoArgumentSequence:
+    smoothCurvetoArgument
+    | smoothCurvetoArgument commaWsp? smoothCurvetoArgumentSequence;
+smoothCurvetoArgument:
+    coordinatePair commaWsp? coordinatePair;
+quadraticBezierCurveto:
+    ( 'Q' | 'q' ) wsp* quadraticBezierCurvetoArgumentSequence;
+quadraticBezierCurvetoArgumentSequence:
+    quadraticBezierCurvetoArgument
+    | quadraticBezierCurvetoArgument commaWsp? 
+        quadraticBezierCurvetoArgumentSequence;
+quadraticBezierCurvetoArgument:
+    coordinatePair commaWsp? coordinatePair;
+smoothQuadraticBezierCurveto:
+    ( 'T' | 't' ) wsp* smoothQuadraticBezierCurvetoArgumentSequence;
+smoothQuadraticBezierCurvetoArgumentSequence:
+    coordinatePair
+    | coordinatePair commaWsp? smoothQuadraticBezierCurvetoArgumentSequence;
+ellipticalArc:
+    ( 'A' | 'a' ) wsp* ellipticalArcArgumentSequence;
+ellipticalArcArgumentSequence:
+    ellipticalArcArgument
+    | ellipticalArcArgument commaWsp? ellipticalArcArgumentSequence;
+ellipticalArcArgument:
+    nonnegativeNumber commaWsp? nonnegativeNumber commaWsp? 
+        number commaWsp flag commaWsp? flag commaWsp? coordinatePair;
+coordinatePair:
+    coordinate commaWsp? coordinate;
 coordinate:
     number;
-nonnegative_number:
-    integer_constant
-    | floating_point_constant;
+nonnegativeNumber:
+    integerConstant
+    | floatingPointConstant;
 number:
-    sign? integer_constant
-    | sign? floating_point_constant;
+    sign? integerConstant
+    | sign? floatingPointConstant;
 flag:
     '0' | '1';
-comma_wsp:
+commaWsp:
     (wsp+ comma? wsp*) | (comma wsp*);
 comma:
     ',';
-integer_constant:
-    digit_sequence;
-floating_point_constant:
-    fractional_constant exponent?
-    | digit_sequence exponent;
-fractional_constant:
-    digit_sequence? '.' digit_sequence
-    | digit_sequence '.';
+integerConstant:
+    digitSequence;
+floatingPointConstant:
+    fractionalConstant exponent?
+    | digitSequence exponent;
+fractionalConstant:
+    digitSequence? '.' digitSequence
+    | digitSequence '.';
 exponent:
-    ( 'e' | 'E' ) sign? digit_sequence;
+    ( 'e' | 'E' ) sign? digitSequence;
 sign:
     '+' | '-';
-digit_sequence:
+digitSequence:
     digit
-    | digit digit_sequence;
+    | digit digitSequence;
 digit:
     ('0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9');
 wsp:

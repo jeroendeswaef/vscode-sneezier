@@ -316,21 +316,20 @@ var literalNames = [ null, "'M'", "'m'", "'Z'", "'z'", "'L'", "'l'", "'H'",
 
 var symbolicNames = [  ];
 
-var ruleNames =  [ "eval", "svg_path", "moveto_drawto_command_groups", "moveto_drawto_command_group", 
-                   "drawto_commands", "drawto_command", "moveto", "moveto_argument_sequence", 
-                   "closepath", "lineto", "lineto_argument_sequence", "horizontal_lineto", 
-                   "horizontal_lineto_argument_sequence", "vertical_lineto", 
-                   "vertical_lineto_argument_sequence", "curveto", "curveto_argument_sequence", 
-                   "curveto_argument", "smooth_curveto", "smooth_curveto_argument_sequence", 
-                   "smooth_curveto_argument", "quadratic_bezier_curveto", 
-                   "quadratic_bezier_curveto_argument_sequence", "quadratic_bezier_curveto_argument", 
-                   "smooth_quadratic_bezier_curveto", "smooth_quadratic_bezier_curveto_argument_sequence", 
-                   "elliptical_arc", "elliptical_arc_argument_sequence", 
-                   "elliptical_arc_argument", "coordinate_pair", "coordinate", 
-                   "nonnegative_number", "number", "flag", "comma_wsp", 
-                   "comma", "integer_constant", "floating_point_constant", 
-                   "fractional_constant", "exponent", "sign", "digit_sequence", 
-                   "digit", "wsp" ];
+var ruleNames =  [ "eval", "svgPath", "movetoDrawtoCommandGroups", "movetoDrawtoCommandGroup", 
+                   "drawtoCommands", "drawtoCommand", "moveto", "movetoArgumentSequence", 
+                   "closepath", "lineto", "linetoArgumentSequence", "horizontalLineto", 
+                   "horizontalLinetoArgumentSequence", "verticalLineto", 
+                   "verticalLinetoArgumentSequence", "curveto", "curvetoArgumentSequence", 
+                   "curvetoArgument", "smoothCurveto", "smoothCurvetoArgumentSequence", 
+                   "smoothCurvetoArgument", "quadraticBezierCurveto", "quadraticBezierCurvetoArgumentSequence", 
+                   "quadraticBezierCurvetoArgument", "smoothQuadraticBezierCurveto", 
+                   "smoothQuadraticBezierCurvetoArgumentSequence", "ellipticalArc", 
+                   "ellipticalArcArgumentSequence", "ellipticalArcArgument", 
+                   "coordinatePair", "coordinate", "nonnegativeNumber", 
+                   "number", "flag", "commaWsp", "comma", "integerConstant", 
+                   "floatingPointConstant", "fractionalConstant", "exponent", 
+                   "sign", "digitSequence", "digit", "wsp" ];
 
 function SvgPathParser (input) {
 	antlr4.Parser.call(this, input);
@@ -393,47 +392,47 @@ SvgPathParser.T__38 = 39;
 SvgPathParser.T__39 = 40;
 
 SvgPathParser.RULE_eval = 0;
-SvgPathParser.RULE_svg_path = 1;
-SvgPathParser.RULE_moveto_drawto_command_groups = 2;
-SvgPathParser.RULE_moveto_drawto_command_group = 3;
-SvgPathParser.RULE_drawto_commands = 4;
-SvgPathParser.RULE_drawto_command = 5;
+SvgPathParser.RULE_svgPath = 1;
+SvgPathParser.RULE_movetoDrawtoCommandGroups = 2;
+SvgPathParser.RULE_movetoDrawtoCommandGroup = 3;
+SvgPathParser.RULE_drawtoCommands = 4;
+SvgPathParser.RULE_drawtoCommand = 5;
 SvgPathParser.RULE_moveto = 6;
-SvgPathParser.RULE_moveto_argument_sequence = 7;
+SvgPathParser.RULE_movetoArgumentSequence = 7;
 SvgPathParser.RULE_closepath = 8;
 SvgPathParser.RULE_lineto = 9;
-SvgPathParser.RULE_lineto_argument_sequence = 10;
-SvgPathParser.RULE_horizontal_lineto = 11;
-SvgPathParser.RULE_horizontal_lineto_argument_sequence = 12;
-SvgPathParser.RULE_vertical_lineto = 13;
-SvgPathParser.RULE_vertical_lineto_argument_sequence = 14;
+SvgPathParser.RULE_linetoArgumentSequence = 10;
+SvgPathParser.RULE_horizontalLineto = 11;
+SvgPathParser.RULE_horizontalLinetoArgumentSequence = 12;
+SvgPathParser.RULE_verticalLineto = 13;
+SvgPathParser.RULE_verticalLinetoArgumentSequence = 14;
 SvgPathParser.RULE_curveto = 15;
-SvgPathParser.RULE_curveto_argument_sequence = 16;
-SvgPathParser.RULE_curveto_argument = 17;
-SvgPathParser.RULE_smooth_curveto = 18;
-SvgPathParser.RULE_smooth_curveto_argument_sequence = 19;
-SvgPathParser.RULE_smooth_curveto_argument = 20;
-SvgPathParser.RULE_quadratic_bezier_curveto = 21;
-SvgPathParser.RULE_quadratic_bezier_curveto_argument_sequence = 22;
-SvgPathParser.RULE_quadratic_bezier_curveto_argument = 23;
-SvgPathParser.RULE_smooth_quadratic_bezier_curveto = 24;
-SvgPathParser.RULE_smooth_quadratic_bezier_curveto_argument_sequence = 25;
-SvgPathParser.RULE_elliptical_arc = 26;
-SvgPathParser.RULE_elliptical_arc_argument_sequence = 27;
-SvgPathParser.RULE_elliptical_arc_argument = 28;
-SvgPathParser.RULE_coordinate_pair = 29;
+SvgPathParser.RULE_curvetoArgumentSequence = 16;
+SvgPathParser.RULE_curvetoArgument = 17;
+SvgPathParser.RULE_smoothCurveto = 18;
+SvgPathParser.RULE_smoothCurvetoArgumentSequence = 19;
+SvgPathParser.RULE_smoothCurvetoArgument = 20;
+SvgPathParser.RULE_quadraticBezierCurveto = 21;
+SvgPathParser.RULE_quadraticBezierCurvetoArgumentSequence = 22;
+SvgPathParser.RULE_quadraticBezierCurvetoArgument = 23;
+SvgPathParser.RULE_smoothQuadraticBezierCurveto = 24;
+SvgPathParser.RULE_smoothQuadraticBezierCurvetoArgumentSequence = 25;
+SvgPathParser.RULE_ellipticalArc = 26;
+SvgPathParser.RULE_ellipticalArcArgumentSequence = 27;
+SvgPathParser.RULE_ellipticalArcArgument = 28;
+SvgPathParser.RULE_coordinatePair = 29;
 SvgPathParser.RULE_coordinate = 30;
-SvgPathParser.RULE_nonnegative_number = 31;
+SvgPathParser.RULE_nonnegativeNumber = 31;
 SvgPathParser.RULE_number = 32;
 SvgPathParser.RULE_flag = 33;
-SvgPathParser.RULE_comma_wsp = 34;
+SvgPathParser.RULE_commaWsp = 34;
 SvgPathParser.RULE_comma = 35;
-SvgPathParser.RULE_integer_constant = 36;
-SvgPathParser.RULE_floating_point_constant = 37;
-SvgPathParser.RULE_fractional_constant = 38;
+SvgPathParser.RULE_integerConstant = 36;
+SvgPathParser.RULE_floatingPointConstant = 37;
+SvgPathParser.RULE_fractionalConstant = 38;
 SvgPathParser.RULE_exponent = 39;
 SvgPathParser.RULE_sign = 40;
-SvgPathParser.RULE_digit_sequence = 41;
+SvgPathParser.RULE_digitSequence = 41;
 SvgPathParser.RULE_digit = 42;
 SvgPathParser.RULE_wsp = 43;
 
@@ -454,8 +453,8 @@ function EvalContext(parser, parent, invokingState) {
 EvalContext.prototype = Object.create(antlr4.ParserRuleContext.prototype);
 EvalContext.prototype.constructor = EvalContext;
 
-EvalContext.prototype.svg_path = function() {
-    return this.getTypedRuleContext(Svg_pathContext,0);
+EvalContext.prototype.svgPath = function() {
+    return this.getTypedRuleContext(SvgPathContext,0);
 };
 
 EvalContext.prototype.enterRule = function(listener) {
@@ -482,7 +481,7 @@ SvgPathParser.prototype.eval = function() {
     try {
         this.enterOuterAlt(localctx, 1);
         this.state = 88;
-        this.svg_path();
+        this.svgPath();
     } catch (re) {
     	if(re instanceof antlr4.error.RecognitionException) {
 	        localctx.exception = re;
@@ -498,7 +497,7 @@ SvgPathParser.prototype.eval = function() {
 };
 
 
-function Svg_pathContext(parser, parent, invokingState) {
+function SvgPathContext(parser, parent, invokingState) {
 	if(parent===undefined) {
 	    parent = null;
 	}
@@ -507,14 +506,14 @@ function Svg_pathContext(parser, parent, invokingState) {
 	}
 	antlr4.ParserRuleContext.call(this, parent, invokingState);
     this.parser = parser;
-    this.ruleIndex = SvgPathParser.RULE_svg_path;
+    this.ruleIndex = SvgPathParser.RULE_svgPath;
     return this;
 }
 
-Svg_pathContext.prototype = Object.create(antlr4.ParserRuleContext.prototype);
-Svg_pathContext.prototype.constructor = Svg_pathContext;
+SvgPathContext.prototype = Object.create(antlr4.ParserRuleContext.prototype);
+SvgPathContext.prototype.constructor = SvgPathContext;
 
-Svg_pathContext.prototype.wsp = function(i) {
+SvgPathContext.prototype.wsp = function(i) {
     if(i===undefined) {
         i = null;
     }
@@ -525,31 +524,31 @@ Svg_pathContext.prototype.wsp = function(i) {
     }
 };
 
-Svg_pathContext.prototype.moveto_drawto_command_groups = function() {
-    return this.getTypedRuleContext(Moveto_drawto_command_groupsContext,0);
+SvgPathContext.prototype.movetoDrawtoCommandGroups = function() {
+    return this.getTypedRuleContext(MovetoDrawtoCommandGroupsContext,0);
 };
 
-Svg_pathContext.prototype.enterRule = function(listener) {
+SvgPathContext.prototype.enterRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
-        listener.enterSvg_path(this);
+        listener.enterSvgPath(this);
 	}
 };
 
-Svg_pathContext.prototype.exitRule = function(listener) {
+SvgPathContext.prototype.exitRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
-        listener.exitSvg_path(this);
+        listener.exitSvgPath(this);
 	}
 };
 
 
 
 
-SvgPathParser.Svg_pathContext = Svg_pathContext;
+SvgPathParser.SvgPathContext = SvgPathContext;
 
-SvgPathParser.prototype.svg_path = function() {
+SvgPathParser.prototype.svgPath = function() {
 
-    var localctx = new Svg_pathContext(this, this._ctx, this.state);
-    this.enterRule(localctx, 2, SvgPathParser.RULE_svg_path);
+    var localctx = new SvgPathContext(this, this._ctx, this.state);
+    this.enterRule(localctx, 2, SvgPathParser.RULE_svgPath);
     var _la = 0; // Token type
     try {
         this.enterOuterAlt(localctx, 1);
@@ -571,7 +570,7 @@ SvgPathParser.prototype.svg_path = function() {
         _la = this._input.LA(1);
         if(_la===SvgPathParser.T__0 || _la===SvgPathParser.T__1) {
             this.state = 96;
-            this.moveto_drawto_command_groups();
+            this.movetoDrawtoCommandGroups();
         }
 
         this.state = 102;
@@ -599,7 +598,7 @@ SvgPathParser.prototype.svg_path = function() {
 };
 
 
-function Moveto_drawto_command_groupsContext(parser, parent, invokingState) {
+function MovetoDrawtoCommandGroupsContext(parser, parent, invokingState) {
 	if(parent===undefined) {
 	    parent = null;
 	}
@@ -608,22 +607,22 @@ function Moveto_drawto_command_groupsContext(parser, parent, invokingState) {
 	}
 	antlr4.ParserRuleContext.call(this, parent, invokingState);
     this.parser = parser;
-    this.ruleIndex = SvgPathParser.RULE_moveto_drawto_command_groups;
+    this.ruleIndex = SvgPathParser.RULE_movetoDrawtoCommandGroups;
     return this;
 }
 
-Moveto_drawto_command_groupsContext.prototype = Object.create(antlr4.ParserRuleContext.prototype);
-Moveto_drawto_command_groupsContext.prototype.constructor = Moveto_drawto_command_groupsContext;
+MovetoDrawtoCommandGroupsContext.prototype = Object.create(antlr4.ParserRuleContext.prototype);
+MovetoDrawtoCommandGroupsContext.prototype.constructor = MovetoDrawtoCommandGroupsContext;
 
-Moveto_drawto_command_groupsContext.prototype.moveto_drawto_command_group = function() {
-    return this.getTypedRuleContext(Moveto_drawto_command_groupContext,0);
+MovetoDrawtoCommandGroupsContext.prototype.movetoDrawtoCommandGroup = function() {
+    return this.getTypedRuleContext(MovetoDrawtoCommandGroupContext,0);
 };
 
-Moveto_drawto_command_groupsContext.prototype.moveto_drawto_command_groups = function() {
-    return this.getTypedRuleContext(Moveto_drawto_command_groupsContext,0);
+MovetoDrawtoCommandGroupsContext.prototype.movetoDrawtoCommandGroups = function() {
+    return this.getTypedRuleContext(MovetoDrawtoCommandGroupsContext,0);
 };
 
-Moveto_drawto_command_groupsContext.prototype.wsp = function(i) {
+MovetoDrawtoCommandGroupsContext.prototype.wsp = function(i) {
     if(i===undefined) {
         i = null;
     }
@@ -634,27 +633,27 @@ Moveto_drawto_command_groupsContext.prototype.wsp = function(i) {
     }
 };
 
-Moveto_drawto_command_groupsContext.prototype.enterRule = function(listener) {
+MovetoDrawtoCommandGroupsContext.prototype.enterRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
-        listener.enterMoveto_drawto_command_groups(this);
+        listener.enterMovetoDrawtoCommandGroups(this);
 	}
 };
 
-Moveto_drawto_command_groupsContext.prototype.exitRule = function(listener) {
+MovetoDrawtoCommandGroupsContext.prototype.exitRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
-        listener.exitMoveto_drawto_command_groups(this);
+        listener.exitMovetoDrawtoCommandGroups(this);
 	}
 };
 
 
 
 
-SvgPathParser.Moveto_drawto_command_groupsContext = Moveto_drawto_command_groupsContext;
+SvgPathParser.MovetoDrawtoCommandGroupsContext = MovetoDrawtoCommandGroupsContext;
 
-SvgPathParser.prototype.moveto_drawto_command_groups = function() {
+SvgPathParser.prototype.movetoDrawtoCommandGroups = function() {
 
-    var localctx = new Moveto_drawto_command_groupsContext(this, this._ctx, this.state);
-    this.enterRule(localctx, 4, SvgPathParser.RULE_moveto_drawto_command_groups);
+    var localctx = new MovetoDrawtoCommandGroupsContext(this, this._ctx, this.state);
+    this.enterRule(localctx, 4, SvgPathParser.RULE_movetoDrawtoCommandGroups);
     var _la = 0; // Token type
     try {
         this.state = 115;
@@ -664,13 +663,13 @@ SvgPathParser.prototype.moveto_drawto_command_groups = function() {
         case 1:
             this.enterOuterAlt(localctx, 1);
             this.state = 105;
-            this.moveto_drawto_command_group();
+            this.movetoDrawtoCommandGroup();
             break;
 
         case 2:
             this.enterOuterAlt(localctx, 2);
             this.state = 106;
-            this.moveto_drawto_command_group();
+            this.movetoDrawtoCommandGroup();
             this.state = 110;
             this._errHandler.sync(this);
             _la = this._input.LA(1);
@@ -682,7 +681,7 @@ SvgPathParser.prototype.moveto_drawto_command_groups = function() {
                 _la = this._input.LA(1);
             }
             this.state = 113;
-            this.moveto_drawto_command_groups();
+            this.movetoDrawtoCommandGroups();
             break;
 
         }
@@ -701,7 +700,7 @@ SvgPathParser.prototype.moveto_drawto_command_groups = function() {
 };
 
 
-function Moveto_drawto_command_groupContext(parser, parent, invokingState) {
+function MovetoDrawtoCommandGroupContext(parser, parent, invokingState) {
 	if(parent===undefined) {
 	    parent = null;
 	}
@@ -710,18 +709,18 @@ function Moveto_drawto_command_groupContext(parser, parent, invokingState) {
 	}
 	antlr4.ParserRuleContext.call(this, parent, invokingState);
     this.parser = parser;
-    this.ruleIndex = SvgPathParser.RULE_moveto_drawto_command_group;
+    this.ruleIndex = SvgPathParser.RULE_movetoDrawtoCommandGroup;
     return this;
 }
 
-Moveto_drawto_command_groupContext.prototype = Object.create(antlr4.ParserRuleContext.prototype);
-Moveto_drawto_command_groupContext.prototype.constructor = Moveto_drawto_command_groupContext;
+MovetoDrawtoCommandGroupContext.prototype = Object.create(antlr4.ParserRuleContext.prototype);
+MovetoDrawtoCommandGroupContext.prototype.constructor = MovetoDrawtoCommandGroupContext;
 
-Moveto_drawto_command_groupContext.prototype.moveto = function() {
+MovetoDrawtoCommandGroupContext.prototype.moveto = function() {
     return this.getTypedRuleContext(MovetoContext,0);
 };
 
-Moveto_drawto_command_groupContext.prototype.wsp = function(i) {
+MovetoDrawtoCommandGroupContext.prototype.wsp = function(i) {
     if(i===undefined) {
         i = null;
     }
@@ -732,31 +731,31 @@ Moveto_drawto_command_groupContext.prototype.wsp = function(i) {
     }
 };
 
-Moveto_drawto_command_groupContext.prototype.drawto_commands = function() {
-    return this.getTypedRuleContext(Drawto_commandsContext,0);
+MovetoDrawtoCommandGroupContext.prototype.drawtoCommands = function() {
+    return this.getTypedRuleContext(DrawtoCommandsContext,0);
 };
 
-Moveto_drawto_command_groupContext.prototype.enterRule = function(listener) {
+MovetoDrawtoCommandGroupContext.prototype.enterRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
-        listener.enterMoveto_drawto_command_group(this);
+        listener.enterMovetoDrawtoCommandGroup(this);
 	}
 };
 
-Moveto_drawto_command_groupContext.prototype.exitRule = function(listener) {
+MovetoDrawtoCommandGroupContext.prototype.exitRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
-        listener.exitMoveto_drawto_command_group(this);
+        listener.exitMovetoDrawtoCommandGroup(this);
 	}
 };
 
 
 
 
-SvgPathParser.Moveto_drawto_command_groupContext = Moveto_drawto_command_groupContext;
+SvgPathParser.MovetoDrawtoCommandGroupContext = MovetoDrawtoCommandGroupContext;
 
-SvgPathParser.prototype.moveto_drawto_command_group = function() {
+SvgPathParser.prototype.movetoDrawtoCommandGroup = function() {
 
-    var localctx = new Moveto_drawto_command_groupContext(this, this._ctx, this.state);
-    this.enterRule(localctx, 6, SvgPathParser.RULE_moveto_drawto_command_group);
+    var localctx = new MovetoDrawtoCommandGroupContext(this, this._ctx, this.state);
+    this.enterRule(localctx, 6, SvgPathParser.RULE_movetoDrawtoCommandGroup);
     var _la = 0; // Token type
     try {
         this.enterOuterAlt(localctx, 1);
@@ -780,7 +779,7 @@ SvgPathParser.prototype.moveto_drawto_command_group = function() {
         _la = this._input.LA(1);
         if((((_la) & ~0x1f) == 0 && ((1 << _la) & ((1 << SvgPathParser.T__2) | (1 << SvgPathParser.T__3) | (1 << SvgPathParser.T__4) | (1 << SvgPathParser.T__5) | (1 << SvgPathParser.T__6) | (1 << SvgPathParser.T__7) | (1 << SvgPathParser.T__8) | (1 << SvgPathParser.T__9) | (1 << SvgPathParser.T__10) | (1 << SvgPathParser.T__11) | (1 << SvgPathParser.T__12) | (1 << SvgPathParser.T__13) | (1 << SvgPathParser.T__14) | (1 << SvgPathParser.T__15) | (1 << SvgPathParser.T__16) | (1 << SvgPathParser.T__17) | (1 << SvgPathParser.T__18) | (1 << SvgPathParser.T__19))) !== 0)) {
             this.state = 124;
-            this.drawto_commands();
+            this.drawtoCommands();
         }
 
     } catch (re) {
@@ -798,7 +797,7 @@ SvgPathParser.prototype.moveto_drawto_command_group = function() {
 };
 
 
-function Drawto_commandsContext(parser, parent, invokingState) {
+function DrawtoCommandsContext(parser, parent, invokingState) {
 	if(parent===undefined) {
 	    parent = null;
 	}
@@ -807,22 +806,22 @@ function Drawto_commandsContext(parser, parent, invokingState) {
 	}
 	antlr4.ParserRuleContext.call(this, parent, invokingState);
     this.parser = parser;
-    this.ruleIndex = SvgPathParser.RULE_drawto_commands;
+    this.ruleIndex = SvgPathParser.RULE_drawtoCommands;
     return this;
 }
 
-Drawto_commandsContext.prototype = Object.create(antlr4.ParserRuleContext.prototype);
-Drawto_commandsContext.prototype.constructor = Drawto_commandsContext;
+DrawtoCommandsContext.prototype = Object.create(antlr4.ParserRuleContext.prototype);
+DrawtoCommandsContext.prototype.constructor = DrawtoCommandsContext;
 
-Drawto_commandsContext.prototype.drawto_command = function() {
-    return this.getTypedRuleContext(Drawto_commandContext,0);
+DrawtoCommandsContext.prototype.drawtoCommand = function() {
+    return this.getTypedRuleContext(DrawtoCommandContext,0);
 };
 
-Drawto_commandsContext.prototype.drawto_commands = function() {
-    return this.getTypedRuleContext(Drawto_commandsContext,0);
+DrawtoCommandsContext.prototype.drawtoCommands = function() {
+    return this.getTypedRuleContext(DrawtoCommandsContext,0);
 };
 
-Drawto_commandsContext.prototype.wsp = function(i) {
+DrawtoCommandsContext.prototype.wsp = function(i) {
     if(i===undefined) {
         i = null;
     }
@@ -833,27 +832,27 @@ Drawto_commandsContext.prototype.wsp = function(i) {
     }
 };
 
-Drawto_commandsContext.prototype.enterRule = function(listener) {
+DrawtoCommandsContext.prototype.enterRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
-        listener.enterDrawto_commands(this);
+        listener.enterDrawtoCommands(this);
 	}
 };
 
-Drawto_commandsContext.prototype.exitRule = function(listener) {
+DrawtoCommandsContext.prototype.exitRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
-        listener.exitDrawto_commands(this);
+        listener.exitDrawtoCommands(this);
 	}
 };
 
 
 
 
-SvgPathParser.Drawto_commandsContext = Drawto_commandsContext;
+SvgPathParser.DrawtoCommandsContext = DrawtoCommandsContext;
 
-SvgPathParser.prototype.drawto_commands = function() {
+SvgPathParser.prototype.drawtoCommands = function() {
 
-    var localctx = new Drawto_commandsContext(this, this._ctx, this.state);
-    this.enterRule(localctx, 8, SvgPathParser.RULE_drawto_commands);
+    var localctx = new DrawtoCommandsContext(this, this._ctx, this.state);
+    this.enterRule(localctx, 8, SvgPathParser.RULE_drawtoCommands);
     var _la = 0; // Token type
     try {
         this.state = 137;
@@ -863,13 +862,13 @@ SvgPathParser.prototype.drawto_commands = function() {
         case 1:
             this.enterOuterAlt(localctx, 1);
             this.state = 127;
-            this.drawto_command();
+            this.drawtoCommand();
             break;
 
         case 2:
             this.enterOuterAlt(localctx, 2);
             this.state = 128;
-            this.drawto_command();
+            this.drawtoCommand();
             this.state = 132;
             this._errHandler.sync(this);
             _la = this._input.LA(1);
@@ -881,7 +880,7 @@ SvgPathParser.prototype.drawto_commands = function() {
                 _la = this._input.LA(1);
             }
             this.state = 135;
-            this.drawto_commands();
+            this.drawtoCommands();
             break;
 
         }
@@ -900,7 +899,7 @@ SvgPathParser.prototype.drawto_commands = function() {
 };
 
 
-function Drawto_commandContext(parser, parent, invokingState) {
+function DrawtoCommandContext(parser, parent, invokingState) {
 	if(parent===undefined) {
 	    parent = null;
 	}
@@ -909,70 +908,70 @@ function Drawto_commandContext(parser, parent, invokingState) {
 	}
 	antlr4.ParserRuleContext.call(this, parent, invokingState);
     this.parser = parser;
-    this.ruleIndex = SvgPathParser.RULE_drawto_command;
+    this.ruleIndex = SvgPathParser.RULE_drawtoCommand;
     return this;
 }
 
-Drawto_commandContext.prototype = Object.create(antlr4.ParserRuleContext.prototype);
-Drawto_commandContext.prototype.constructor = Drawto_commandContext;
+DrawtoCommandContext.prototype = Object.create(antlr4.ParserRuleContext.prototype);
+DrawtoCommandContext.prototype.constructor = DrawtoCommandContext;
 
-Drawto_commandContext.prototype.closepath = function() {
+DrawtoCommandContext.prototype.closepath = function() {
     return this.getTypedRuleContext(ClosepathContext,0);
 };
 
-Drawto_commandContext.prototype.lineto = function() {
+DrawtoCommandContext.prototype.lineto = function() {
     return this.getTypedRuleContext(LinetoContext,0);
 };
 
-Drawto_commandContext.prototype.horizontal_lineto = function() {
-    return this.getTypedRuleContext(Horizontal_linetoContext,0);
+DrawtoCommandContext.prototype.horizontalLineto = function() {
+    return this.getTypedRuleContext(HorizontalLinetoContext,0);
 };
 
-Drawto_commandContext.prototype.vertical_lineto = function() {
-    return this.getTypedRuleContext(Vertical_linetoContext,0);
+DrawtoCommandContext.prototype.verticalLineto = function() {
+    return this.getTypedRuleContext(VerticalLinetoContext,0);
 };
 
-Drawto_commandContext.prototype.curveto = function() {
+DrawtoCommandContext.prototype.curveto = function() {
     return this.getTypedRuleContext(CurvetoContext,0);
 };
 
-Drawto_commandContext.prototype.smooth_curveto = function() {
-    return this.getTypedRuleContext(Smooth_curvetoContext,0);
+DrawtoCommandContext.prototype.smoothCurveto = function() {
+    return this.getTypedRuleContext(SmoothCurvetoContext,0);
 };
 
-Drawto_commandContext.prototype.quadratic_bezier_curveto = function() {
-    return this.getTypedRuleContext(Quadratic_bezier_curvetoContext,0);
+DrawtoCommandContext.prototype.quadraticBezierCurveto = function() {
+    return this.getTypedRuleContext(QuadraticBezierCurvetoContext,0);
 };
 
-Drawto_commandContext.prototype.smooth_quadratic_bezier_curveto = function() {
-    return this.getTypedRuleContext(Smooth_quadratic_bezier_curvetoContext,0);
+DrawtoCommandContext.prototype.smoothQuadraticBezierCurveto = function() {
+    return this.getTypedRuleContext(SmoothQuadraticBezierCurvetoContext,0);
 };
 
-Drawto_commandContext.prototype.elliptical_arc = function() {
-    return this.getTypedRuleContext(Elliptical_arcContext,0);
+DrawtoCommandContext.prototype.ellipticalArc = function() {
+    return this.getTypedRuleContext(EllipticalArcContext,0);
 };
 
-Drawto_commandContext.prototype.enterRule = function(listener) {
+DrawtoCommandContext.prototype.enterRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
-        listener.enterDrawto_command(this);
+        listener.enterDrawtoCommand(this);
 	}
 };
 
-Drawto_commandContext.prototype.exitRule = function(listener) {
+DrawtoCommandContext.prototype.exitRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
-        listener.exitDrawto_command(this);
+        listener.exitDrawtoCommand(this);
 	}
 };
 
 
 
 
-SvgPathParser.Drawto_commandContext = Drawto_commandContext;
+SvgPathParser.DrawtoCommandContext = DrawtoCommandContext;
 
-SvgPathParser.prototype.drawto_command = function() {
+SvgPathParser.prototype.drawtoCommand = function() {
 
-    var localctx = new Drawto_commandContext(this, this._ctx, this.state);
-    this.enterRule(localctx, 10, SvgPathParser.RULE_drawto_command);
+    var localctx = new DrawtoCommandContext(this, this._ctx, this.state);
+    this.enterRule(localctx, 10, SvgPathParser.RULE_drawtoCommand);
     try {
         this.state = 148;
         this._errHandler.sync(this);
@@ -993,13 +992,13 @@ SvgPathParser.prototype.drawto_command = function() {
         case SvgPathParser.T__7:
             this.enterOuterAlt(localctx, 3);
             this.state = 141;
-            this.horizontal_lineto();
+            this.horizontalLineto();
             break;
         case SvgPathParser.T__8:
         case SvgPathParser.T__9:
             this.enterOuterAlt(localctx, 4);
             this.state = 142;
-            this.vertical_lineto();
+            this.verticalLineto();
             break;
         case SvgPathParser.T__10:
         case SvgPathParser.T__11:
@@ -1011,25 +1010,25 @@ SvgPathParser.prototype.drawto_command = function() {
         case SvgPathParser.T__13:
             this.enterOuterAlt(localctx, 6);
             this.state = 144;
-            this.smooth_curveto();
+            this.smoothCurveto();
             break;
         case SvgPathParser.T__14:
         case SvgPathParser.T__15:
             this.enterOuterAlt(localctx, 7);
             this.state = 145;
-            this.quadratic_bezier_curveto();
+            this.quadraticBezierCurveto();
             break;
         case SvgPathParser.T__16:
         case SvgPathParser.T__17:
             this.enterOuterAlt(localctx, 8);
             this.state = 146;
-            this.smooth_quadratic_bezier_curveto();
+            this.smoothQuadraticBezierCurveto();
             break;
         case SvgPathParser.T__18:
         case SvgPathParser.T__19:
             this.enterOuterAlt(localctx, 9);
             this.state = 147;
-            this.elliptical_arc();
+            this.ellipticalArc();
             break;
         default:
             throw new antlr4.error.NoViableAltException(this);
@@ -1065,8 +1064,8 @@ function MovetoContext(parser, parent, invokingState) {
 MovetoContext.prototype = Object.create(antlr4.ParserRuleContext.prototype);
 MovetoContext.prototype.constructor = MovetoContext;
 
-MovetoContext.prototype.moveto_argument_sequence = function() {
-    return this.getTypedRuleContext(Moveto_argument_sequenceContext,0);
+MovetoContext.prototype.movetoArgumentSequence = function() {
+    return this.getTypedRuleContext(MovetoArgumentSequenceContext,0);
 };
 
 MovetoContext.prototype.wsp = function(i) {
@@ -1124,7 +1123,7 @@ SvgPathParser.prototype.moveto = function() {
             _la = this._input.LA(1);
         }
         this.state = 157;
-        this.moveto_argument_sequence();
+        this.movetoArgumentSequence();
     } catch (re) {
     	if(re instanceof antlr4.error.RecognitionException) {
 	        localctx.exception = re;
@@ -1140,7 +1139,7 @@ SvgPathParser.prototype.moveto = function() {
 };
 
 
-function Moveto_argument_sequenceContext(parser, parent, invokingState) {
+function MovetoArgumentSequenceContext(parser, parent, invokingState) {
 	if(parent===undefined) {
 	    parent = null;
 	}
@@ -1149,46 +1148,46 @@ function Moveto_argument_sequenceContext(parser, parent, invokingState) {
 	}
 	antlr4.ParserRuleContext.call(this, parent, invokingState);
     this.parser = parser;
-    this.ruleIndex = SvgPathParser.RULE_moveto_argument_sequence;
+    this.ruleIndex = SvgPathParser.RULE_movetoArgumentSequence;
     return this;
 }
 
-Moveto_argument_sequenceContext.prototype = Object.create(antlr4.ParserRuleContext.prototype);
-Moveto_argument_sequenceContext.prototype.constructor = Moveto_argument_sequenceContext;
+MovetoArgumentSequenceContext.prototype = Object.create(antlr4.ParserRuleContext.prototype);
+MovetoArgumentSequenceContext.prototype.constructor = MovetoArgumentSequenceContext;
 
-Moveto_argument_sequenceContext.prototype.coordinate_pair = function() {
-    return this.getTypedRuleContext(Coordinate_pairContext,0);
+MovetoArgumentSequenceContext.prototype.coordinatePair = function() {
+    return this.getTypedRuleContext(CoordinatePairContext,0);
 };
 
-Moveto_argument_sequenceContext.prototype.lineto_argument_sequence = function() {
-    return this.getTypedRuleContext(Lineto_argument_sequenceContext,0);
+MovetoArgumentSequenceContext.prototype.linetoArgumentSequence = function() {
+    return this.getTypedRuleContext(LinetoArgumentSequenceContext,0);
 };
 
-Moveto_argument_sequenceContext.prototype.comma_wsp = function() {
-    return this.getTypedRuleContext(Comma_wspContext,0);
+MovetoArgumentSequenceContext.prototype.commaWsp = function() {
+    return this.getTypedRuleContext(CommaWspContext,0);
 };
 
-Moveto_argument_sequenceContext.prototype.enterRule = function(listener) {
+MovetoArgumentSequenceContext.prototype.enterRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
-        listener.enterMoveto_argument_sequence(this);
+        listener.enterMovetoArgumentSequence(this);
 	}
 };
 
-Moveto_argument_sequenceContext.prototype.exitRule = function(listener) {
+MovetoArgumentSequenceContext.prototype.exitRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
-        listener.exitMoveto_argument_sequence(this);
+        listener.exitMovetoArgumentSequence(this);
 	}
 };
 
 
 
 
-SvgPathParser.Moveto_argument_sequenceContext = Moveto_argument_sequenceContext;
+SvgPathParser.MovetoArgumentSequenceContext = MovetoArgumentSequenceContext;
 
-SvgPathParser.prototype.moveto_argument_sequence = function() {
+SvgPathParser.prototype.movetoArgumentSequence = function() {
 
-    var localctx = new Moveto_argument_sequenceContext(this, this._ctx, this.state);
-    this.enterRule(localctx, 14, SvgPathParser.RULE_moveto_argument_sequence);
+    var localctx = new MovetoArgumentSequenceContext(this, this._ctx, this.state);
+    this.enterRule(localctx, 14, SvgPathParser.RULE_movetoArgumentSequence);
     var _la = 0; // Token type
     try {
         this.state = 166;
@@ -1198,23 +1197,23 @@ SvgPathParser.prototype.moveto_argument_sequence = function() {
         case 1:
             this.enterOuterAlt(localctx, 1);
             this.state = 159;
-            this.coordinate_pair();
+            this.coordinatePair();
             break;
 
         case 2:
             this.enterOuterAlt(localctx, 2);
             this.state = 160;
-            this.coordinate_pair();
+            this.coordinatePair();
             this.state = 162;
             this._errHandler.sync(this);
             _la = this._input.LA(1);
             if(((((_la - 23)) & ~0x1f) == 0 && ((1 << (_la - 23)) & ((1 << (SvgPathParser.T__22 - 23)) | (1 << (SvgPathParser.T__36 - 23)) | (1 << (SvgPathParser.T__37 - 23)) | (1 << (SvgPathParser.T__38 - 23)) | (1 << (SvgPathParser.T__39 - 23)))) !== 0)) {
                 this.state = 161;
-                this.comma_wsp();
+                this.commaWsp();
             }
 
             this.state = 164;
-            this.lineto_argument_sequence();
+            this.linetoArgumentSequence();
             break;
 
         }
@@ -1314,8 +1313,8 @@ function LinetoContext(parser, parent, invokingState) {
 LinetoContext.prototype = Object.create(antlr4.ParserRuleContext.prototype);
 LinetoContext.prototype.constructor = LinetoContext;
 
-LinetoContext.prototype.lineto_argument_sequence = function() {
-    return this.getTypedRuleContext(Lineto_argument_sequenceContext,0);
+LinetoContext.prototype.linetoArgumentSequence = function() {
+    return this.getTypedRuleContext(LinetoArgumentSequenceContext,0);
 };
 
 LinetoContext.prototype.wsp = function(i) {
@@ -1373,7 +1372,7 @@ SvgPathParser.prototype.lineto = function() {
             _la = this._input.LA(1);
         }
         this.state = 177;
-        this.lineto_argument_sequence();
+        this.linetoArgumentSequence();
     } catch (re) {
     	if(re instanceof antlr4.error.RecognitionException) {
 	        localctx.exception = re;
@@ -1389,7 +1388,7 @@ SvgPathParser.prototype.lineto = function() {
 };
 
 
-function Lineto_argument_sequenceContext(parser, parent, invokingState) {
+function LinetoArgumentSequenceContext(parser, parent, invokingState) {
 	if(parent===undefined) {
 	    parent = null;
 	}
@@ -1398,46 +1397,46 @@ function Lineto_argument_sequenceContext(parser, parent, invokingState) {
 	}
 	antlr4.ParserRuleContext.call(this, parent, invokingState);
     this.parser = parser;
-    this.ruleIndex = SvgPathParser.RULE_lineto_argument_sequence;
+    this.ruleIndex = SvgPathParser.RULE_linetoArgumentSequence;
     return this;
 }
 
-Lineto_argument_sequenceContext.prototype = Object.create(antlr4.ParserRuleContext.prototype);
-Lineto_argument_sequenceContext.prototype.constructor = Lineto_argument_sequenceContext;
+LinetoArgumentSequenceContext.prototype = Object.create(antlr4.ParserRuleContext.prototype);
+LinetoArgumentSequenceContext.prototype.constructor = LinetoArgumentSequenceContext;
 
-Lineto_argument_sequenceContext.prototype.coordinate_pair = function() {
-    return this.getTypedRuleContext(Coordinate_pairContext,0);
+LinetoArgumentSequenceContext.prototype.coordinatePair = function() {
+    return this.getTypedRuleContext(CoordinatePairContext,0);
 };
 
-Lineto_argument_sequenceContext.prototype.lineto_argument_sequence = function() {
-    return this.getTypedRuleContext(Lineto_argument_sequenceContext,0);
+LinetoArgumentSequenceContext.prototype.linetoArgumentSequence = function() {
+    return this.getTypedRuleContext(LinetoArgumentSequenceContext,0);
 };
 
-Lineto_argument_sequenceContext.prototype.comma_wsp = function() {
-    return this.getTypedRuleContext(Comma_wspContext,0);
+LinetoArgumentSequenceContext.prototype.commaWsp = function() {
+    return this.getTypedRuleContext(CommaWspContext,0);
 };
 
-Lineto_argument_sequenceContext.prototype.enterRule = function(listener) {
+LinetoArgumentSequenceContext.prototype.enterRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
-        listener.enterLineto_argument_sequence(this);
+        listener.enterLinetoArgumentSequence(this);
 	}
 };
 
-Lineto_argument_sequenceContext.prototype.exitRule = function(listener) {
+LinetoArgumentSequenceContext.prototype.exitRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
-        listener.exitLineto_argument_sequence(this);
+        listener.exitLinetoArgumentSequence(this);
 	}
 };
 
 
 
 
-SvgPathParser.Lineto_argument_sequenceContext = Lineto_argument_sequenceContext;
+SvgPathParser.LinetoArgumentSequenceContext = LinetoArgumentSequenceContext;
 
-SvgPathParser.prototype.lineto_argument_sequence = function() {
+SvgPathParser.prototype.linetoArgumentSequence = function() {
 
-    var localctx = new Lineto_argument_sequenceContext(this, this._ctx, this.state);
-    this.enterRule(localctx, 20, SvgPathParser.RULE_lineto_argument_sequence);
+    var localctx = new LinetoArgumentSequenceContext(this, this._ctx, this.state);
+    this.enterRule(localctx, 20, SvgPathParser.RULE_linetoArgumentSequence);
     var _la = 0; // Token type
     try {
         this.state = 186;
@@ -1447,23 +1446,23 @@ SvgPathParser.prototype.lineto_argument_sequence = function() {
         case 1:
             this.enterOuterAlt(localctx, 1);
             this.state = 179;
-            this.coordinate_pair();
+            this.coordinatePair();
             break;
 
         case 2:
             this.enterOuterAlt(localctx, 2);
             this.state = 180;
-            this.coordinate_pair();
+            this.coordinatePair();
             this.state = 182;
             this._errHandler.sync(this);
             _la = this._input.LA(1);
             if(((((_la - 23)) & ~0x1f) == 0 && ((1 << (_la - 23)) & ((1 << (SvgPathParser.T__22 - 23)) | (1 << (SvgPathParser.T__36 - 23)) | (1 << (SvgPathParser.T__37 - 23)) | (1 << (SvgPathParser.T__38 - 23)) | (1 << (SvgPathParser.T__39 - 23)))) !== 0)) {
                 this.state = 181;
-                this.comma_wsp();
+                this.commaWsp();
             }
 
             this.state = 184;
-            this.lineto_argument_sequence();
+            this.linetoArgumentSequence();
             break;
 
         }
@@ -1482,7 +1481,7 @@ SvgPathParser.prototype.lineto_argument_sequence = function() {
 };
 
 
-function Horizontal_linetoContext(parser, parent, invokingState) {
+function HorizontalLinetoContext(parser, parent, invokingState) {
 	if(parent===undefined) {
 	    parent = null;
 	}
@@ -1491,18 +1490,18 @@ function Horizontal_linetoContext(parser, parent, invokingState) {
 	}
 	antlr4.ParserRuleContext.call(this, parent, invokingState);
     this.parser = parser;
-    this.ruleIndex = SvgPathParser.RULE_horizontal_lineto;
+    this.ruleIndex = SvgPathParser.RULE_horizontalLineto;
     return this;
 }
 
-Horizontal_linetoContext.prototype = Object.create(antlr4.ParserRuleContext.prototype);
-Horizontal_linetoContext.prototype.constructor = Horizontal_linetoContext;
+HorizontalLinetoContext.prototype = Object.create(antlr4.ParserRuleContext.prototype);
+HorizontalLinetoContext.prototype.constructor = HorizontalLinetoContext;
 
-Horizontal_linetoContext.prototype.horizontal_lineto_argument_sequence = function() {
-    return this.getTypedRuleContext(Horizontal_lineto_argument_sequenceContext,0);
+HorizontalLinetoContext.prototype.horizontalLinetoArgumentSequence = function() {
+    return this.getTypedRuleContext(HorizontalLinetoArgumentSequenceContext,0);
 };
 
-Horizontal_linetoContext.prototype.wsp = function(i) {
+HorizontalLinetoContext.prototype.wsp = function(i) {
     if(i===undefined) {
         i = null;
     }
@@ -1513,27 +1512,27 @@ Horizontal_linetoContext.prototype.wsp = function(i) {
     }
 };
 
-Horizontal_linetoContext.prototype.enterRule = function(listener) {
+HorizontalLinetoContext.prototype.enterRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
-        listener.enterHorizontal_lineto(this);
+        listener.enterHorizontalLineto(this);
 	}
 };
 
-Horizontal_linetoContext.prototype.exitRule = function(listener) {
+HorizontalLinetoContext.prototype.exitRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
-        listener.exitHorizontal_lineto(this);
+        listener.exitHorizontalLineto(this);
 	}
 };
 
 
 
 
-SvgPathParser.Horizontal_linetoContext = Horizontal_linetoContext;
+SvgPathParser.HorizontalLinetoContext = HorizontalLinetoContext;
 
-SvgPathParser.prototype.horizontal_lineto = function() {
+SvgPathParser.prototype.horizontalLineto = function() {
 
-    var localctx = new Horizontal_linetoContext(this, this._ctx, this.state);
-    this.enterRule(localctx, 22, SvgPathParser.RULE_horizontal_lineto);
+    var localctx = new HorizontalLinetoContext(this, this._ctx, this.state);
+    this.enterRule(localctx, 22, SvgPathParser.RULE_horizontalLineto);
     var _la = 0; // Token type
     try {
         this.enterOuterAlt(localctx, 1);
@@ -1557,7 +1556,7 @@ SvgPathParser.prototype.horizontal_lineto = function() {
             _la = this._input.LA(1);
         }
         this.state = 195;
-        this.horizontal_lineto_argument_sequence();
+        this.horizontalLinetoArgumentSequence();
     } catch (re) {
     	if(re instanceof antlr4.error.RecognitionException) {
 	        localctx.exception = re;
@@ -1573,7 +1572,7 @@ SvgPathParser.prototype.horizontal_lineto = function() {
 };
 
 
-function Horizontal_lineto_argument_sequenceContext(parser, parent, invokingState) {
+function HorizontalLinetoArgumentSequenceContext(parser, parent, invokingState) {
 	if(parent===undefined) {
 	    parent = null;
 	}
@@ -1582,46 +1581,46 @@ function Horizontal_lineto_argument_sequenceContext(parser, parent, invokingStat
 	}
 	antlr4.ParserRuleContext.call(this, parent, invokingState);
     this.parser = parser;
-    this.ruleIndex = SvgPathParser.RULE_horizontal_lineto_argument_sequence;
+    this.ruleIndex = SvgPathParser.RULE_horizontalLinetoArgumentSequence;
     return this;
 }
 
-Horizontal_lineto_argument_sequenceContext.prototype = Object.create(antlr4.ParserRuleContext.prototype);
-Horizontal_lineto_argument_sequenceContext.prototype.constructor = Horizontal_lineto_argument_sequenceContext;
+HorizontalLinetoArgumentSequenceContext.prototype = Object.create(antlr4.ParserRuleContext.prototype);
+HorizontalLinetoArgumentSequenceContext.prototype.constructor = HorizontalLinetoArgumentSequenceContext;
 
-Horizontal_lineto_argument_sequenceContext.prototype.coordinate = function() {
+HorizontalLinetoArgumentSequenceContext.prototype.coordinate = function() {
     return this.getTypedRuleContext(CoordinateContext,0);
 };
 
-Horizontal_lineto_argument_sequenceContext.prototype.horizontal_lineto_argument_sequence = function() {
-    return this.getTypedRuleContext(Horizontal_lineto_argument_sequenceContext,0);
+HorizontalLinetoArgumentSequenceContext.prototype.horizontalLinetoArgumentSequence = function() {
+    return this.getTypedRuleContext(HorizontalLinetoArgumentSequenceContext,0);
 };
 
-Horizontal_lineto_argument_sequenceContext.prototype.comma_wsp = function() {
-    return this.getTypedRuleContext(Comma_wspContext,0);
+HorizontalLinetoArgumentSequenceContext.prototype.commaWsp = function() {
+    return this.getTypedRuleContext(CommaWspContext,0);
 };
 
-Horizontal_lineto_argument_sequenceContext.prototype.enterRule = function(listener) {
+HorizontalLinetoArgumentSequenceContext.prototype.enterRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
-        listener.enterHorizontal_lineto_argument_sequence(this);
+        listener.enterHorizontalLinetoArgumentSequence(this);
 	}
 };
 
-Horizontal_lineto_argument_sequenceContext.prototype.exitRule = function(listener) {
+HorizontalLinetoArgumentSequenceContext.prototype.exitRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
-        listener.exitHorizontal_lineto_argument_sequence(this);
+        listener.exitHorizontalLinetoArgumentSequence(this);
 	}
 };
 
 
 
 
-SvgPathParser.Horizontal_lineto_argument_sequenceContext = Horizontal_lineto_argument_sequenceContext;
+SvgPathParser.HorizontalLinetoArgumentSequenceContext = HorizontalLinetoArgumentSequenceContext;
 
-SvgPathParser.prototype.horizontal_lineto_argument_sequence = function() {
+SvgPathParser.prototype.horizontalLinetoArgumentSequence = function() {
 
-    var localctx = new Horizontal_lineto_argument_sequenceContext(this, this._ctx, this.state);
-    this.enterRule(localctx, 24, SvgPathParser.RULE_horizontal_lineto_argument_sequence);
+    var localctx = new HorizontalLinetoArgumentSequenceContext(this, this._ctx, this.state);
+    this.enterRule(localctx, 24, SvgPathParser.RULE_horizontalLinetoArgumentSequence);
     var _la = 0; // Token type
     try {
         this.state = 204;
@@ -1643,11 +1642,11 @@ SvgPathParser.prototype.horizontal_lineto_argument_sequence = function() {
             _la = this._input.LA(1);
             if(((((_la - 23)) & ~0x1f) == 0 && ((1 << (_la - 23)) & ((1 << (SvgPathParser.T__22 - 23)) | (1 << (SvgPathParser.T__36 - 23)) | (1 << (SvgPathParser.T__37 - 23)) | (1 << (SvgPathParser.T__38 - 23)) | (1 << (SvgPathParser.T__39 - 23)))) !== 0)) {
                 this.state = 199;
-                this.comma_wsp();
+                this.commaWsp();
             }
 
             this.state = 202;
-            this.horizontal_lineto_argument_sequence();
+            this.horizontalLinetoArgumentSequence();
             break;
 
         }
@@ -1666,7 +1665,7 @@ SvgPathParser.prototype.horizontal_lineto_argument_sequence = function() {
 };
 
 
-function Vertical_linetoContext(parser, parent, invokingState) {
+function VerticalLinetoContext(parser, parent, invokingState) {
 	if(parent===undefined) {
 	    parent = null;
 	}
@@ -1675,18 +1674,18 @@ function Vertical_linetoContext(parser, parent, invokingState) {
 	}
 	antlr4.ParserRuleContext.call(this, parent, invokingState);
     this.parser = parser;
-    this.ruleIndex = SvgPathParser.RULE_vertical_lineto;
+    this.ruleIndex = SvgPathParser.RULE_verticalLineto;
     return this;
 }
 
-Vertical_linetoContext.prototype = Object.create(antlr4.ParserRuleContext.prototype);
-Vertical_linetoContext.prototype.constructor = Vertical_linetoContext;
+VerticalLinetoContext.prototype = Object.create(antlr4.ParserRuleContext.prototype);
+VerticalLinetoContext.prototype.constructor = VerticalLinetoContext;
 
-Vertical_linetoContext.prototype.vertical_lineto_argument_sequence = function() {
-    return this.getTypedRuleContext(Vertical_lineto_argument_sequenceContext,0);
+VerticalLinetoContext.prototype.verticalLinetoArgumentSequence = function() {
+    return this.getTypedRuleContext(VerticalLinetoArgumentSequenceContext,0);
 };
 
-Vertical_linetoContext.prototype.wsp = function(i) {
+VerticalLinetoContext.prototype.wsp = function(i) {
     if(i===undefined) {
         i = null;
     }
@@ -1697,27 +1696,27 @@ Vertical_linetoContext.prototype.wsp = function(i) {
     }
 };
 
-Vertical_linetoContext.prototype.enterRule = function(listener) {
+VerticalLinetoContext.prototype.enterRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
-        listener.enterVertical_lineto(this);
+        listener.enterVerticalLineto(this);
 	}
 };
 
-Vertical_linetoContext.prototype.exitRule = function(listener) {
+VerticalLinetoContext.prototype.exitRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
-        listener.exitVertical_lineto(this);
+        listener.exitVerticalLineto(this);
 	}
 };
 
 
 
 
-SvgPathParser.Vertical_linetoContext = Vertical_linetoContext;
+SvgPathParser.VerticalLinetoContext = VerticalLinetoContext;
 
-SvgPathParser.prototype.vertical_lineto = function() {
+SvgPathParser.prototype.verticalLineto = function() {
 
-    var localctx = new Vertical_linetoContext(this, this._ctx, this.state);
-    this.enterRule(localctx, 26, SvgPathParser.RULE_vertical_lineto);
+    var localctx = new VerticalLinetoContext(this, this._ctx, this.state);
+    this.enterRule(localctx, 26, SvgPathParser.RULE_verticalLineto);
     var _la = 0; // Token type
     try {
         this.enterOuterAlt(localctx, 1);
@@ -1741,7 +1740,7 @@ SvgPathParser.prototype.vertical_lineto = function() {
             _la = this._input.LA(1);
         }
         this.state = 213;
-        this.vertical_lineto_argument_sequence();
+        this.verticalLinetoArgumentSequence();
     } catch (re) {
     	if(re instanceof antlr4.error.RecognitionException) {
 	        localctx.exception = re;
@@ -1757,7 +1756,7 @@ SvgPathParser.prototype.vertical_lineto = function() {
 };
 
 
-function Vertical_lineto_argument_sequenceContext(parser, parent, invokingState) {
+function VerticalLinetoArgumentSequenceContext(parser, parent, invokingState) {
 	if(parent===undefined) {
 	    parent = null;
 	}
@@ -1766,46 +1765,46 @@ function Vertical_lineto_argument_sequenceContext(parser, parent, invokingState)
 	}
 	antlr4.ParserRuleContext.call(this, parent, invokingState);
     this.parser = parser;
-    this.ruleIndex = SvgPathParser.RULE_vertical_lineto_argument_sequence;
+    this.ruleIndex = SvgPathParser.RULE_verticalLinetoArgumentSequence;
     return this;
 }
 
-Vertical_lineto_argument_sequenceContext.prototype = Object.create(antlr4.ParserRuleContext.prototype);
-Vertical_lineto_argument_sequenceContext.prototype.constructor = Vertical_lineto_argument_sequenceContext;
+VerticalLinetoArgumentSequenceContext.prototype = Object.create(antlr4.ParserRuleContext.prototype);
+VerticalLinetoArgumentSequenceContext.prototype.constructor = VerticalLinetoArgumentSequenceContext;
 
-Vertical_lineto_argument_sequenceContext.prototype.coordinate = function() {
+VerticalLinetoArgumentSequenceContext.prototype.coordinate = function() {
     return this.getTypedRuleContext(CoordinateContext,0);
 };
 
-Vertical_lineto_argument_sequenceContext.prototype.vertical_lineto_argument_sequence = function() {
-    return this.getTypedRuleContext(Vertical_lineto_argument_sequenceContext,0);
+VerticalLinetoArgumentSequenceContext.prototype.verticalLinetoArgumentSequence = function() {
+    return this.getTypedRuleContext(VerticalLinetoArgumentSequenceContext,0);
 };
 
-Vertical_lineto_argument_sequenceContext.prototype.comma_wsp = function() {
-    return this.getTypedRuleContext(Comma_wspContext,0);
+VerticalLinetoArgumentSequenceContext.prototype.commaWsp = function() {
+    return this.getTypedRuleContext(CommaWspContext,0);
 };
 
-Vertical_lineto_argument_sequenceContext.prototype.enterRule = function(listener) {
+VerticalLinetoArgumentSequenceContext.prototype.enterRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
-        listener.enterVertical_lineto_argument_sequence(this);
+        listener.enterVerticalLinetoArgumentSequence(this);
 	}
 };
 
-Vertical_lineto_argument_sequenceContext.prototype.exitRule = function(listener) {
+VerticalLinetoArgumentSequenceContext.prototype.exitRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
-        listener.exitVertical_lineto_argument_sequence(this);
+        listener.exitVerticalLinetoArgumentSequence(this);
 	}
 };
 
 
 
 
-SvgPathParser.Vertical_lineto_argument_sequenceContext = Vertical_lineto_argument_sequenceContext;
+SvgPathParser.VerticalLinetoArgumentSequenceContext = VerticalLinetoArgumentSequenceContext;
 
-SvgPathParser.prototype.vertical_lineto_argument_sequence = function() {
+SvgPathParser.prototype.verticalLinetoArgumentSequence = function() {
 
-    var localctx = new Vertical_lineto_argument_sequenceContext(this, this._ctx, this.state);
-    this.enterRule(localctx, 28, SvgPathParser.RULE_vertical_lineto_argument_sequence);
+    var localctx = new VerticalLinetoArgumentSequenceContext(this, this._ctx, this.state);
+    this.enterRule(localctx, 28, SvgPathParser.RULE_verticalLinetoArgumentSequence);
     var _la = 0; // Token type
     try {
         this.state = 222;
@@ -1827,11 +1826,11 @@ SvgPathParser.prototype.vertical_lineto_argument_sequence = function() {
             _la = this._input.LA(1);
             if(((((_la - 23)) & ~0x1f) == 0 && ((1 << (_la - 23)) & ((1 << (SvgPathParser.T__22 - 23)) | (1 << (SvgPathParser.T__36 - 23)) | (1 << (SvgPathParser.T__37 - 23)) | (1 << (SvgPathParser.T__38 - 23)) | (1 << (SvgPathParser.T__39 - 23)))) !== 0)) {
                 this.state = 217;
-                this.comma_wsp();
+                this.commaWsp();
             }
 
             this.state = 220;
-            this.vertical_lineto_argument_sequence();
+            this.verticalLinetoArgumentSequence();
             break;
 
         }
@@ -1866,8 +1865,8 @@ function CurvetoContext(parser, parent, invokingState) {
 CurvetoContext.prototype = Object.create(antlr4.ParserRuleContext.prototype);
 CurvetoContext.prototype.constructor = CurvetoContext;
 
-CurvetoContext.prototype.curveto_argument_sequence = function() {
-    return this.getTypedRuleContext(Curveto_argument_sequenceContext,0);
+CurvetoContext.prototype.curvetoArgumentSequence = function() {
+    return this.getTypedRuleContext(CurvetoArgumentSequenceContext,0);
 };
 
 CurvetoContext.prototype.wsp = function(i) {
@@ -1925,7 +1924,7 @@ SvgPathParser.prototype.curveto = function() {
             _la = this._input.LA(1);
         }
         this.state = 231;
-        this.curveto_argument_sequence();
+        this.curvetoArgumentSequence();
     } catch (re) {
     	if(re instanceof antlr4.error.RecognitionException) {
 	        localctx.exception = re;
@@ -1941,7 +1940,7 @@ SvgPathParser.prototype.curveto = function() {
 };
 
 
-function Curveto_argument_sequenceContext(parser, parent, invokingState) {
+function CurvetoArgumentSequenceContext(parser, parent, invokingState) {
 	if(parent===undefined) {
 	    parent = null;
 	}
@@ -1950,46 +1949,46 @@ function Curveto_argument_sequenceContext(parser, parent, invokingState) {
 	}
 	antlr4.ParserRuleContext.call(this, parent, invokingState);
     this.parser = parser;
-    this.ruleIndex = SvgPathParser.RULE_curveto_argument_sequence;
+    this.ruleIndex = SvgPathParser.RULE_curvetoArgumentSequence;
     return this;
 }
 
-Curveto_argument_sequenceContext.prototype = Object.create(antlr4.ParserRuleContext.prototype);
-Curveto_argument_sequenceContext.prototype.constructor = Curveto_argument_sequenceContext;
+CurvetoArgumentSequenceContext.prototype = Object.create(antlr4.ParserRuleContext.prototype);
+CurvetoArgumentSequenceContext.prototype.constructor = CurvetoArgumentSequenceContext;
 
-Curveto_argument_sequenceContext.prototype.curveto_argument = function() {
-    return this.getTypedRuleContext(Curveto_argumentContext,0);
+CurvetoArgumentSequenceContext.prototype.curvetoArgument = function() {
+    return this.getTypedRuleContext(CurvetoArgumentContext,0);
 };
 
-Curveto_argument_sequenceContext.prototype.curveto_argument_sequence = function() {
-    return this.getTypedRuleContext(Curveto_argument_sequenceContext,0);
+CurvetoArgumentSequenceContext.prototype.curvetoArgumentSequence = function() {
+    return this.getTypedRuleContext(CurvetoArgumentSequenceContext,0);
 };
 
-Curveto_argument_sequenceContext.prototype.comma_wsp = function() {
-    return this.getTypedRuleContext(Comma_wspContext,0);
+CurvetoArgumentSequenceContext.prototype.commaWsp = function() {
+    return this.getTypedRuleContext(CommaWspContext,0);
 };
 
-Curveto_argument_sequenceContext.prototype.enterRule = function(listener) {
+CurvetoArgumentSequenceContext.prototype.enterRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
-        listener.enterCurveto_argument_sequence(this);
+        listener.enterCurvetoArgumentSequence(this);
 	}
 };
 
-Curveto_argument_sequenceContext.prototype.exitRule = function(listener) {
+CurvetoArgumentSequenceContext.prototype.exitRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
-        listener.exitCurveto_argument_sequence(this);
+        listener.exitCurvetoArgumentSequence(this);
 	}
 };
 
 
 
 
-SvgPathParser.Curveto_argument_sequenceContext = Curveto_argument_sequenceContext;
+SvgPathParser.CurvetoArgumentSequenceContext = CurvetoArgumentSequenceContext;
 
-SvgPathParser.prototype.curveto_argument_sequence = function() {
+SvgPathParser.prototype.curvetoArgumentSequence = function() {
 
-    var localctx = new Curveto_argument_sequenceContext(this, this._ctx, this.state);
-    this.enterRule(localctx, 32, SvgPathParser.RULE_curveto_argument_sequence);
+    var localctx = new CurvetoArgumentSequenceContext(this, this._ctx, this.state);
+    this.enterRule(localctx, 32, SvgPathParser.RULE_curvetoArgumentSequence);
     var _la = 0; // Token type
     try {
         this.state = 240;
@@ -1999,23 +1998,23 @@ SvgPathParser.prototype.curveto_argument_sequence = function() {
         case 1:
             this.enterOuterAlt(localctx, 1);
             this.state = 233;
-            this.curveto_argument();
+            this.curvetoArgument();
             break;
 
         case 2:
             this.enterOuterAlt(localctx, 2);
             this.state = 234;
-            this.curveto_argument();
+            this.curvetoArgument();
             this.state = 236;
             this._errHandler.sync(this);
             _la = this._input.LA(1);
             if(((((_la - 23)) & ~0x1f) == 0 && ((1 << (_la - 23)) & ((1 << (SvgPathParser.T__22 - 23)) | (1 << (SvgPathParser.T__36 - 23)) | (1 << (SvgPathParser.T__37 - 23)) | (1 << (SvgPathParser.T__38 - 23)) | (1 << (SvgPathParser.T__39 - 23)))) !== 0)) {
                 this.state = 235;
-                this.comma_wsp();
+                this.commaWsp();
             }
 
             this.state = 238;
-            this.curveto_argument_sequence();
+            this.curvetoArgumentSequence();
             break;
 
         }
@@ -2034,7 +2033,7 @@ SvgPathParser.prototype.curveto_argument_sequence = function() {
 };
 
 
-function Curveto_argumentContext(parser, parent, invokingState) {
+function CurvetoArgumentContext(parser, parent, invokingState) {
 	if(parent===undefined) {
 	    parent = null;
 	}
@@ -2043,81 +2042,81 @@ function Curveto_argumentContext(parser, parent, invokingState) {
 	}
 	antlr4.ParserRuleContext.call(this, parent, invokingState);
     this.parser = parser;
-    this.ruleIndex = SvgPathParser.RULE_curveto_argument;
+    this.ruleIndex = SvgPathParser.RULE_curvetoArgument;
     return this;
 }
 
-Curveto_argumentContext.prototype = Object.create(antlr4.ParserRuleContext.prototype);
-Curveto_argumentContext.prototype.constructor = Curveto_argumentContext;
+CurvetoArgumentContext.prototype = Object.create(antlr4.ParserRuleContext.prototype);
+CurvetoArgumentContext.prototype.constructor = CurvetoArgumentContext;
 
-Curveto_argumentContext.prototype.coordinate_pair = function(i) {
+CurvetoArgumentContext.prototype.coordinatePair = function(i) {
     if(i===undefined) {
         i = null;
     }
     if(i===null) {
-        return this.getTypedRuleContexts(Coordinate_pairContext);
+        return this.getTypedRuleContexts(CoordinatePairContext);
     } else {
-        return this.getTypedRuleContext(Coordinate_pairContext,i);
+        return this.getTypedRuleContext(CoordinatePairContext,i);
     }
 };
 
-Curveto_argumentContext.prototype.comma_wsp = function(i) {
+CurvetoArgumentContext.prototype.commaWsp = function(i) {
     if(i===undefined) {
         i = null;
     }
     if(i===null) {
-        return this.getTypedRuleContexts(Comma_wspContext);
+        return this.getTypedRuleContexts(CommaWspContext);
     } else {
-        return this.getTypedRuleContext(Comma_wspContext,i);
+        return this.getTypedRuleContext(CommaWspContext,i);
     }
 };
 
-Curveto_argumentContext.prototype.enterRule = function(listener) {
+CurvetoArgumentContext.prototype.enterRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
-        listener.enterCurveto_argument(this);
+        listener.enterCurvetoArgument(this);
 	}
 };
 
-Curveto_argumentContext.prototype.exitRule = function(listener) {
+CurvetoArgumentContext.prototype.exitRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
-        listener.exitCurveto_argument(this);
+        listener.exitCurvetoArgument(this);
 	}
 };
 
 
 
 
-SvgPathParser.Curveto_argumentContext = Curveto_argumentContext;
+SvgPathParser.CurvetoArgumentContext = CurvetoArgumentContext;
 
-SvgPathParser.prototype.curveto_argument = function() {
+SvgPathParser.prototype.curvetoArgument = function() {
 
-    var localctx = new Curveto_argumentContext(this, this._ctx, this.state);
-    this.enterRule(localctx, 34, SvgPathParser.RULE_curveto_argument);
+    var localctx = new CurvetoArgumentContext(this, this._ctx, this.state);
+    this.enterRule(localctx, 34, SvgPathParser.RULE_curvetoArgument);
     var _la = 0; // Token type
     try {
         this.enterOuterAlt(localctx, 1);
         this.state = 242;
-        this.coordinate_pair();
+        this.coordinatePair();
         this.state = 244;
         this._errHandler.sync(this);
         _la = this._input.LA(1);
         if(((((_la - 23)) & ~0x1f) == 0 && ((1 << (_la - 23)) & ((1 << (SvgPathParser.T__22 - 23)) | (1 << (SvgPathParser.T__36 - 23)) | (1 << (SvgPathParser.T__37 - 23)) | (1 << (SvgPathParser.T__38 - 23)) | (1 << (SvgPathParser.T__39 - 23)))) !== 0)) {
             this.state = 243;
-            this.comma_wsp();
+            this.commaWsp();
         }
 
         this.state = 246;
-        this.coordinate_pair();
+        this.coordinatePair();
         this.state = 248;
         this._errHandler.sync(this);
         _la = this._input.LA(1);
         if(((((_la - 23)) & ~0x1f) == 0 && ((1 << (_la - 23)) & ((1 << (SvgPathParser.T__22 - 23)) | (1 << (SvgPathParser.T__36 - 23)) | (1 << (SvgPathParser.T__37 - 23)) | (1 << (SvgPathParser.T__38 - 23)) | (1 << (SvgPathParser.T__39 - 23)))) !== 0)) {
             this.state = 247;
-            this.comma_wsp();
+            this.commaWsp();
         }
 
         this.state = 250;
-        this.coordinate_pair();
+        this.coordinatePair();
     } catch (re) {
     	if(re instanceof antlr4.error.RecognitionException) {
 	        localctx.exception = re;
@@ -2133,7 +2132,7 @@ SvgPathParser.prototype.curveto_argument = function() {
 };
 
 
-function Smooth_curvetoContext(parser, parent, invokingState) {
+function SmoothCurvetoContext(parser, parent, invokingState) {
 	if(parent===undefined) {
 	    parent = null;
 	}
@@ -2142,18 +2141,18 @@ function Smooth_curvetoContext(parser, parent, invokingState) {
 	}
 	antlr4.ParserRuleContext.call(this, parent, invokingState);
     this.parser = parser;
-    this.ruleIndex = SvgPathParser.RULE_smooth_curveto;
+    this.ruleIndex = SvgPathParser.RULE_smoothCurveto;
     return this;
 }
 
-Smooth_curvetoContext.prototype = Object.create(antlr4.ParserRuleContext.prototype);
-Smooth_curvetoContext.prototype.constructor = Smooth_curvetoContext;
+SmoothCurvetoContext.prototype = Object.create(antlr4.ParserRuleContext.prototype);
+SmoothCurvetoContext.prototype.constructor = SmoothCurvetoContext;
 
-Smooth_curvetoContext.prototype.smooth_curveto_argument_sequence = function() {
-    return this.getTypedRuleContext(Smooth_curveto_argument_sequenceContext,0);
+SmoothCurvetoContext.prototype.smoothCurvetoArgumentSequence = function() {
+    return this.getTypedRuleContext(SmoothCurvetoArgumentSequenceContext,0);
 };
 
-Smooth_curvetoContext.prototype.wsp = function(i) {
+SmoothCurvetoContext.prototype.wsp = function(i) {
     if(i===undefined) {
         i = null;
     }
@@ -2164,27 +2163,27 @@ Smooth_curvetoContext.prototype.wsp = function(i) {
     }
 };
 
-Smooth_curvetoContext.prototype.enterRule = function(listener) {
+SmoothCurvetoContext.prototype.enterRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
-        listener.enterSmooth_curveto(this);
+        listener.enterSmoothCurveto(this);
 	}
 };
 
-Smooth_curvetoContext.prototype.exitRule = function(listener) {
+SmoothCurvetoContext.prototype.exitRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
-        listener.exitSmooth_curveto(this);
+        listener.exitSmoothCurveto(this);
 	}
 };
 
 
 
 
-SvgPathParser.Smooth_curvetoContext = Smooth_curvetoContext;
+SvgPathParser.SmoothCurvetoContext = SmoothCurvetoContext;
 
-SvgPathParser.prototype.smooth_curveto = function() {
+SvgPathParser.prototype.smoothCurveto = function() {
 
-    var localctx = new Smooth_curvetoContext(this, this._ctx, this.state);
-    this.enterRule(localctx, 36, SvgPathParser.RULE_smooth_curveto);
+    var localctx = new SmoothCurvetoContext(this, this._ctx, this.state);
+    this.enterRule(localctx, 36, SvgPathParser.RULE_smoothCurveto);
     var _la = 0; // Token type
     try {
         this.enterOuterAlt(localctx, 1);
@@ -2208,7 +2207,7 @@ SvgPathParser.prototype.smooth_curveto = function() {
             _la = this._input.LA(1);
         }
         this.state = 259;
-        this.smooth_curveto_argument_sequence();
+        this.smoothCurvetoArgumentSequence();
     } catch (re) {
     	if(re instanceof antlr4.error.RecognitionException) {
 	        localctx.exception = re;
@@ -2224,7 +2223,7 @@ SvgPathParser.prototype.smooth_curveto = function() {
 };
 
 
-function Smooth_curveto_argument_sequenceContext(parser, parent, invokingState) {
+function SmoothCurvetoArgumentSequenceContext(parser, parent, invokingState) {
 	if(parent===undefined) {
 	    parent = null;
 	}
@@ -2233,46 +2232,46 @@ function Smooth_curveto_argument_sequenceContext(parser, parent, invokingState) 
 	}
 	antlr4.ParserRuleContext.call(this, parent, invokingState);
     this.parser = parser;
-    this.ruleIndex = SvgPathParser.RULE_smooth_curveto_argument_sequence;
+    this.ruleIndex = SvgPathParser.RULE_smoothCurvetoArgumentSequence;
     return this;
 }
 
-Smooth_curveto_argument_sequenceContext.prototype = Object.create(antlr4.ParserRuleContext.prototype);
-Smooth_curveto_argument_sequenceContext.prototype.constructor = Smooth_curveto_argument_sequenceContext;
+SmoothCurvetoArgumentSequenceContext.prototype = Object.create(antlr4.ParserRuleContext.prototype);
+SmoothCurvetoArgumentSequenceContext.prototype.constructor = SmoothCurvetoArgumentSequenceContext;
 
-Smooth_curveto_argument_sequenceContext.prototype.smooth_curveto_argument = function() {
-    return this.getTypedRuleContext(Smooth_curveto_argumentContext,0);
+SmoothCurvetoArgumentSequenceContext.prototype.smoothCurvetoArgument = function() {
+    return this.getTypedRuleContext(SmoothCurvetoArgumentContext,0);
 };
 
-Smooth_curveto_argument_sequenceContext.prototype.smooth_curveto_argument_sequence = function() {
-    return this.getTypedRuleContext(Smooth_curveto_argument_sequenceContext,0);
+SmoothCurvetoArgumentSequenceContext.prototype.smoothCurvetoArgumentSequence = function() {
+    return this.getTypedRuleContext(SmoothCurvetoArgumentSequenceContext,0);
 };
 
-Smooth_curveto_argument_sequenceContext.prototype.comma_wsp = function() {
-    return this.getTypedRuleContext(Comma_wspContext,0);
+SmoothCurvetoArgumentSequenceContext.prototype.commaWsp = function() {
+    return this.getTypedRuleContext(CommaWspContext,0);
 };
 
-Smooth_curveto_argument_sequenceContext.prototype.enterRule = function(listener) {
+SmoothCurvetoArgumentSequenceContext.prototype.enterRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
-        listener.enterSmooth_curveto_argument_sequence(this);
+        listener.enterSmoothCurvetoArgumentSequence(this);
 	}
 };
 
-Smooth_curveto_argument_sequenceContext.prototype.exitRule = function(listener) {
+SmoothCurvetoArgumentSequenceContext.prototype.exitRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
-        listener.exitSmooth_curveto_argument_sequence(this);
+        listener.exitSmoothCurvetoArgumentSequence(this);
 	}
 };
 
 
 
 
-SvgPathParser.Smooth_curveto_argument_sequenceContext = Smooth_curveto_argument_sequenceContext;
+SvgPathParser.SmoothCurvetoArgumentSequenceContext = SmoothCurvetoArgumentSequenceContext;
 
-SvgPathParser.prototype.smooth_curveto_argument_sequence = function() {
+SvgPathParser.prototype.smoothCurvetoArgumentSequence = function() {
 
-    var localctx = new Smooth_curveto_argument_sequenceContext(this, this._ctx, this.state);
-    this.enterRule(localctx, 38, SvgPathParser.RULE_smooth_curveto_argument_sequence);
+    var localctx = new SmoothCurvetoArgumentSequenceContext(this, this._ctx, this.state);
+    this.enterRule(localctx, 38, SvgPathParser.RULE_smoothCurvetoArgumentSequence);
     var _la = 0; // Token type
     try {
         this.state = 268;
@@ -2282,23 +2281,23 @@ SvgPathParser.prototype.smooth_curveto_argument_sequence = function() {
         case 1:
             this.enterOuterAlt(localctx, 1);
             this.state = 261;
-            this.smooth_curveto_argument();
+            this.smoothCurvetoArgument();
             break;
 
         case 2:
             this.enterOuterAlt(localctx, 2);
             this.state = 262;
-            this.smooth_curveto_argument();
+            this.smoothCurvetoArgument();
             this.state = 264;
             this._errHandler.sync(this);
             _la = this._input.LA(1);
             if(((((_la - 23)) & ~0x1f) == 0 && ((1 << (_la - 23)) & ((1 << (SvgPathParser.T__22 - 23)) | (1 << (SvgPathParser.T__36 - 23)) | (1 << (SvgPathParser.T__37 - 23)) | (1 << (SvgPathParser.T__38 - 23)) | (1 << (SvgPathParser.T__39 - 23)))) !== 0)) {
                 this.state = 263;
-                this.comma_wsp();
+                this.commaWsp();
             }
 
             this.state = 266;
-            this.smooth_curveto_argument_sequence();
+            this.smoothCurvetoArgumentSequence();
             break;
 
         }
@@ -2317,7 +2316,7 @@ SvgPathParser.prototype.smooth_curveto_argument_sequence = function() {
 };
 
 
-function Smooth_curveto_argumentContext(parser, parent, invokingState) {
+function SmoothCurvetoArgumentContext(parser, parent, invokingState) {
 	if(parent===undefined) {
 	    parent = null;
 	}
@@ -2326,64 +2325,64 @@ function Smooth_curveto_argumentContext(parser, parent, invokingState) {
 	}
 	antlr4.ParserRuleContext.call(this, parent, invokingState);
     this.parser = parser;
-    this.ruleIndex = SvgPathParser.RULE_smooth_curveto_argument;
+    this.ruleIndex = SvgPathParser.RULE_smoothCurvetoArgument;
     return this;
 }
 
-Smooth_curveto_argumentContext.prototype = Object.create(antlr4.ParserRuleContext.prototype);
-Smooth_curveto_argumentContext.prototype.constructor = Smooth_curveto_argumentContext;
+SmoothCurvetoArgumentContext.prototype = Object.create(antlr4.ParserRuleContext.prototype);
+SmoothCurvetoArgumentContext.prototype.constructor = SmoothCurvetoArgumentContext;
 
-Smooth_curveto_argumentContext.prototype.coordinate_pair = function(i) {
+SmoothCurvetoArgumentContext.prototype.coordinatePair = function(i) {
     if(i===undefined) {
         i = null;
     }
     if(i===null) {
-        return this.getTypedRuleContexts(Coordinate_pairContext);
+        return this.getTypedRuleContexts(CoordinatePairContext);
     } else {
-        return this.getTypedRuleContext(Coordinate_pairContext,i);
+        return this.getTypedRuleContext(CoordinatePairContext,i);
     }
 };
 
-Smooth_curveto_argumentContext.prototype.comma_wsp = function() {
-    return this.getTypedRuleContext(Comma_wspContext,0);
+SmoothCurvetoArgumentContext.prototype.commaWsp = function() {
+    return this.getTypedRuleContext(CommaWspContext,0);
 };
 
-Smooth_curveto_argumentContext.prototype.enterRule = function(listener) {
+SmoothCurvetoArgumentContext.prototype.enterRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
-        listener.enterSmooth_curveto_argument(this);
+        listener.enterSmoothCurvetoArgument(this);
 	}
 };
 
-Smooth_curveto_argumentContext.prototype.exitRule = function(listener) {
+SmoothCurvetoArgumentContext.prototype.exitRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
-        listener.exitSmooth_curveto_argument(this);
+        listener.exitSmoothCurvetoArgument(this);
 	}
 };
 
 
 
 
-SvgPathParser.Smooth_curveto_argumentContext = Smooth_curveto_argumentContext;
+SvgPathParser.SmoothCurvetoArgumentContext = SmoothCurvetoArgumentContext;
 
-SvgPathParser.prototype.smooth_curveto_argument = function() {
+SvgPathParser.prototype.smoothCurvetoArgument = function() {
 
-    var localctx = new Smooth_curveto_argumentContext(this, this._ctx, this.state);
-    this.enterRule(localctx, 40, SvgPathParser.RULE_smooth_curveto_argument);
+    var localctx = new SmoothCurvetoArgumentContext(this, this._ctx, this.state);
+    this.enterRule(localctx, 40, SvgPathParser.RULE_smoothCurvetoArgument);
     var _la = 0; // Token type
     try {
         this.enterOuterAlt(localctx, 1);
         this.state = 270;
-        this.coordinate_pair();
+        this.coordinatePair();
         this.state = 272;
         this._errHandler.sync(this);
         _la = this._input.LA(1);
         if(((((_la - 23)) & ~0x1f) == 0 && ((1 << (_la - 23)) & ((1 << (SvgPathParser.T__22 - 23)) | (1 << (SvgPathParser.T__36 - 23)) | (1 << (SvgPathParser.T__37 - 23)) | (1 << (SvgPathParser.T__38 - 23)) | (1 << (SvgPathParser.T__39 - 23)))) !== 0)) {
             this.state = 271;
-            this.comma_wsp();
+            this.commaWsp();
         }
 
         this.state = 274;
-        this.coordinate_pair();
+        this.coordinatePair();
     } catch (re) {
     	if(re instanceof antlr4.error.RecognitionException) {
 	        localctx.exception = re;
@@ -2399,7 +2398,7 @@ SvgPathParser.prototype.smooth_curveto_argument = function() {
 };
 
 
-function Quadratic_bezier_curvetoContext(parser, parent, invokingState) {
+function QuadraticBezierCurvetoContext(parser, parent, invokingState) {
 	if(parent===undefined) {
 	    parent = null;
 	}
@@ -2408,18 +2407,18 @@ function Quadratic_bezier_curvetoContext(parser, parent, invokingState) {
 	}
 	antlr4.ParserRuleContext.call(this, parent, invokingState);
     this.parser = parser;
-    this.ruleIndex = SvgPathParser.RULE_quadratic_bezier_curveto;
+    this.ruleIndex = SvgPathParser.RULE_quadraticBezierCurveto;
     return this;
 }
 
-Quadratic_bezier_curvetoContext.prototype = Object.create(antlr4.ParserRuleContext.prototype);
-Quadratic_bezier_curvetoContext.prototype.constructor = Quadratic_bezier_curvetoContext;
+QuadraticBezierCurvetoContext.prototype = Object.create(antlr4.ParserRuleContext.prototype);
+QuadraticBezierCurvetoContext.prototype.constructor = QuadraticBezierCurvetoContext;
 
-Quadratic_bezier_curvetoContext.prototype.quadratic_bezier_curveto_argument_sequence = function() {
-    return this.getTypedRuleContext(Quadratic_bezier_curveto_argument_sequenceContext,0);
+QuadraticBezierCurvetoContext.prototype.quadraticBezierCurvetoArgumentSequence = function() {
+    return this.getTypedRuleContext(QuadraticBezierCurvetoArgumentSequenceContext,0);
 };
 
-Quadratic_bezier_curvetoContext.prototype.wsp = function(i) {
+QuadraticBezierCurvetoContext.prototype.wsp = function(i) {
     if(i===undefined) {
         i = null;
     }
@@ -2430,27 +2429,27 @@ Quadratic_bezier_curvetoContext.prototype.wsp = function(i) {
     }
 };
 
-Quadratic_bezier_curvetoContext.prototype.enterRule = function(listener) {
+QuadraticBezierCurvetoContext.prototype.enterRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
-        listener.enterQuadratic_bezier_curveto(this);
+        listener.enterQuadraticBezierCurveto(this);
 	}
 };
 
-Quadratic_bezier_curvetoContext.prototype.exitRule = function(listener) {
+QuadraticBezierCurvetoContext.prototype.exitRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
-        listener.exitQuadratic_bezier_curveto(this);
+        listener.exitQuadraticBezierCurveto(this);
 	}
 };
 
 
 
 
-SvgPathParser.Quadratic_bezier_curvetoContext = Quadratic_bezier_curvetoContext;
+SvgPathParser.QuadraticBezierCurvetoContext = QuadraticBezierCurvetoContext;
 
-SvgPathParser.prototype.quadratic_bezier_curveto = function() {
+SvgPathParser.prototype.quadraticBezierCurveto = function() {
 
-    var localctx = new Quadratic_bezier_curvetoContext(this, this._ctx, this.state);
-    this.enterRule(localctx, 42, SvgPathParser.RULE_quadratic_bezier_curveto);
+    var localctx = new QuadraticBezierCurvetoContext(this, this._ctx, this.state);
+    this.enterRule(localctx, 42, SvgPathParser.RULE_quadraticBezierCurveto);
     var _la = 0; // Token type
     try {
         this.enterOuterAlt(localctx, 1);
@@ -2474,7 +2473,7 @@ SvgPathParser.prototype.quadratic_bezier_curveto = function() {
             _la = this._input.LA(1);
         }
         this.state = 283;
-        this.quadratic_bezier_curveto_argument_sequence();
+        this.quadraticBezierCurvetoArgumentSequence();
     } catch (re) {
     	if(re instanceof antlr4.error.RecognitionException) {
 	        localctx.exception = re;
@@ -2490,7 +2489,7 @@ SvgPathParser.prototype.quadratic_bezier_curveto = function() {
 };
 
 
-function Quadratic_bezier_curveto_argument_sequenceContext(parser, parent, invokingState) {
+function QuadraticBezierCurvetoArgumentSequenceContext(parser, parent, invokingState) {
 	if(parent===undefined) {
 	    parent = null;
 	}
@@ -2499,46 +2498,46 @@ function Quadratic_bezier_curveto_argument_sequenceContext(parser, parent, invok
 	}
 	antlr4.ParserRuleContext.call(this, parent, invokingState);
     this.parser = parser;
-    this.ruleIndex = SvgPathParser.RULE_quadratic_bezier_curveto_argument_sequence;
+    this.ruleIndex = SvgPathParser.RULE_quadraticBezierCurvetoArgumentSequence;
     return this;
 }
 
-Quadratic_bezier_curveto_argument_sequenceContext.prototype = Object.create(antlr4.ParserRuleContext.prototype);
-Quadratic_bezier_curveto_argument_sequenceContext.prototype.constructor = Quadratic_bezier_curveto_argument_sequenceContext;
+QuadraticBezierCurvetoArgumentSequenceContext.prototype = Object.create(antlr4.ParserRuleContext.prototype);
+QuadraticBezierCurvetoArgumentSequenceContext.prototype.constructor = QuadraticBezierCurvetoArgumentSequenceContext;
 
-Quadratic_bezier_curveto_argument_sequenceContext.prototype.quadratic_bezier_curveto_argument = function() {
-    return this.getTypedRuleContext(Quadratic_bezier_curveto_argumentContext,0);
+QuadraticBezierCurvetoArgumentSequenceContext.prototype.quadraticBezierCurvetoArgument = function() {
+    return this.getTypedRuleContext(QuadraticBezierCurvetoArgumentContext,0);
 };
 
-Quadratic_bezier_curveto_argument_sequenceContext.prototype.quadratic_bezier_curveto_argument_sequence = function() {
-    return this.getTypedRuleContext(Quadratic_bezier_curveto_argument_sequenceContext,0);
+QuadraticBezierCurvetoArgumentSequenceContext.prototype.quadraticBezierCurvetoArgumentSequence = function() {
+    return this.getTypedRuleContext(QuadraticBezierCurvetoArgumentSequenceContext,0);
 };
 
-Quadratic_bezier_curveto_argument_sequenceContext.prototype.comma_wsp = function() {
-    return this.getTypedRuleContext(Comma_wspContext,0);
+QuadraticBezierCurvetoArgumentSequenceContext.prototype.commaWsp = function() {
+    return this.getTypedRuleContext(CommaWspContext,0);
 };
 
-Quadratic_bezier_curveto_argument_sequenceContext.prototype.enterRule = function(listener) {
+QuadraticBezierCurvetoArgumentSequenceContext.prototype.enterRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
-        listener.enterQuadratic_bezier_curveto_argument_sequence(this);
+        listener.enterQuadraticBezierCurvetoArgumentSequence(this);
 	}
 };
 
-Quadratic_bezier_curveto_argument_sequenceContext.prototype.exitRule = function(listener) {
+QuadraticBezierCurvetoArgumentSequenceContext.prototype.exitRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
-        listener.exitQuadratic_bezier_curveto_argument_sequence(this);
+        listener.exitQuadraticBezierCurvetoArgumentSequence(this);
 	}
 };
 
 
 
 
-SvgPathParser.Quadratic_bezier_curveto_argument_sequenceContext = Quadratic_bezier_curveto_argument_sequenceContext;
+SvgPathParser.QuadraticBezierCurvetoArgumentSequenceContext = QuadraticBezierCurvetoArgumentSequenceContext;
 
-SvgPathParser.prototype.quadratic_bezier_curveto_argument_sequence = function() {
+SvgPathParser.prototype.quadraticBezierCurvetoArgumentSequence = function() {
 
-    var localctx = new Quadratic_bezier_curveto_argument_sequenceContext(this, this._ctx, this.state);
-    this.enterRule(localctx, 44, SvgPathParser.RULE_quadratic_bezier_curveto_argument_sequence);
+    var localctx = new QuadraticBezierCurvetoArgumentSequenceContext(this, this._ctx, this.state);
+    this.enterRule(localctx, 44, SvgPathParser.RULE_quadraticBezierCurvetoArgumentSequence);
     var _la = 0; // Token type
     try {
         this.state = 292;
@@ -2548,23 +2547,23 @@ SvgPathParser.prototype.quadratic_bezier_curveto_argument_sequence = function() 
         case 1:
             this.enterOuterAlt(localctx, 1);
             this.state = 285;
-            this.quadratic_bezier_curveto_argument();
+            this.quadraticBezierCurvetoArgument();
             break;
 
         case 2:
             this.enterOuterAlt(localctx, 2);
             this.state = 286;
-            this.quadratic_bezier_curveto_argument();
+            this.quadraticBezierCurvetoArgument();
             this.state = 288;
             this._errHandler.sync(this);
             _la = this._input.LA(1);
             if(((((_la - 23)) & ~0x1f) == 0 && ((1 << (_la - 23)) & ((1 << (SvgPathParser.T__22 - 23)) | (1 << (SvgPathParser.T__36 - 23)) | (1 << (SvgPathParser.T__37 - 23)) | (1 << (SvgPathParser.T__38 - 23)) | (1 << (SvgPathParser.T__39 - 23)))) !== 0)) {
                 this.state = 287;
-                this.comma_wsp();
+                this.commaWsp();
             }
 
             this.state = 290;
-            this.quadratic_bezier_curveto_argument_sequence();
+            this.quadraticBezierCurvetoArgumentSequence();
             break;
 
         }
@@ -2583,7 +2582,7 @@ SvgPathParser.prototype.quadratic_bezier_curveto_argument_sequence = function() 
 };
 
 
-function Quadratic_bezier_curveto_argumentContext(parser, parent, invokingState) {
+function QuadraticBezierCurvetoArgumentContext(parser, parent, invokingState) {
 	if(parent===undefined) {
 	    parent = null;
 	}
@@ -2592,64 +2591,64 @@ function Quadratic_bezier_curveto_argumentContext(parser, parent, invokingState)
 	}
 	antlr4.ParserRuleContext.call(this, parent, invokingState);
     this.parser = parser;
-    this.ruleIndex = SvgPathParser.RULE_quadratic_bezier_curveto_argument;
+    this.ruleIndex = SvgPathParser.RULE_quadraticBezierCurvetoArgument;
     return this;
 }
 
-Quadratic_bezier_curveto_argumentContext.prototype = Object.create(antlr4.ParserRuleContext.prototype);
-Quadratic_bezier_curveto_argumentContext.prototype.constructor = Quadratic_bezier_curveto_argumentContext;
+QuadraticBezierCurvetoArgumentContext.prototype = Object.create(antlr4.ParserRuleContext.prototype);
+QuadraticBezierCurvetoArgumentContext.prototype.constructor = QuadraticBezierCurvetoArgumentContext;
 
-Quadratic_bezier_curveto_argumentContext.prototype.coordinate_pair = function(i) {
+QuadraticBezierCurvetoArgumentContext.prototype.coordinatePair = function(i) {
     if(i===undefined) {
         i = null;
     }
     if(i===null) {
-        return this.getTypedRuleContexts(Coordinate_pairContext);
+        return this.getTypedRuleContexts(CoordinatePairContext);
     } else {
-        return this.getTypedRuleContext(Coordinate_pairContext,i);
+        return this.getTypedRuleContext(CoordinatePairContext,i);
     }
 };
 
-Quadratic_bezier_curveto_argumentContext.prototype.comma_wsp = function() {
-    return this.getTypedRuleContext(Comma_wspContext,0);
+QuadraticBezierCurvetoArgumentContext.prototype.commaWsp = function() {
+    return this.getTypedRuleContext(CommaWspContext,0);
 };
 
-Quadratic_bezier_curveto_argumentContext.prototype.enterRule = function(listener) {
+QuadraticBezierCurvetoArgumentContext.prototype.enterRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
-        listener.enterQuadratic_bezier_curveto_argument(this);
+        listener.enterQuadraticBezierCurvetoArgument(this);
 	}
 };
 
-Quadratic_bezier_curveto_argumentContext.prototype.exitRule = function(listener) {
+QuadraticBezierCurvetoArgumentContext.prototype.exitRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
-        listener.exitQuadratic_bezier_curveto_argument(this);
+        listener.exitQuadraticBezierCurvetoArgument(this);
 	}
 };
 
 
 
 
-SvgPathParser.Quadratic_bezier_curveto_argumentContext = Quadratic_bezier_curveto_argumentContext;
+SvgPathParser.QuadraticBezierCurvetoArgumentContext = QuadraticBezierCurvetoArgumentContext;
 
-SvgPathParser.prototype.quadratic_bezier_curveto_argument = function() {
+SvgPathParser.prototype.quadraticBezierCurvetoArgument = function() {
 
-    var localctx = new Quadratic_bezier_curveto_argumentContext(this, this._ctx, this.state);
-    this.enterRule(localctx, 46, SvgPathParser.RULE_quadratic_bezier_curveto_argument);
+    var localctx = new QuadraticBezierCurvetoArgumentContext(this, this._ctx, this.state);
+    this.enterRule(localctx, 46, SvgPathParser.RULE_quadraticBezierCurvetoArgument);
     var _la = 0; // Token type
     try {
         this.enterOuterAlt(localctx, 1);
         this.state = 294;
-        this.coordinate_pair();
+        this.coordinatePair();
         this.state = 296;
         this._errHandler.sync(this);
         _la = this._input.LA(1);
         if(((((_la - 23)) & ~0x1f) == 0 && ((1 << (_la - 23)) & ((1 << (SvgPathParser.T__22 - 23)) | (1 << (SvgPathParser.T__36 - 23)) | (1 << (SvgPathParser.T__37 - 23)) | (1 << (SvgPathParser.T__38 - 23)) | (1 << (SvgPathParser.T__39 - 23)))) !== 0)) {
             this.state = 295;
-            this.comma_wsp();
+            this.commaWsp();
         }
 
         this.state = 298;
-        this.coordinate_pair();
+        this.coordinatePair();
     } catch (re) {
     	if(re instanceof antlr4.error.RecognitionException) {
 	        localctx.exception = re;
@@ -2665,7 +2664,7 @@ SvgPathParser.prototype.quadratic_bezier_curveto_argument = function() {
 };
 
 
-function Smooth_quadratic_bezier_curvetoContext(parser, parent, invokingState) {
+function SmoothQuadraticBezierCurvetoContext(parser, parent, invokingState) {
 	if(parent===undefined) {
 	    parent = null;
 	}
@@ -2674,18 +2673,18 @@ function Smooth_quadratic_bezier_curvetoContext(parser, parent, invokingState) {
 	}
 	antlr4.ParserRuleContext.call(this, parent, invokingState);
     this.parser = parser;
-    this.ruleIndex = SvgPathParser.RULE_smooth_quadratic_bezier_curveto;
+    this.ruleIndex = SvgPathParser.RULE_smoothQuadraticBezierCurveto;
     return this;
 }
 
-Smooth_quadratic_bezier_curvetoContext.prototype = Object.create(antlr4.ParserRuleContext.prototype);
-Smooth_quadratic_bezier_curvetoContext.prototype.constructor = Smooth_quadratic_bezier_curvetoContext;
+SmoothQuadraticBezierCurvetoContext.prototype = Object.create(antlr4.ParserRuleContext.prototype);
+SmoothQuadraticBezierCurvetoContext.prototype.constructor = SmoothQuadraticBezierCurvetoContext;
 
-Smooth_quadratic_bezier_curvetoContext.prototype.smooth_quadratic_bezier_curveto_argument_sequence = function() {
-    return this.getTypedRuleContext(Smooth_quadratic_bezier_curveto_argument_sequenceContext,0);
+SmoothQuadraticBezierCurvetoContext.prototype.smoothQuadraticBezierCurvetoArgumentSequence = function() {
+    return this.getTypedRuleContext(SmoothQuadraticBezierCurvetoArgumentSequenceContext,0);
 };
 
-Smooth_quadratic_bezier_curvetoContext.prototype.wsp = function(i) {
+SmoothQuadraticBezierCurvetoContext.prototype.wsp = function(i) {
     if(i===undefined) {
         i = null;
     }
@@ -2696,27 +2695,27 @@ Smooth_quadratic_bezier_curvetoContext.prototype.wsp = function(i) {
     }
 };
 
-Smooth_quadratic_bezier_curvetoContext.prototype.enterRule = function(listener) {
+SmoothQuadraticBezierCurvetoContext.prototype.enterRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
-        listener.enterSmooth_quadratic_bezier_curveto(this);
+        listener.enterSmoothQuadraticBezierCurveto(this);
 	}
 };
 
-Smooth_quadratic_bezier_curvetoContext.prototype.exitRule = function(listener) {
+SmoothQuadraticBezierCurvetoContext.prototype.exitRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
-        listener.exitSmooth_quadratic_bezier_curveto(this);
+        listener.exitSmoothQuadraticBezierCurveto(this);
 	}
 };
 
 
 
 
-SvgPathParser.Smooth_quadratic_bezier_curvetoContext = Smooth_quadratic_bezier_curvetoContext;
+SvgPathParser.SmoothQuadraticBezierCurvetoContext = SmoothQuadraticBezierCurvetoContext;
 
-SvgPathParser.prototype.smooth_quadratic_bezier_curveto = function() {
+SvgPathParser.prototype.smoothQuadraticBezierCurveto = function() {
 
-    var localctx = new Smooth_quadratic_bezier_curvetoContext(this, this._ctx, this.state);
-    this.enterRule(localctx, 48, SvgPathParser.RULE_smooth_quadratic_bezier_curveto);
+    var localctx = new SmoothQuadraticBezierCurvetoContext(this, this._ctx, this.state);
+    this.enterRule(localctx, 48, SvgPathParser.RULE_smoothQuadraticBezierCurveto);
     var _la = 0; // Token type
     try {
         this.enterOuterAlt(localctx, 1);
@@ -2740,7 +2739,7 @@ SvgPathParser.prototype.smooth_quadratic_bezier_curveto = function() {
             _la = this._input.LA(1);
         }
         this.state = 307;
-        this.smooth_quadratic_bezier_curveto_argument_sequence();
+        this.smoothQuadraticBezierCurvetoArgumentSequence();
     } catch (re) {
     	if(re instanceof antlr4.error.RecognitionException) {
 	        localctx.exception = re;
@@ -2756,7 +2755,7 @@ SvgPathParser.prototype.smooth_quadratic_bezier_curveto = function() {
 };
 
 
-function Smooth_quadratic_bezier_curveto_argument_sequenceContext(parser, parent, invokingState) {
+function SmoothQuadraticBezierCurvetoArgumentSequenceContext(parser, parent, invokingState) {
 	if(parent===undefined) {
 	    parent = null;
 	}
@@ -2765,46 +2764,46 @@ function Smooth_quadratic_bezier_curveto_argument_sequenceContext(parser, parent
 	}
 	antlr4.ParserRuleContext.call(this, parent, invokingState);
     this.parser = parser;
-    this.ruleIndex = SvgPathParser.RULE_smooth_quadratic_bezier_curveto_argument_sequence;
+    this.ruleIndex = SvgPathParser.RULE_smoothQuadraticBezierCurvetoArgumentSequence;
     return this;
 }
 
-Smooth_quadratic_bezier_curveto_argument_sequenceContext.prototype = Object.create(antlr4.ParserRuleContext.prototype);
-Smooth_quadratic_bezier_curveto_argument_sequenceContext.prototype.constructor = Smooth_quadratic_bezier_curveto_argument_sequenceContext;
+SmoothQuadraticBezierCurvetoArgumentSequenceContext.prototype = Object.create(antlr4.ParserRuleContext.prototype);
+SmoothQuadraticBezierCurvetoArgumentSequenceContext.prototype.constructor = SmoothQuadraticBezierCurvetoArgumentSequenceContext;
 
-Smooth_quadratic_bezier_curveto_argument_sequenceContext.prototype.coordinate_pair = function() {
-    return this.getTypedRuleContext(Coordinate_pairContext,0);
+SmoothQuadraticBezierCurvetoArgumentSequenceContext.prototype.coordinatePair = function() {
+    return this.getTypedRuleContext(CoordinatePairContext,0);
 };
 
-Smooth_quadratic_bezier_curveto_argument_sequenceContext.prototype.smooth_quadratic_bezier_curveto_argument_sequence = function() {
-    return this.getTypedRuleContext(Smooth_quadratic_bezier_curveto_argument_sequenceContext,0);
+SmoothQuadraticBezierCurvetoArgumentSequenceContext.prototype.smoothQuadraticBezierCurvetoArgumentSequence = function() {
+    return this.getTypedRuleContext(SmoothQuadraticBezierCurvetoArgumentSequenceContext,0);
 };
 
-Smooth_quadratic_bezier_curveto_argument_sequenceContext.prototype.comma_wsp = function() {
-    return this.getTypedRuleContext(Comma_wspContext,0);
+SmoothQuadraticBezierCurvetoArgumentSequenceContext.prototype.commaWsp = function() {
+    return this.getTypedRuleContext(CommaWspContext,0);
 };
 
-Smooth_quadratic_bezier_curveto_argument_sequenceContext.prototype.enterRule = function(listener) {
+SmoothQuadraticBezierCurvetoArgumentSequenceContext.prototype.enterRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
-        listener.enterSmooth_quadratic_bezier_curveto_argument_sequence(this);
+        listener.enterSmoothQuadraticBezierCurvetoArgumentSequence(this);
 	}
 };
 
-Smooth_quadratic_bezier_curveto_argument_sequenceContext.prototype.exitRule = function(listener) {
+SmoothQuadraticBezierCurvetoArgumentSequenceContext.prototype.exitRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
-        listener.exitSmooth_quadratic_bezier_curveto_argument_sequence(this);
+        listener.exitSmoothQuadraticBezierCurvetoArgumentSequence(this);
 	}
 };
 
 
 
 
-SvgPathParser.Smooth_quadratic_bezier_curveto_argument_sequenceContext = Smooth_quadratic_bezier_curveto_argument_sequenceContext;
+SvgPathParser.SmoothQuadraticBezierCurvetoArgumentSequenceContext = SmoothQuadraticBezierCurvetoArgumentSequenceContext;
 
-SvgPathParser.prototype.smooth_quadratic_bezier_curveto_argument_sequence = function() {
+SvgPathParser.prototype.smoothQuadraticBezierCurvetoArgumentSequence = function() {
 
-    var localctx = new Smooth_quadratic_bezier_curveto_argument_sequenceContext(this, this._ctx, this.state);
-    this.enterRule(localctx, 50, SvgPathParser.RULE_smooth_quadratic_bezier_curveto_argument_sequence);
+    var localctx = new SmoothQuadraticBezierCurvetoArgumentSequenceContext(this, this._ctx, this.state);
+    this.enterRule(localctx, 50, SvgPathParser.RULE_smoothQuadraticBezierCurvetoArgumentSequence);
     var _la = 0; // Token type
     try {
         this.state = 316;
@@ -2814,23 +2813,23 @@ SvgPathParser.prototype.smooth_quadratic_bezier_curveto_argument_sequence = func
         case 1:
             this.enterOuterAlt(localctx, 1);
             this.state = 309;
-            this.coordinate_pair();
+            this.coordinatePair();
             break;
 
         case 2:
             this.enterOuterAlt(localctx, 2);
             this.state = 310;
-            this.coordinate_pair();
+            this.coordinatePair();
             this.state = 312;
             this._errHandler.sync(this);
             _la = this._input.LA(1);
             if(((((_la - 23)) & ~0x1f) == 0 && ((1 << (_la - 23)) & ((1 << (SvgPathParser.T__22 - 23)) | (1 << (SvgPathParser.T__36 - 23)) | (1 << (SvgPathParser.T__37 - 23)) | (1 << (SvgPathParser.T__38 - 23)) | (1 << (SvgPathParser.T__39 - 23)))) !== 0)) {
                 this.state = 311;
-                this.comma_wsp();
+                this.commaWsp();
             }
 
             this.state = 314;
-            this.smooth_quadratic_bezier_curveto_argument_sequence();
+            this.smoothQuadraticBezierCurvetoArgumentSequence();
             break;
 
         }
@@ -2849,7 +2848,7 @@ SvgPathParser.prototype.smooth_quadratic_bezier_curveto_argument_sequence = func
 };
 
 
-function Elliptical_arcContext(parser, parent, invokingState) {
+function EllipticalArcContext(parser, parent, invokingState) {
 	if(parent===undefined) {
 	    parent = null;
 	}
@@ -2858,18 +2857,18 @@ function Elliptical_arcContext(parser, parent, invokingState) {
 	}
 	antlr4.ParserRuleContext.call(this, parent, invokingState);
     this.parser = parser;
-    this.ruleIndex = SvgPathParser.RULE_elliptical_arc;
+    this.ruleIndex = SvgPathParser.RULE_ellipticalArc;
     return this;
 }
 
-Elliptical_arcContext.prototype = Object.create(antlr4.ParserRuleContext.prototype);
-Elliptical_arcContext.prototype.constructor = Elliptical_arcContext;
+EllipticalArcContext.prototype = Object.create(antlr4.ParserRuleContext.prototype);
+EllipticalArcContext.prototype.constructor = EllipticalArcContext;
 
-Elliptical_arcContext.prototype.elliptical_arc_argument_sequence = function() {
-    return this.getTypedRuleContext(Elliptical_arc_argument_sequenceContext,0);
+EllipticalArcContext.prototype.ellipticalArcArgumentSequence = function() {
+    return this.getTypedRuleContext(EllipticalArcArgumentSequenceContext,0);
 };
 
-Elliptical_arcContext.prototype.wsp = function(i) {
+EllipticalArcContext.prototype.wsp = function(i) {
     if(i===undefined) {
         i = null;
     }
@@ -2880,27 +2879,27 @@ Elliptical_arcContext.prototype.wsp = function(i) {
     }
 };
 
-Elliptical_arcContext.prototype.enterRule = function(listener) {
+EllipticalArcContext.prototype.enterRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
-        listener.enterElliptical_arc(this);
+        listener.enterEllipticalArc(this);
 	}
 };
 
-Elliptical_arcContext.prototype.exitRule = function(listener) {
+EllipticalArcContext.prototype.exitRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
-        listener.exitElliptical_arc(this);
+        listener.exitEllipticalArc(this);
 	}
 };
 
 
 
 
-SvgPathParser.Elliptical_arcContext = Elliptical_arcContext;
+SvgPathParser.EllipticalArcContext = EllipticalArcContext;
 
-SvgPathParser.prototype.elliptical_arc = function() {
+SvgPathParser.prototype.ellipticalArc = function() {
 
-    var localctx = new Elliptical_arcContext(this, this._ctx, this.state);
-    this.enterRule(localctx, 52, SvgPathParser.RULE_elliptical_arc);
+    var localctx = new EllipticalArcContext(this, this._ctx, this.state);
+    this.enterRule(localctx, 52, SvgPathParser.RULE_ellipticalArc);
     var _la = 0; // Token type
     try {
         this.enterOuterAlt(localctx, 1);
@@ -2924,7 +2923,7 @@ SvgPathParser.prototype.elliptical_arc = function() {
             _la = this._input.LA(1);
         }
         this.state = 325;
-        this.elliptical_arc_argument_sequence();
+        this.ellipticalArcArgumentSequence();
     } catch (re) {
     	if(re instanceof antlr4.error.RecognitionException) {
 	        localctx.exception = re;
@@ -2940,7 +2939,7 @@ SvgPathParser.prototype.elliptical_arc = function() {
 };
 
 
-function Elliptical_arc_argument_sequenceContext(parser, parent, invokingState) {
+function EllipticalArcArgumentSequenceContext(parser, parent, invokingState) {
 	if(parent===undefined) {
 	    parent = null;
 	}
@@ -2949,46 +2948,46 @@ function Elliptical_arc_argument_sequenceContext(parser, parent, invokingState) 
 	}
 	antlr4.ParserRuleContext.call(this, parent, invokingState);
     this.parser = parser;
-    this.ruleIndex = SvgPathParser.RULE_elliptical_arc_argument_sequence;
+    this.ruleIndex = SvgPathParser.RULE_ellipticalArcArgumentSequence;
     return this;
 }
 
-Elliptical_arc_argument_sequenceContext.prototype = Object.create(antlr4.ParserRuleContext.prototype);
-Elliptical_arc_argument_sequenceContext.prototype.constructor = Elliptical_arc_argument_sequenceContext;
+EllipticalArcArgumentSequenceContext.prototype = Object.create(antlr4.ParserRuleContext.prototype);
+EllipticalArcArgumentSequenceContext.prototype.constructor = EllipticalArcArgumentSequenceContext;
 
-Elliptical_arc_argument_sequenceContext.prototype.elliptical_arc_argument = function() {
-    return this.getTypedRuleContext(Elliptical_arc_argumentContext,0);
+EllipticalArcArgumentSequenceContext.prototype.ellipticalArcArgument = function() {
+    return this.getTypedRuleContext(EllipticalArcArgumentContext,0);
 };
 
-Elliptical_arc_argument_sequenceContext.prototype.elliptical_arc_argument_sequence = function() {
-    return this.getTypedRuleContext(Elliptical_arc_argument_sequenceContext,0);
+EllipticalArcArgumentSequenceContext.prototype.ellipticalArcArgumentSequence = function() {
+    return this.getTypedRuleContext(EllipticalArcArgumentSequenceContext,0);
 };
 
-Elliptical_arc_argument_sequenceContext.prototype.comma_wsp = function() {
-    return this.getTypedRuleContext(Comma_wspContext,0);
+EllipticalArcArgumentSequenceContext.prototype.commaWsp = function() {
+    return this.getTypedRuleContext(CommaWspContext,0);
 };
 
-Elliptical_arc_argument_sequenceContext.prototype.enterRule = function(listener) {
+EllipticalArcArgumentSequenceContext.prototype.enterRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
-        listener.enterElliptical_arc_argument_sequence(this);
+        listener.enterEllipticalArcArgumentSequence(this);
 	}
 };
 
-Elliptical_arc_argument_sequenceContext.prototype.exitRule = function(listener) {
+EllipticalArcArgumentSequenceContext.prototype.exitRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
-        listener.exitElliptical_arc_argument_sequence(this);
+        listener.exitEllipticalArcArgumentSequence(this);
 	}
 };
 
 
 
 
-SvgPathParser.Elliptical_arc_argument_sequenceContext = Elliptical_arc_argument_sequenceContext;
+SvgPathParser.EllipticalArcArgumentSequenceContext = EllipticalArcArgumentSequenceContext;
 
-SvgPathParser.prototype.elliptical_arc_argument_sequence = function() {
+SvgPathParser.prototype.ellipticalArcArgumentSequence = function() {
 
-    var localctx = new Elliptical_arc_argument_sequenceContext(this, this._ctx, this.state);
-    this.enterRule(localctx, 54, SvgPathParser.RULE_elliptical_arc_argument_sequence);
+    var localctx = new EllipticalArcArgumentSequenceContext(this, this._ctx, this.state);
+    this.enterRule(localctx, 54, SvgPathParser.RULE_ellipticalArcArgumentSequence);
     var _la = 0; // Token type
     try {
         this.state = 334;
@@ -2998,23 +2997,23 @@ SvgPathParser.prototype.elliptical_arc_argument_sequence = function() {
         case 1:
             this.enterOuterAlt(localctx, 1);
             this.state = 327;
-            this.elliptical_arc_argument();
+            this.ellipticalArcArgument();
             break;
 
         case 2:
             this.enterOuterAlt(localctx, 2);
             this.state = 328;
-            this.elliptical_arc_argument();
+            this.ellipticalArcArgument();
             this.state = 330;
             this._errHandler.sync(this);
             _la = this._input.LA(1);
             if(((((_la - 23)) & ~0x1f) == 0 && ((1 << (_la - 23)) & ((1 << (SvgPathParser.T__22 - 23)) | (1 << (SvgPathParser.T__36 - 23)) | (1 << (SvgPathParser.T__37 - 23)) | (1 << (SvgPathParser.T__38 - 23)) | (1 << (SvgPathParser.T__39 - 23)))) !== 0)) {
                 this.state = 329;
-                this.comma_wsp();
+                this.commaWsp();
             }
 
             this.state = 332;
-            this.elliptical_arc_argument_sequence();
+            this.ellipticalArcArgumentSequence();
             break;
 
         }
@@ -3033,7 +3032,7 @@ SvgPathParser.prototype.elliptical_arc_argument_sequence = function() {
 };
 
 
-function Elliptical_arc_argumentContext(parser, parent, invokingState) {
+function EllipticalArcArgumentContext(parser, parent, invokingState) {
 	if(parent===undefined) {
 	    parent = null;
 	}
@@ -3042,40 +3041,40 @@ function Elliptical_arc_argumentContext(parser, parent, invokingState) {
 	}
 	antlr4.ParserRuleContext.call(this, parent, invokingState);
     this.parser = parser;
-    this.ruleIndex = SvgPathParser.RULE_elliptical_arc_argument;
+    this.ruleIndex = SvgPathParser.RULE_ellipticalArcArgument;
     return this;
 }
 
-Elliptical_arc_argumentContext.prototype = Object.create(antlr4.ParserRuleContext.prototype);
-Elliptical_arc_argumentContext.prototype.constructor = Elliptical_arc_argumentContext;
+EllipticalArcArgumentContext.prototype = Object.create(antlr4.ParserRuleContext.prototype);
+EllipticalArcArgumentContext.prototype.constructor = EllipticalArcArgumentContext;
 
-Elliptical_arc_argumentContext.prototype.nonnegative_number = function(i) {
+EllipticalArcArgumentContext.prototype.nonnegativeNumber = function(i) {
     if(i===undefined) {
         i = null;
     }
     if(i===null) {
-        return this.getTypedRuleContexts(Nonnegative_numberContext);
+        return this.getTypedRuleContexts(NonnegativeNumberContext);
     } else {
-        return this.getTypedRuleContext(Nonnegative_numberContext,i);
+        return this.getTypedRuleContext(NonnegativeNumberContext,i);
     }
 };
 
-Elliptical_arc_argumentContext.prototype.number = function() {
+EllipticalArcArgumentContext.prototype.number = function() {
     return this.getTypedRuleContext(NumberContext,0);
 };
 
-Elliptical_arc_argumentContext.prototype.comma_wsp = function(i) {
+EllipticalArcArgumentContext.prototype.commaWsp = function(i) {
     if(i===undefined) {
         i = null;
     }
     if(i===null) {
-        return this.getTypedRuleContexts(Comma_wspContext);
+        return this.getTypedRuleContexts(CommaWspContext);
     } else {
-        return this.getTypedRuleContext(Comma_wspContext,i);
+        return this.getTypedRuleContext(CommaWspContext,i);
     }
 };
 
-Elliptical_arc_argumentContext.prototype.flag = function(i) {
+EllipticalArcArgumentContext.prototype.flag = function(i) {
     if(i===undefined) {
         i = null;
     }
@@ -3086,58 +3085,58 @@ Elliptical_arc_argumentContext.prototype.flag = function(i) {
     }
 };
 
-Elliptical_arc_argumentContext.prototype.coordinate_pair = function() {
-    return this.getTypedRuleContext(Coordinate_pairContext,0);
+EllipticalArcArgumentContext.prototype.coordinatePair = function() {
+    return this.getTypedRuleContext(CoordinatePairContext,0);
 };
 
-Elliptical_arc_argumentContext.prototype.enterRule = function(listener) {
+EllipticalArcArgumentContext.prototype.enterRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
-        listener.enterElliptical_arc_argument(this);
+        listener.enterEllipticalArcArgument(this);
 	}
 };
 
-Elliptical_arc_argumentContext.prototype.exitRule = function(listener) {
+EllipticalArcArgumentContext.prototype.exitRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
-        listener.exitElliptical_arc_argument(this);
+        listener.exitEllipticalArcArgument(this);
 	}
 };
 
 
 
 
-SvgPathParser.Elliptical_arc_argumentContext = Elliptical_arc_argumentContext;
+SvgPathParser.EllipticalArcArgumentContext = EllipticalArcArgumentContext;
 
-SvgPathParser.prototype.elliptical_arc_argument = function() {
+SvgPathParser.prototype.ellipticalArcArgument = function() {
 
-    var localctx = new Elliptical_arc_argumentContext(this, this._ctx, this.state);
-    this.enterRule(localctx, 56, SvgPathParser.RULE_elliptical_arc_argument);
+    var localctx = new EllipticalArcArgumentContext(this, this._ctx, this.state);
+    this.enterRule(localctx, 56, SvgPathParser.RULE_ellipticalArcArgument);
     var _la = 0; // Token type
     try {
         this.enterOuterAlt(localctx, 1);
         this.state = 336;
-        this.nonnegative_number();
+        this.nonnegativeNumber();
         this.state = 338;
         this._errHandler.sync(this);
         _la = this._input.LA(1);
         if(((((_la - 23)) & ~0x1f) == 0 && ((1 << (_la - 23)) & ((1 << (SvgPathParser.T__22 - 23)) | (1 << (SvgPathParser.T__36 - 23)) | (1 << (SvgPathParser.T__37 - 23)) | (1 << (SvgPathParser.T__38 - 23)) | (1 << (SvgPathParser.T__39 - 23)))) !== 0)) {
             this.state = 337;
-            this.comma_wsp();
+            this.commaWsp();
         }
 
         this.state = 340;
-        this.nonnegative_number();
+        this.nonnegativeNumber();
         this.state = 342;
         this._errHandler.sync(this);
         _la = this._input.LA(1);
         if(((((_la - 23)) & ~0x1f) == 0 && ((1 << (_la - 23)) & ((1 << (SvgPathParser.T__22 - 23)) | (1 << (SvgPathParser.T__36 - 23)) | (1 << (SvgPathParser.T__37 - 23)) | (1 << (SvgPathParser.T__38 - 23)) | (1 << (SvgPathParser.T__39 - 23)))) !== 0)) {
             this.state = 341;
-            this.comma_wsp();
+            this.commaWsp();
         }
 
         this.state = 344;
         this.number();
         this.state = 345;
-        this.comma_wsp();
+        this.commaWsp();
         this.state = 346;
         this.flag();
         this.state = 348;
@@ -3145,7 +3144,7 @@ SvgPathParser.prototype.elliptical_arc_argument = function() {
         _la = this._input.LA(1);
         if(((((_la - 23)) & ~0x1f) == 0 && ((1 << (_la - 23)) & ((1 << (SvgPathParser.T__22 - 23)) | (1 << (SvgPathParser.T__36 - 23)) | (1 << (SvgPathParser.T__37 - 23)) | (1 << (SvgPathParser.T__38 - 23)) | (1 << (SvgPathParser.T__39 - 23)))) !== 0)) {
             this.state = 347;
-            this.comma_wsp();
+            this.commaWsp();
         }
 
         this.state = 350;
@@ -3155,11 +3154,11 @@ SvgPathParser.prototype.elliptical_arc_argument = function() {
         _la = this._input.LA(1);
         if(((((_la - 23)) & ~0x1f) == 0 && ((1 << (_la - 23)) & ((1 << (SvgPathParser.T__22 - 23)) | (1 << (SvgPathParser.T__36 - 23)) | (1 << (SvgPathParser.T__37 - 23)) | (1 << (SvgPathParser.T__38 - 23)) | (1 << (SvgPathParser.T__39 - 23)))) !== 0)) {
             this.state = 351;
-            this.comma_wsp();
+            this.commaWsp();
         }
 
         this.state = 354;
-        this.coordinate_pair();
+        this.coordinatePair();
     } catch (re) {
     	if(re instanceof antlr4.error.RecognitionException) {
 	        localctx.exception = re;
@@ -3175,7 +3174,7 @@ SvgPathParser.prototype.elliptical_arc_argument = function() {
 };
 
 
-function Coordinate_pairContext(parser, parent, invokingState) {
+function CoordinatePairContext(parser, parent, invokingState) {
 	if(parent===undefined) {
 	    parent = null;
 	}
@@ -3184,14 +3183,14 @@ function Coordinate_pairContext(parser, parent, invokingState) {
 	}
 	antlr4.ParserRuleContext.call(this, parent, invokingState);
     this.parser = parser;
-    this.ruleIndex = SvgPathParser.RULE_coordinate_pair;
+    this.ruleIndex = SvgPathParser.RULE_coordinatePair;
     return this;
 }
 
-Coordinate_pairContext.prototype = Object.create(antlr4.ParserRuleContext.prototype);
-Coordinate_pairContext.prototype.constructor = Coordinate_pairContext;
+CoordinatePairContext.prototype = Object.create(antlr4.ParserRuleContext.prototype);
+CoordinatePairContext.prototype.constructor = CoordinatePairContext;
 
-Coordinate_pairContext.prototype.coordinate = function(i) {
+CoordinatePairContext.prototype.coordinate = function(i) {
     if(i===undefined) {
         i = null;
     }
@@ -3202,31 +3201,31 @@ Coordinate_pairContext.prototype.coordinate = function(i) {
     }
 };
 
-Coordinate_pairContext.prototype.comma_wsp = function() {
-    return this.getTypedRuleContext(Comma_wspContext,0);
+CoordinatePairContext.prototype.commaWsp = function() {
+    return this.getTypedRuleContext(CommaWspContext,0);
 };
 
-Coordinate_pairContext.prototype.enterRule = function(listener) {
+CoordinatePairContext.prototype.enterRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
-        listener.enterCoordinate_pair(this);
+        listener.enterCoordinatePair(this);
 	}
 };
 
-Coordinate_pairContext.prototype.exitRule = function(listener) {
+CoordinatePairContext.prototype.exitRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
-        listener.exitCoordinate_pair(this);
+        listener.exitCoordinatePair(this);
 	}
 };
 
 
 
 
-SvgPathParser.Coordinate_pairContext = Coordinate_pairContext;
+SvgPathParser.CoordinatePairContext = CoordinatePairContext;
 
-SvgPathParser.prototype.coordinate_pair = function() {
+SvgPathParser.prototype.coordinatePair = function() {
 
-    var localctx = new Coordinate_pairContext(this, this._ctx, this.state);
-    this.enterRule(localctx, 58, SvgPathParser.RULE_coordinate_pair);
+    var localctx = new CoordinatePairContext(this, this._ctx, this.state);
+    this.enterRule(localctx, 58, SvgPathParser.RULE_coordinatePair);
     var _la = 0; // Token type
     try {
         this.enterOuterAlt(localctx, 1);
@@ -3237,7 +3236,7 @@ SvgPathParser.prototype.coordinate_pair = function() {
         _la = this._input.LA(1);
         if(((((_la - 23)) & ~0x1f) == 0 && ((1 << (_la - 23)) & ((1 << (SvgPathParser.T__22 - 23)) | (1 << (SvgPathParser.T__36 - 23)) | (1 << (SvgPathParser.T__37 - 23)) | (1 << (SvgPathParser.T__38 - 23)) | (1 << (SvgPathParser.T__39 - 23)))) !== 0)) {
             this.state = 357;
-            this.comma_wsp();
+            this.commaWsp();
         }
 
         this.state = 360;
@@ -3317,7 +3316,7 @@ SvgPathParser.prototype.coordinate = function() {
 };
 
 
-function Nonnegative_numberContext(parser, parent, invokingState) {
+function NonnegativeNumberContext(parser, parent, invokingState) {
 	if(parent===undefined) {
 	    parent = null;
 	}
@@ -3326,42 +3325,42 @@ function Nonnegative_numberContext(parser, parent, invokingState) {
 	}
 	antlr4.ParserRuleContext.call(this, parent, invokingState);
     this.parser = parser;
-    this.ruleIndex = SvgPathParser.RULE_nonnegative_number;
+    this.ruleIndex = SvgPathParser.RULE_nonnegativeNumber;
     return this;
 }
 
-Nonnegative_numberContext.prototype = Object.create(antlr4.ParserRuleContext.prototype);
-Nonnegative_numberContext.prototype.constructor = Nonnegative_numberContext;
+NonnegativeNumberContext.prototype = Object.create(antlr4.ParserRuleContext.prototype);
+NonnegativeNumberContext.prototype.constructor = NonnegativeNumberContext;
 
-Nonnegative_numberContext.prototype.integer_constant = function() {
-    return this.getTypedRuleContext(Integer_constantContext,0);
+NonnegativeNumberContext.prototype.integerConstant = function() {
+    return this.getTypedRuleContext(IntegerConstantContext,0);
 };
 
-Nonnegative_numberContext.prototype.floating_point_constant = function() {
-    return this.getTypedRuleContext(Floating_point_constantContext,0);
+NonnegativeNumberContext.prototype.floatingPointConstant = function() {
+    return this.getTypedRuleContext(FloatingPointConstantContext,0);
 };
 
-Nonnegative_numberContext.prototype.enterRule = function(listener) {
+NonnegativeNumberContext.prototype.enterRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
-        listener.enterNonnegative_number(this);
+        listener.enterNonnegativeNumber(this);
 	}
 };
 
-Nonnegative_numberContext.prototype.exitRule = function(listener) {
+NonnegativeNumberContext.prototype.exitRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
-        listener.exitNonnegative_number(this);
+        listener.exitNonnegativeNumber(this);
 	}
 };
 
 
 
 
-SvgPathParser.Nonnegative_numberContext = Nonnegative_numberContext;
+SvgPathParser.NonnegativeNumberContext = NonnegativeNumberContext;
 
-SvgPathParser.prototype.nonnegative_number = function() {
+SvgPathParser.prototype.nonnegativeNumber = function() {
 
-    var localctx = new Nonnegative_numberContext(this, this._ctx, this.state);
-    this.enterRule(localctx, 62, SvgPathParser.RULE_nonnegative_number);
+    var localctx = new NonnegativeNumberContext(this, this._ctx, this.state);
+    this.enterRule(localctx, 62, SvgPathParser.RULE_nonnegativeNumber);
     try {
         this.state = 366;
         this._errHandler.sync(this);
@@ -3370,13 +3369,13 @@ SvgPathParser.prototype.nonnegative_number = function() {
         case 1:
             this.enterOuterAlt(localctx, 1);
             this.state = 364;
-            this.integer_constant();
+            this.integerConstant();
             break;
 
         case 2:
             this.enterOuterAlt(localctx, 2);
             this.state = 365;
-            this.floating_point_constant();
+            this.floatingPointConstant();
             break;
 
         }
@@ -3411,16 +3410,16 @@ function NumberContext(parser, parent, invokingState) {
 NumberContext.prototype = Object.create(antlr4.ParserRuleContext.prototype);
 NumberContext.prototype.constructor = NumberContext;
 
-NumberContext.prototype.integer_constant = function() {
-    return this.getTypedRuleContext(Integer_constantContext,0);
+NumberContext.prototype.integerConstant = function() {
+    return this.getTypedRuleContext(IntegerConstantContext,0);
 };
 
 NumberContext.prototype.sign = function() {
     return this.getTypedRuleContext(SignContext,0);
 };
 
-NumberContext.prototype.floating_point_constant = function() {
-    return this.getTypedRuleContext(Floating_point_constantContext,0);
+NumberContext.prototype.floatingPointConstant = function() {
+    return this.getTypedRuleContext(FloatingPointConstantContext,0);
 };
 
 NumberContext.prototype.enterRule = function(listener) {
@@ -3461,7 +3460,7 @@ SvgPathParser.prototype.number = function() {
             }
 
             this.state = 371;
-            this.integer_constant();
+            this.integerConstant();
             break;
 
         case 2:
@@ -3475,7 +3474,7 @@ SvgPathParser.prototype.number = function() {
             }
 
             this.state = 375;
-            this.floating_point_constant();
+            this.floatingPointConstant();
             break;
 
         }
@@ -3559,7 +3558,7 @@ SvgPathParser.prototype.flag = function() {
 };
 
 
-function Comma_wspContext(parser, parent, invokingState) {
+function CommaWspContext(parser, parent, invokingState) {
 	if(parent===undefined) {
 	    parent = null;
 	}
@@ -3568,14 +3567,14 @@ function Comma_wspContext(parser, parent, invokingState) {
 	}
 	antlr4.ParserRuleContext.call(this, parent, invokingState);
     this.parser = parser;
-    this.ruleIndex = SvgPathParser.RULE_comma_wsp;
+    this.ruleIndex = SvgPathParser.RULE_commaWsp;
     return this;
 }
 
-Comma_wspContext.prototype = Object.create(antlr4.ParserRuleContext.prototype);
-Comma_wspContext.prototype.constructor = Comma_wspContext;
+CommaWspContext.prototype = Object.create(antlr4.ParserRuleContext.prototype);
+CommaWspContext.prototype.constructor = CommaWspContext;
 
-Comma_wspContext.prototype.wsp = function(i) {
+CommaWspContext.prototype.wsp = function(i) {
     if(i===undefined) {
         i = null;
     }
@@ -3586,31 +3585,31 @@ Comma_wspContext.prototype.wsp = function(i) {
     }
 };
 
-Comma_wspContext.prototype.comma = function() {
+CommaWspContext.prototype.comma = function() {
     return this.getTypedRuleContext(CommaContext,0);
 };
 
-Comma_wspContext.prototype.enterRule = function(listener) {
+CommaWspContext.prototype.enterRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
-        listener.enterComma_wsp(this);
+        listener.enterCommaWsp(this);
 	}
 };
 
-Comma_wspContext.prototype.exitRule = function(listener) {
+CommaWspContext.prototype.exitRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
-        listener.exitComma_wsp(this);
+        listener.exitCommaWsp(this);
 	}
 };
 
 
 
 
-SvgPathParser.Comma_wspContext = Comma_wspContext;
+SvgPathParser.CommaWspContext = CommaWspContext;
 
-SvgPathParser.prototype.comma_wsp = function() {
+SvgPathParser.prototype.commaWsp = function() {
 
-    var localctx = new Comma_wspContext(this, this._ctx, this.state);
-    this.enterRule(localctx, 68, SvgPathParser.RULE_comma_wsp);
+    var localctx = new CommaWspContext(this, this._ctx, this.state);
+    this.enterRule(localctx, 68, SvgPathParser.RULE_commaWsp);
     var _la = 0; // Token type
     try {
         this.state = 401;
@@ -3746,7 +3745,7 @@ SvgPathParser.prototype.comma = function() {
 };
 
 
-function Integer_constantContext(parser, parent, invokingState) {
+function IntegerConstantContext(parser, parent, invokingState) {
 	if(parent===undefined) {
 	    parent = null;
 	}
@@ -3755,42 +3754,42 @@ function Integer_constantContext(parser, parent, invokingState) {
 	}
 	antlr4.ParserRuleContext.call(this, parent, invokingState);
     this.parser = parser;
-    this.ruleIndex = SvgPathParser.RULE_integer_constant;
+    this.ruleIndex = SvgPathParser.RULE_integerConstant;
     return this;
 }
 
-Integer_constantContext.prototype = Object.create(antlr4.ParserRuleContext.prototype);
-Integer_constantContext.prototype.constructor = Integer_constantContext;
+IntegerConstantContext.prototype = Object.create(antlr4.ParserRuleContext.prototype);
+IntegerConstantContext.prototype.constructor = IntegerConstantContext;
 
-Integer_constantContext.prototype.digit_sequence = function() {
-    return this.getTypedRuleContext(Digit_sequenceContext,0);
+IntegerConstantContext.prototype.digitSequence = function() {
+    return this.getTypedRuleContext(DigitSequenceContext,0);
 };
 
-Integer_constantContext.prototype.enterRule = function(listener) {
+IntegerConstantContext.prototype.enterRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
-        listener.enterInteger_constant(this);
+        listener.enterIntegerConstant(this);
 	}
 };
 
-Integer_constantContext.prototype.exitRule = function(listener) {
+IntegerConstantContext.prototype.exitRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
-        listener.exitInteger_constant(this);
+        listener.exitIntegerConstant(this);
 	}
 };
 
 
 
 
-SvgPathParser.Integer_constantContext = Integer_constantContext;
+SvgPathParser.IntegerConstantContext = IntegerConstantContext;
 
-SvgPathParser.prototype.integer_constant = function() {
+SvgPathParser.prototype.integerConstant = function() {
 
-    var localctx = new Integer_constantContext(this, this._ctx, this.state);
-    this.enterRule(localctx, 72, SvgPathParser.RULE_integer_constant);
+    var localctx = new IntegerConstantContext(this, this._ctx, this.state);
+    this.enterRule(localctx, 72, SvgPathParser.RULE_integerConstant);
     try {
         this.enterOuterAlt(localctx, 1);
         this.state = 405;
-        this.digit_sequence();
+        this.digitSequence();
     } catch (re) {
     	if(re instanceof antlr4.error.RecognitionException) {
 	        localctx.exception = re;
@@ -3806,7 +3805,7 @@ SvgPathParser.prototype.integer_constant = function() {
 };
 
 
-function Floating_point_constantContext(parser, parent, invokingState) {
+function FloatingPointConstantContext(parser, parent, invokingState) {
 	if(parent===undefined) {
 	    parent = null;
 	}
@@ -3815,46 +3814,46 @@ function Floating_point_constantContext(parser, parent, invokingState) {
 	}
 	antlr4.ParserRuleContext.call(this, parent, invokingState);
     this.parser = parser;
-    this.ruleIndex = SvgPathParser.RULE_floating_point_constant;
+    this.ruleIndex = SvgPathParser.RULE_floatingPointConstant;
     return this;
 }
 
-Floating_point_constantContext.prototype = Object.create(antlr4.ParserRuleContext.prototype);
-Floating_point_constantContext.prototype.constructor = Floating_point_constantContext;
+FloatingPointConstantContext.prototype = Object.create(antlr4.ParserRuleContext.prototype);
+FloatingPointConstantContext.prototype.constructor = FloatingPointConstantContext;
 
-Floating_point_constantContext.prototype.fractional_constant = function() {
-    return this.getTypedRuleContext(Fractional_constantContext,0);
+FloatingPointConstantContext.prototype.fractionalConstant = function() {
+    return this.getTypedRuleContext(FractionalConstantContext,0);
 };
 
-Floating_point_constantContext.prototype.exponent = function() {
+FloatingPointConstantContext.prototype.exponent = function() {
     return this.getTypedRuleContext(ExponentContext,0);
 };
 
-Floating_point_constantContext.prototype.digit_sequence = function() {
-    return this.getTypedRuleContext(Digit_sequenceContext,0);
+FloatingPointConstantContext.prototype.digitSequence = function() {
+    return this.getTypedRuleContext(DigitSequenceContext,0);
 };
 
-Floating_point_constantContext.prototype.enterRule = function(listener) {
+FloatingPointConstantContext.prototype.enterRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
-        listener.enterFloating_point_constant(this);
+        listener.enterFloatingPointConstant(this);
 	}
 };
 
-Floating_point_constantContext.prototype.exitRule = function(listener) {
+FloatingPointConstantContext.prototype.exitRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
-        listener.exitFloating_point_constant(this);
+        listener.exitFloatingPointConstant(this);
 	}
 };
 
 
 
 
-SvgPathParser.Floating_point_constantContext = Floating_point_constantContext;
+SvgPathParser.FloatingPointConstantContext = FloatingPointConstantContext;
 
-SvgPathParser.prototype.floating_point_constant = function() {
+SvgPathParser.prototype.floatingPointConstant = function() {
 
-    var localctx = new Floating_point_constantContext(this, this._ctx, this.state);
-    this.enterRule(localctx, 74, SvgPathParser.RULE_floating_point_constant);
+    var localctx = new FloatingPointConstantContext(this, this._ctx, this.state);
+    this.enterRule(localctx, 74, SvgPathParser.RULE_floatingPointConstant);
     var _la = 0; // Token type
     try {
         this.state = 414;
@@ -3864,7 +3863,7 @@ SvgPathParser.prototype.floating_point_constant = function() {
         case 1:
             this.enterOuterAlt(localctx, 1);
             this.state = 407;
-            this.fractional_constant();
+            this.fractionalConstant();
             this.state = 409;
             this._errHandler.sync(this);
             _la = this._input.LA(1);
@@ -3878,7 +3877,7 @@ SvgPathParser.prototype.floating_point_constant = function() {
         case 2:
             this.enterOuterAlt(localctx, 2);
             this.state = 411;
-            this.digit_sequence();
+            this.digitSequence();
             this.state = 412;
             this.exponent();
             break;
@@ -3899,7 +3898,7 @@ SvgPathParser.prototype.floating_point_constant = function() {
 };
 
 
-function Fractional_constantContext(parser, parent, invokingState) {
+function FractionalConstantContext(parser, parent, invokingState) {
 	if(parent===undefined) {
 	    parent = null;
 	}
@@ -3908,45 +3907,45 @@ function Fractional_constantContext(parser, parent, invokingState) {
 	}
 	antlr4.ParserRuleContext.call(this, parent, invokingState);
     this.parser = parser;
-    this.ruleIndex = SvgPathParser.RULE_fractional_constant;
+    this.ruleIndex = SvgPathParser.RULE_fractionalConstant;
     return this;
 }
 
-Fractional_constantContext.prototype = Object.create(antlr4.ParserRuleContext.prototype);
-Fractional_constantContext.prototype.constructor = Fractional_constantContext;
+FractionalConstantContext.prototype = Object.create(antlr4.ParserRuleContext.prototype);
+FractionalConstantContext.prototype.constructor = FractionalConstantContext;
 
-Fractional_constantContext.prototype.digit_sequence = function(i) {
+FractionalConstantContext.prototype.digitSequence = function(i) {
     if(i===undefined) {
         i = null;
     }
     if(i===null) {
-        return this.getTypedRuleContexts(Digit_sequenceContext);
+        return this.getTypedRuleContexts(DigitSequenceContext);
     } else {
-        return this.getTypedRuleContext(Digit_sequenceContext,i);
+        return this.getTypedRuleContext(DigitSequenceContext,i);
     }
 };
 
-Fractional_constantContext.prototype.enterRule = function(listener) {
+FractionalConstantContext.prototype.enterRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
-        listener.enterFractional_constant(this);
+        listener.enterFractionalConstant(this);
 	}
 };
 
-Fractional_constantContext.prototype.exitRule = function(listener) {
+FractionalConstantContext.prototype.exitRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
-        listener.exitFractional_constant(this);
+        listener.exitFractionalConstant(this);
 	}
 };
 
 
 
 
-SvgPathParser.Fractional_constantContext = Fractional_constantContext;
+SvgPathParser.FractionalConstantContext = FractionalConstantContext;
 
-SvgPathParser.prototype.fractional_constant = function() {
+SvgPathParser.prototype.fractionalConstant = function() {
 
-    var localctx = new Fractional_constantContext(this, this._ctx, this.state);
-    this.enterRule(localctx, 76, SvgPathParser.RULE_fractional_constant);
+    var localctx = new FractionalConstantContext(this, this._ctx, this.state);
+    this.enterRule(localctx, 76, SvgPathParser.RULE_fractionalConstant);
     var _la = 0; // Token type
     try {
         this.state = 424;
@@ -3960,19 +3959,19 @@ SvgPathParser.prototype.fractional_constant = function() {
             _la = this._input.LA(1);
             if(((((_la - 21)) & ~0x1f) == 0 && ((1 << (_la - 21)) & ((1 << (SvgPathParser.T__20 - 21)) | (1 << (SvgPathParser.T__21 - 21)) | (1 << (SvgPathParser.T__28 - 21)) | (1 << (SvgPathParser.T__29 - 21)) | (1 << (SvgPathParser.T__30 - 21)) | (1 << (SvgPathParser.T__31 - 21)) | (1 << (SvgPathParser.T__32 - 21)) | (1 << (SvgPathParser.T__33 - 21)) | (1 << (SvgPathParser.T__34 - 21)) | (1 << (SvgPathParser.T__35 - 21)))) !== 0)) {
                 this.state = 416;
-                this.digit_sequence();
+                this.digitSequence();
             }
 
             this.state = 419;
             this.match(SvgPathParser.T__23);
             this.state = 420;
-            this.digit_sequence();
+            this.digitSequence();
             break;
 
         case 2:
             this.enterOuterAlt(localctx, 2);
             this.state = 421;
-            this.digit_sequence();
+            this.digitSequence();
             this.state = 422;
             this.match(SvgPathParser.T__23);
             break;
@@ -4009,8 +4008,8 @@ function ExponentContext(parser, parent, invokingState) {
 ExponentContext.prototype = Object.create(antlr4.ParserRuleContext.prototype);
 ExponentContext.prototype.constructor = ExponentContext;
 
-ExponentContext.prototype.digit_sequence = function() {
-    return this.getTypedRuleContext(Digit_sequenceContext,0);
+ExponentContext.prototype.digitSequence = function() {
+    return this.getTypedRuleContext(DigitSequenceContext,0);
 };
 
 ExponentContext.prototype.sign = function() {
@@ -4059,7 +4058,7 @@ SvgPathParser.prototype.exponent = function() {
         }
 
         this.state = 430;
-        this.digit_sequence();
+        this.digitSequence();
     } catch (re) {
     	if(re instanceof antlr4.error.RecognitionException) {
 	        localctx.exception = re;
@@ -4140,7 +4139,7 @@ SvgPathParser.prototype.sign = function() {
 };
 
 
-function Digit_sequenceContext(parser, parent, invokingState) {
+function DigitSequenceContext(parser, parent, invokingState) {
 	if(parent===undefined) {
 	    parent = null;
 	}
@@ -4149,42 +4148,42 @@ function Digit_sequenceContext(parser, parent, invokingState) {
 	}
 	antlr4.ParserRuleContext.call(this, parent, invokingState);
     this.parser = parser;
-    this.ruleIndex = SvgPathParser.RULE_digit_sequence;
+    this.ruleIndex = SvgPathParser.RULE_digitSequence;
     return this;
 }
 
-Digit_sequenceContext.prototype = Object.create(antlr4.ParserRuleContext.prototype);
-Digit_sequenceContext.prototype.constructor = Digit_sequenceContext;
+DigitSequenceContext.prototype = Object.create(antlr4.ParserRuleContext.prototype);
+DigitSequenceContext.prototype.constructor = DigitSequenceContext;
 
-Digit_sequenceContext.prototype.digit = function() {
+DigitSequenceContext.prototype.digit = function() {
     return this.getTypedRuleContext(DigitContext,0);
 };
 
-Digit_sequenceContext.prototype.digit_sequence = function() {
-    return this.getTypedRuleContext(Digit_sequenceContext,0);
+DigitSequenceContext.prototype.digitSequence = function() {
+    return this.getTypedRuleContext(DigitSequenceContext,0);
 };
 
-Digit_sequenceContext.prototype.enterRule = function(listener) {
+DigitSequenceContext.prototype.enterRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
-        listener.enterDigit_sequence(this);
+        listener.enterDigitSequence(this);
 	}
 };
 
-Digit_sequenceContext.prototype.exitRule = function(listener) {
+DigitSequenceContext.prototype.exitRule = function(listener) {
     if(listener instanceof SvgPathListener ) {
-        listener.exitDigit_sequence(this);
+        listener.exitDigitSequence(this);
 	}
 };
 
 
 
 
-SvgPathParser.Digit_sequenceContext = Digit_sequenceContext;
+SvgPathParser.DigitSequenceContext = DigitSequenceContext;
 
-SvgPathParser.prototype.digit_sequence = function() {
+SvgPathParser.prototype.digitSequence = function() {
 
-    var localctx = new Digit_sequenceContext(this, this._ctx, this.state);
-    this.enterRule(localctx, 82, SvgPathParser.RULE_digit_sequence);
+    var localctx = new DigitSequenceContext(this, this._ctx, this.state);
+    this.enterRule(localctx, 82, SvgPathParser.RULE_digitSequence);
     try {
         this.state = 438;
         this._errHandler.sync(this);
@@ -4201,7 +4200,7 @@ SvgPathParser.prototype.digit_sequence = function() {
             this.state = 435;
             this.digit();
             this.state = 436;
-            this.digit_sequence();
+            this.digitSequence();
             break;
 
         }

@@ -9,6 +9,6 @@ test('Testing a oneline svg expression', () => {
 	var tokens  = new antlr4.CommonTokenStream(lexer);
 	var parser = new Parser(tokens);
 	parser.buildParseTrees = true;
-	var tree = parser.svg_path();
+	var tree = parser.svgPath();
     expect(1 + 2).toBe(3);
 });

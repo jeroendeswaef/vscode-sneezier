@@ -2,6 +2,9 @@
 
 This is the README for your extension "sneezier". After writing up a brief description, we recommend including the following sections.
 
+The Antlr parser is based on a stackoverflow question: https://stackoverflow.com/questions/25630917/using-antlr3-to-parse-svg-path-data
+
+
 ## Features
 
 Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
