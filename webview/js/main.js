@@ -11,6 +11,7 @@ const vscode = acquireVsCodeApi();
 function CurvesView() {
     let imageWidth;
     let imageHeight;
+    let cursorPosChanged;
 
     return {
         oninit: function(vnode) {
@@ -19,6 +20,8 @@ function CurvesView() {
             })
             imageWidth = vnode.attrs.imageWidth;
             imageHeight = vnode.attrs.imageHeight;
+            cursorPosChanged = vnode.attrs.cursorPosChanged;
+
             this.drawing = null;
             this.lineIndex = startLine;
             window.addEventListener('message', event => {
@@ -85,7 +88,7 @@ function CurvesView() {
         },
         view: function() {
             //return m("figure")
-            return m("svg", { class: "svg-area", viewBox: `0 0 ${imageWidth} ${imageHeight}`},
+            return m("svg", { onmousemove: cursorPosChanged, class: "svg-area", viewBox: `0 0 ${imageWidth} ${imageHeight}`},
                 //initialPaths.map(path => m("path", { class: "path-element", onclick: () => { console.info('svg clicked!'); }, d: path.svgPath, fill: "none", 'stroke-width': 2, stroke: "hotpink" }))
                 this.drawing ? this.drawing.map(el => m("circle", { fill: 'none', 'stroke-width': 1, stroke: "hotpink", cx: el.x, cy: el.y, r: 2 })) : null
             )
@@ -98,6 +101,9 @@ function DrawingPanel() {
     let opacity = 30;
     let imageWidth = null;
     let imageHeight = null;
+    let X = null;
+    let Y = null;
+
     return {
         oninit: () => {
             this.background = _.get(initialMetadata, 'background');
@@ -105,8 +111,9 @@ function DrawingPanel() {
         view: () => m("div", [
             m("div", { class: 'drawing-area' }, [
                 m("img", { onload: function() { imageWidth = this.width; imageHeight = this.height; }, style: `opacity: ${opacity / 100}`, src: this.background }),
-            ].concat(imageWidth ? [ m(CurvesView, { imageWidth, imageHeight })] : null)),
-            m("input", { onchange: (ev) => { opacity = parseInt(ev.target.value)}, type: "range", min: "0", "max": 100, "value": opacity, "step": 1 })
+            ].concat(imageWidth ? [ m(CurvesView, { imageWidth, imageHeight, cursorPosChanged: (ev) => (X = ev.offsetX, Y = ev.offsetY) })] : null)),
+            m("input", { onchange: (ev) => { opacity = parseInt(ev.target.value)}, type: "range", min: "0", "max": 100, "value": opacity, "step": 1 }),
+            X && Y ? m("span", { class: 'cursor-position' }, `(${X}, ${Y})`) : null
         ])
     }
 }

@@ -12,6 +12,14 @@ html, body {
     position: relative;
 }
 
+.cursor-position {
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+    margin-top: 2rem;
+    color: #41FF00;
+}
+
 input[type=range] {
     margin: 0 auto;
     display: block;
