@@ -10,15 +10,21 @@ class DrawingBuilder {
     }
 
     getDrawing() {
-        const chars = new antlr4.InputStream(this.input);
-        const lexer = new Lexer(chars);
-        const tokens  = new antlr4.CommonTokenStream(lexer);
-        const parser = new Parser(tokens);
-        //parser.buildParseTrees = true;
-        const tree = parser.svgPath();
-        const visitor = new Visitor();
-        tree.accept(visitor);
-        return visitor.elements;
+        return new Promise((resolve, reject) => {
+            try {
+                const chars = new antlr4.InputStream(this.input);
+                const lexer = new Lexer(chars);
+                const tokens  = new antlr4.CommonTokenStream(lexer);
+                const parser = new Parser(tokens);
+                //parser.buildParseTrees = true;
+                const tree = parser.svgPath();
+                const visitor = new Visitor();
+                tree.accept(visitor);
+                resolve(visitor.elements);
+            } catch(err) {
+                reject(err);
+            }
+        });
         //const listener = new Listener();
         //antlr4.tree.ParseTreeWalker.DEFAULT.walk(listener, tree);
     }

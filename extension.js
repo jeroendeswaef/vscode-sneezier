@@ -8,6 +8,7 @@ const SneezierFile = require('./SneezierFile');
 const ExprLexer = require('./parser/ExprLexer').ExprLexer;
 const ExprParser = require('./parser/ExprParser').ExprParser;
 
+let sneezierFile;
 /**
  * @param {vscode.ExtensionContext} context
  */
@@ -57,6 +58,11 @@ function activate(context) {
 		panel.webview.onDidReceiveMessage(
 			message => {
 				switch (message.command) {
+					case 'initialized':
+						sneezierFile.getDrawing().then(drawing => {
+							panel.webview.postMessage({ command: 'setDrawing', drawing });
+						});
+						break;
 					case 'lineChanged':
 						//vscode.window.showErrorMessage(message.text);
 						linkedTextEditor.edit((editBuilder) => {
@@ -79,8 +85,9 @@ function activate(context) {
 		vscode.workspace.openTextDocument(vscode.window.activeTextEditor.document.fileName).then((document) => {
 			let text = document.getText();
 			mainDoc = document;
-			const sneezierFile = new SneezierFile(text)
-			panel.webview.html = getWebviewContent(sneezierFile.getDrawing(), { background: sneezierFile.getBackground() }, context, vscode.window.activeTextEditor.selection.start.line);
+			sneezierFile = new SneezierFile(text);
+			panel.webview.html = getWebviewContent({ background: sneezierFile.getBackground() }, context, vscode.window.activeTextEditor.selection.start.line);
+			//sneezierFile.getDrawing();
 			//vscode.window.activeTextEditor.document.conten
 		  }).catch((ex) => console.error(ex));
 
@@ -115,7 +122,7 @@ function getNonce() {
     return text;
 }
 
-function getWebviewContent(drawing, metadata, context, startLine) {
+function getWebviewContent(metadata, context, startLine) {
 	const scripts = ['svg-beziers', 'bezier', 'draw', 'interaction', 'mithril', 'lodash.custom.min', 'main']
 	const scriptUris = scripts.reduce((acc, scriptName) => {
 		const scriptPathOnDisk = vscode.Uri.file(path.join(context.extensionPath, 'webview', 'js', `${scriptName}.js`));
@@ -140,7 +147,6 @@ function getWebviewContent(drawing, metadata, context, startLine) {
 	<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src vscode-resource: https:; script-src 'nonce-${nonce}';style-src vscode-resource: 'unsafe-inline' http: https: data:;">
 	<link rel="stylesheet" type="text/css" href="${cssUri}" />
 	<script nonce="${nonce}">
-		var initialDrawing = ${JSON.stringify(drawing)};
 		var initialMetadata = ${JSON.stringify(metadata)};
 		var startLine = ${startLine};
 	</script>

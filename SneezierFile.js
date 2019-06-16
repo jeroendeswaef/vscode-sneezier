@@ -19,8 +19,8 @@ class SneezierFile {
             }
         } 
         if (!content) content = lines;
-        const drawingBuilder = new DrawingBuilder(content.join('\n'));
-        this.drawing = drawingBuilder.getDrawing();
+        this.drawingBuilder = new DrawingBuilder(content.join('\n'));
+        //drawingBuilder.getDrawing();
         // this.paths = [];
         // for (let i = 0; i < content.length; i++) {
         //     if (content[i]) {
@@ -32,9 +32,9 @@ class SneezierFile {
         // }
     }
 
-    getDrawing() {
-        return this.drawing;
-    }
+   getDrawing() {
+       return this.drawingBuilder.getDrawing();
+   }
 
     // getPaths() {
     //     return this.paths;

@@ -14,14 +14,22 @@ function CurvesView() {
 
     return {
         oninit: function(vnode) {
+            vscode.postMessage({
+                command: 'initialized',
+            })
             imageWidth = vnode.attrs.imageWidth;
             imageHeight = vnode.attrs.imageHeight;
+            this.drawing = null;
             this.lineIndex = startLine;
             window.addEventListener('message', event => {
 
                 const message = event.data; // The JSON data our extension sent
             
                 switch (message.command) {
+                    case 'setDrawing':
+                        this.drawing = message.drawing;
+                        m.redraw();
+                        break;
                     case 'selectLine':
                         this.lineIndex = message.lineIndex;
                         m.redraw();
@@ -30,7 +38,6 @@ function CurvesView() {
             });
         },
         oncreate: function(vnode) {
-            console.info('oncreate', initialDrawing)
             return;
             this.fns = bindDrawFunctions(0, vnode.attrs.imageWidth, vnode.attrs.imageHeight);
             let curves = [];
@@ -73,14 +80,14 @@ function CurvesView() {
             }
         },
         onupdate: function(vnode) {
-            this.fns.reset(); 
-            this.drawFns.forEach(draw => draw());
+            //this.fns.reset(); 
+            //this.drawFns.forEach(draw => draw());
         },
         view: function() {
             //return m("figure")
             return m("svg", { class: "svg-area", viewBox: `0 0 ${imageWidth} ${imageHeight}`},
                 //initialPaths.map(path => m("path", { class: "path-element", onclick: () => { console.info('svg clicked!'); }, d: path.svgPath, fill: "none", 'stroke-width': 2, stroke: "hotpink" }))
-                initialDrawing.map(el => m("circle", { fill: 'none', 'stroke-width': 1, stroke: "hotpink", cx: el.x, cy: el.y, r: 2 }))
+                this.drawing ? this.drawing.map(el => m("circle", { fill: 'none', 'stroke-width': 1, stroke: "hotpink", cx: el.x, cy: el.y, r: 2 })) : null
             )
         }
     }

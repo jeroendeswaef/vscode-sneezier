@@ -4,6 +4,25 @@ This is the README for your extension "sneezier". After writing up a brief descr
 
 The Antlr parser is based on a stackoverflow question: https://stackoverflow.com/questions/25630917/using-antlr3-to-parse-svg-path-data
 
+```
+                                     ANTLR                 Drawing
+                                       ^                  +--------------------------+
++--------------+                       |                  |                          |
+| file.snz     |                       |                  |   HelperPoint            |
+|              |  SneezierFile         +                  |     x                    |
+| +----------+ | +------------>  DrawingBuilder +-------> |     y                    |   DrawingMitrilSvgRenderer +----> HTML SVG
+|              |                   ^                      |     origPos              |
+| +------+     |            +------+                      |                          |
+|              |            |                             |  QuadraticCurve          |
+| +---------+  |            |                             |     ...                  |
+|              |            | line changed                |     origPos              |
+|              |            |                             |                          |
+|              |            |                             |                          |
++--------------+            |                             |                          |
+                            |                             |                          |
+ +----------+   +-----------+                             |                          |
+                                                          +--------------------------+
+```
 
 ## Features
 
