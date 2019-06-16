@@ -1,3 +1,5 @@
+const DrawingBuilder = require('./DrawingBuilder');
+
 class SneezierFile {
     constructor(text) {
         let content;
@@ -17,20 +19,26 @@ class SneezierFile {
             }
         } 
         if (!content) content = lines;
-        this.paths = [];
-        for (let i = 0; i < content.length; i++) {
-            if (content[i]) {
-                this.paths.push({
-                    svgPath: content[i],
-                    line: i + startIndex
-                })
-            }
-        }
+        const drawingBuilder = new DrawingBuilder(content.join('\n'));
+        this.drawing = drawingBuilder.getDrawing();
+        // this.paths = [];
+        // for (let i = 0; i < content.length; i++) {
+        //     if (content[i]) {
+        //         this.paths.push({
+        //             svgPath: content[i],
+        //             line: i + startIndex
+        //         })
+        //     }
+        // }
     }
 
-    getPaths() {
-        return this.paths;
+    getDrawing() {
+        return this.drawing;
     }
+
+    // getPaths() {
+    //     return this.paths;
+    // }
 
     getBackground() {
         return this.background;

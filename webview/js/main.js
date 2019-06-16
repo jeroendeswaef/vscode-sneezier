@@ -30,6 +30,7 @@ function CurvesView() {
             });
         },
         oncreate: function(vnode) {
+            console.info('oncreate', initialDrawing)
             return;
             this.fns = bindDrawFunctions(0, vnode.attrs.imageWidth, vnode.attrs.imageHeight);
             let curves = [];
@@ -79,7 +80,7 @@ function CurvesView() {
             //return m("figure")
             return m("svg", { class: "svg-area", viewBox: `0 0 ${imageWidth} ${imageHeight}`},
                 //initialPaths.map(path => m("path", { class: "path-element", onclick: () => { console.info('svg clicked!'); }, d: path.svgPath, fill: "none", 'stroke-width': 2, stroke: "hotpink" }))
-                m("circle", { fill: 'none', 'stroke-width': 1, stroke: "hotpink", cx: 50, cy: 50, r: 4 })
+                initialDrawing.map(el => m("circle", { fill: 'none', 'stroke-width': 1, stroke: "hotpink", cx: el.x, cy: el.y, r: 2 }))
             )
         }
     }
