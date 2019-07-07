@@ -91,20 +91,18 @@ var grammar = {
             );
         }
         },
-    {"name": "Main$ebnf$1", "symbols": ["Rule"]},
-    {"name": "Main$ebnf$1", "symbols": ["Main$ebnf$1", "Rule"], "postprocess": function arrpush(d) {return d[0].concat([d[1]]);}},
+    {"name": "Main$ebnf$1", "symbols": []},
+    {"name": "Main$ebnf$1$subexpression$1", "symbols": ["MoveTo"]},
+    {"name": "Main$ebnf$1$subexpression$1", "symbols": ["Cubic"]},
+    {"name": "Main$ebnf$1", "symbols": ["Main$ebnf$1", "Main$ebnf$1$subexpression$1"], "postprocess": function arrpush(d) {return d[0].concat([d[1]]);}},
     {"name": "Main", "symbols": ["Main$ebnf$1"]},
-    {"name": "Rule", "symbols": ["MoveTo"]},
-    {"name": "Rule", "symbols": ["Cubic"]},
     {"name": "MoveTo$ebnf$1", "symbols": ["_"], "postprocess": id},
     {"name": "MoveTo$ebnf$1", "symbols": [], "postprocess": function(d) {return null;}},
-    {"name": "MoveTo", "symbols": [{"literal":"M"}, "_", "int", "_", "int", "MoveTo$ebnf$1"], "postprocess": d => `Moveto(${d.filter(Number).join(',')})`},
+    {"name": "MoveTo", "symbols": [{"literal":"M"}, "_", "int", "_", "int", "MoveTo$ebnf$1"], "postprocess": d => ({ type: 'helperPoint', x: d.filter(Number)[0], y: d.filter(Number)[1] })},
     {"name": "Cubic$ebnf$1", "symbols": ["_"], "postprocess": id},
     {"name": "Cubic$ebnf$1", "symbols": [], "postprocess": function(d) {return null;}},
     {"name": "Cubic", "symbols": [{"literal":"C"}, "_", "int", "_", "int", "_", "int", "_", "int", "_", "int", "_", "int", "Cubic$ebnf$1"], "postprocess": d => null},
-    {"name": "_$ebnf$1", "symbols": []},
-    {"name": "_$ebnf$1", "symbols": ["_$ebnf$1", /[\s]/], "postprocess": function arrpush(d) {return d[0].concat([d[1]]);}},
-    {"name": "_", "symbols": ["_$ebnf$1"], "postprocess": d => null}
+    {"name": "_", "symbols": [/[\s]/], "postprocess": d => null}
 ]
   , ParserStart: "Main"
 }
