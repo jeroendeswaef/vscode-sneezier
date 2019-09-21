@@ -2,7 +2,7 @@
 // http://github.com/Hardmath123/nearley
 (function () {
 function id(x) { return x[0]; }
-var grammar = {
+ const filterNumbers = d => d.filter(n => typeof n === 'number'); var grammar = {
     Lexer: undefined,
     ParserRules: [
     {"name": "unsigned_int$ebnf$1", "symbols": [/[0-9]/]},
@@ -94,11 +94,15 @@ var grammar = {
     {"name": "Main$ebnf$1", "symbols": []},
     {"name": "Main$ebnf$1$subexpression$1", "symbols": ["MoveTo"]},
     {"name": "Main$ebnf$1$subexpression$1", "symbols": ["Cubic"]},
+    {"name": "Main$ebnf$1$subexpression$1", "symbols": ["LineTo"]},
     {"name": "Main$ebnf$1", "symbols": ["Main$ebnf$1", "Main$ebnf$1$subexpression$1"], "postprocess": function arrpush(d) {return d[0].concat([d[1]]);}},
     {"name": "Main", "symbols": ["Main$ebnf$1"]},
     {"name": "MoveTo$ebnf$1", "symbols": ["_"], "postprocess": id},
     {"name": "MoveTo$ebnf$1", "symbols": [], "postprocess": function(d) {return null;}},
-    {"name": "MoveTo", "symbols": [{"literal":"M"}, "_", "int", "_", "int", "MoveTo$ebnf$1"], "postprocess": d => ({ type: 'helperPoint', x: d.filter(Number)[0], y: d.filter(Number)[1] })},
+    {"name": "MoveTo", "symbols": [{"literal":"M"}, "_", "int", "_", "int", "MoveTo$ebnf$1"], "postprocess": d => (numbers = filterNumbers(d), { type: 'helperPoint', x: numbers[0], y: numbers[1] })},
+    {"name": "LineTo$ebnf$1", "symbols": ["_"], "postprocess": id},
+    {"name": "LineTo$ebnf$1", "symbols": [], "postprocess": function(d) {return null;}},
+    {"name": "LineTo", "symbols": [{"literal":"L"}, "_", "int", "_", "int", "LineTo$ebnf$1"], "postprocess": d => (numbers = filterNumbers(d), { type: 'lineTo', x: numbers[0], y: numbers[1] })},
     {"name": "Cubic$ebnf$1", "symbols": ["_"], "postprocess": id},
     {"name": "Cubic$ebnf$1", "symbols": [], "postprocess": function(d) {return null;}},
     {"name": "Cubic", "symbols": [{"literal":"C"}, "_", "int", "_", "int", "_", "int", "_", "int", "_", "int", "_", "int", "Cubic$ebnf$1"], "postprocess": d => null},

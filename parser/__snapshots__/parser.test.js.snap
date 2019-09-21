@@ -4,13 +4,43 @@ exports[`Testing svg expressions Testing a multi-line svg expression 1`] = `
 Array [
   Object {
     "type": "helperPoint",
-    "x": 10,
-    "y": 80,
+    "x": 60,
+    "y": 0,
   },
   Object {
-    "type": "helperPoint",
-    "x": 90,
-    "y": 100,
+    "type": "lineTo",
+    "x": 120,
+    "y": 0,
+  },
+  Object {
+    "type": "lineTo",
+    "x": 180,
+    "y": 60,
+  },
+  Object {
+    "type": "lineTo",
+    "x": 180,
+    "y": 120,
+  },
+  Object {
+    "type": "lineTo",
+    "x": 120,
+    "y": 180,
+  },
+  Object {
+    "type": "lineTo",
+    "x": 60,
+    "y": 180,
+  },
+  Object {
+    "type": "lineTo",
+    "x": 0,
+    "y": 120,
+  },
+  Object {
+    "type": "lineTo",
+    "x": 0,
+    "y": 60,
   },
 ]
 `;
@@ -19,8 +49,43 @@ exports[`Testing svg expressions Testing a one-line svg expression 1`] = `
 Array [
   Object {
     "type": "helperPoint",
-    "x": 10,
-    "y": 80,
+    "x": 60,
+    "y": 0,
+  },
+  Object {
+    "type": "lineTo",
+    "x": 120,
+    "y": 0,
+  },
+  Object {
+    "type": "lineTo",
+    "x": 180,
+    "y": 60,
+  },
+  Object {
+    "type": "lineTo",
+    "x": 180,
+    "y": 120,
+  },
+  Object {
+    "type": "lineTo",
+    "x": 120,
+    "y": 180,
+  },
+  Object {
+    "type": "lineTo",
+    "x": 60,
+    "y": 180,
+  },
+  Object {
+    "type": "lineTo",
+    "x": 0,
+    "y": 120,
+  },
+  Object {
+    "type": "lineTo",
+    "x": 0,
+    "y": 60,
   },
 ]
 `;
