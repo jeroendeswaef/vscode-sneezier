@@ -1,3 +1,4 @@
+const { getFigure } = require('./FigureBuilder');
 
 class DrawingBuilder {
     constructor() {
@@ -7,12 +8,12 @@ class DrawingBuilder {
     addLine(content, lineNumber) {
         this.lines.push({
             lineNumber,
-            content
+            figureObject: getFigure(content).getObject()
         })
     }
 
     getDrawing() {
-        return Promise.resolve(this.lines.map(line => line.content));
+        return Promise.resolve(this.lines.map(line => line.figureObject));
     }
 }
 

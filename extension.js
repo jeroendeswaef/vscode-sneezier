@@ -37,10 +37,15 @@ function activate(context) {
 		let mainDoc = null;
 		vscode.workspace.onDidChangeTextDocument(changeEvent => {
 			console.log(`Did change: ${changeEvent.document.uri}`);
+			let text = mainDoc.getText();
+			sneezierFile = new SneezierFile(text);
+			sneezierFile.getDrawing().then(drawing => {
+				panel.webview.postMessage({ command: 'setDrawing', drawing });
+			});
 			//if (mainDoc) console.info(mainDoc.getText());
 			// for (const change of changeEvent.contentChanges) {
 			// 	 console.log(change.range); // range of text being replaced
-			// 	 console.log(change.text); // text replacement
+			// 	 //console.log(change.text); // text replacement
 			// }
 	   });
 

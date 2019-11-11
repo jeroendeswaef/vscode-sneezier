@@ -15,11 +15,17 @@
 	"repository": {
 		"keywords": {
 			"patterns": [{
-				"name": "keyword.control.sneezier",
-				"match": "\\b(C|Q|M|L)\\b"
+				"name": "variable.name",
+				"match": "\\b(C|Q|M|L|A)\\b"
 			}, {
 				"name": "keyword.control.sneezier2",
 				"match": "\\[.*\\]"
+			}, {
+				"name": "constant.character",
+				"match": "\\b(CIRCLE)\\b"
+			}, {
+				"name": "comment.line",
+				"match": "\\#.*"
 			}]
 		}
 	},
