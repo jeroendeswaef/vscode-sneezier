@@ -31,6 +31,8 @@ function CurvesView() {
                 switch (message.command) {
                     case 'setDrawing':
                         this.drawing = message.drawing;
+                      
+                        console.log('drawing>>', this.drawing)
                         m.redraw();
                         break;
                     case 'selectLine':
@@ -86,11 +88,21 @@ function CurvesView() {
             //this.fns.reset(); 
             //this.drawFns.forEach(draw => draw());
         },
+        getSvgForDrawingElement: function(drawingElement) {
+            // switch(drawingElement.type) {
+            //     case 'helperPoint':
+            //         return m("circle", { fill: 'none', 'stroke-width': 1, stroke: "hotpink", cx: drawingElement.x, cy: drawingElement.y, r: 2 });
+            //     case 'line':
+            //         return m("line", { 'stroke-width': 1, stroke: "hotpink", x1: drawingElement.x1, y1: drawingElement.y1, x2: drawingElement.x2, y2: drawingElement.y2 });
+
+            // }
+            return m("path", { 'stroke-width': 1, stroke: "hotpink", d: drawingElement })
+        },
         view: function() {
             //return m("figure")
             return m("svg", { onmousemove: cursorPosChanged, class: "svg-area", viewBox: `0 0 ${imageWidth} ${imageHeight}`},
                 //initialPaths.map(path => m("path", { class: "path-element", onclick: () => { console.info('svg clicked!'); }, d: path.svgPath, fill: "none", 'stroke-width': 2, stroke: "hotpink" }))
-                this.drawing ? this.drawing.map(el => m("circle", { fill: 'none', 'stroke-width': 1, stroke: "hotpink", cx: el.x, cy: el.y, r: 2 })) : null
+                this.drawing ? this.drawing.map(el => this.getSvgForDrawingElement(el)) : null
             )
         }
     }
